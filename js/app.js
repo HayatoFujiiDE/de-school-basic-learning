@@ -234,7 +234,7 @@
       core.save();
     }
     var content = current.page === 'list' ? listPage() : current.page === 'unit' ? unitPage(current.unit) : current.page === 'practice' ? practicePage(current.unit) : current.page === 'result' ? resultPage(current.unit) : current.page === 'buddy' ? buddyPage(current.unit) : current.page === 'paused' ? pausedPage() : '<section class="route-error"><h1>この単元を開けませんでした</h1><p>単元一覧から、もう一度選んでみてください。</p><a class="button" href="#list">単元一覧へ</a></section>';
-    app.innerHTML = '<div class="app-shell">' + sidebar(current.page) + '<div class="workspace">' + topbar(current.page) + (!core.storageOK ? '<div class="storage-warning" role="status">このブラウザでは保存できません。今は取り組めますが、ページを閉じると回答が消えます。</div>' : '') + '<main id="main" class="main" tabindex="-1">' + content + '</main></div></div>';
+    app.innerHTML = '<div class="app-shell">' + sidebar(current.page) + '<div class="workspace">' + topbar(current.page) + (!core.storageOK ? '<div class="storage-warning" role="status">このブラウザでは保存できません。今は取り組めますが、ページを閉じると回答が消えます。</div>' : '') + '<main id="main" class="main" tabindex="-1" data-page="' + e(current.page) + '" data-unit="' + e(current.unit ? current.unit.code : '') + '">' + content + '</main></div></div>';
     if (current.page === 'unit' && window.BL.visuals) {
       var visual = document.getElementById('unit-visual');
       if (visual) { visual.innerHTML = window.BL.visuals.render(current.unit); window.BL.visuals.bind(visual, current.unit); }

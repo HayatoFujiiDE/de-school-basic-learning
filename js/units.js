@@ -380,7 +380,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -815,7 +815,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -1209,7 +1209,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -1601,7 +1601,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -1967,7 +1967,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -2325,7 +2325,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -2705,7 +2705,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -3116,7 +3116,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -3497,7 +3497,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -3888,7 +3888,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -4330,7 +4330,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -4762,7 +4762,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -5156,7 +5156,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -5530,7 +5530,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -5953,7 +5953,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -6366,7 +6366,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -6728,7 +6728,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -7120,7 +7120,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -7512,7 +7512,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },
@@ -7929,7 +7929,7 @@ window.BL.data = {
         }
       ],
       "review": {
-        "evidence": "pending",
+        "evidence": "verified",
         "publication": "preview",
         "humanApproval": null
       },

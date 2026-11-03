@@ -1,0 +1,314 @@
+{
+  "reviewedAt": "2026-11-04",
+  "reviewer": "Independent evidence agent, separate from content author",
+  "scope": "All prompts, answer recomputation, explanations, hints, worked examples, misconception/correction, buddy, entries, claims. Status changes do not change this content fingerprint.",
+  "units": {
+    "8250243110000000": {
+      "questions": [
+        10000,
+        305000000,
+        "1000000000000",
+        [
+          "9000万",
+          "3億",
+          "2兆"
+        ],
+        "123万4567",
+        1
+      ],
+      "game": "80億",
+      "basis": "10^8 / 10^4; 3*10^8 + 500*10^4; 10^12; 9*10^7 < 3*10^8 < 2*10^12; 123*10^4+4567; 1000*10^8*10/10^12",
+      "contentSha256": "f56b401bb6d1031072ce759c6de4b580ad76b8616af549d66b5b161b01b023d6"
+    },
+    "8250243120000000": {
+      "questions": [
+        3000,
+        4000,
+        "50人",
+        "99円",
+        600,
+        1600,
+        20,
+        500,
+        "200＋300"
+      ],
+      "game": "501",
+      "basis": "Nearest 1000 for 3460 and 3500; inclusive <=50/exclusive <100; 400+200; 80*20; 600/30; 800-300; upper bound 200+300; 501 nearest 100",
+      "contentSha256": "8543a52890892b497ba19c161e5dca8cf2270e3e46d7e08c445acfc1b997b0bf"
+    },
+    "8250243131100000": {
+      "questions": [
+        28,
+        234,
+        102,
+        1,
+        "24あまり1",
+        9,
+        [
+          "2を十の位にたてる",
+          "3×2をする",
+          "8から6をひく",
+          "4をおろす"
+        ]
+      ],
+      "game": "30÷4＝6あまり6",
+      "basis": "84/3;936/4;816/8;85%3;97=4*24+1;ceil(65/8)=9; long-division algorithm; remainder6>=divisor4",
+      "contentSha256": "6637eb62dffb10676e7640b0ec043304adfa5fb7ed6e4a5388624838045d167a"
+    },
+    "8250243141200000": {
+      "questions": [
+        0.45,
+        5,
+        "2.50",
+        [
+          "0.08",
+          "0.8",
+          "0.808"
+        ],
+        1,
+        347
+      ],
+      "game": "0.65",
+      "basis": "45/100; digit at 10^-3; trailing zero identity; 80<800<808 thousandths;1000/1000;347/100 divided by1/100;0.6<0.65<0.7",
+      "contentSha256": "9ceea50e00937933c031b5f10689bc9725a5e6221664df2fd9848f4a1f3ed170"
+    },
+    "8250243141300000": {
+      "questions": [
+        3.15,
+        2.73,
+        0.479,
+        2.17,
+        "小数点の位置",
+        2.25
+      ],
+      "game": "0.3＋0.7",
+      "basis": "(235+80)/100;(400-127)/100;(406+73)/1000;(302-85)/100; aligned units;(150+75)/100;(3+7)/10",
+      "contentSha256": "ba5667634219caa7379d9735843394201ed494a13bfd09d180eea8b8577bb68c"
+    },
+    "8250243141400000": {
+      "questions": [
+        3.6,
+        1.2,
+        1.2,
+        0.75,
+        0.12,
+        "0.1",
+        0.8
+      ],
+      "game": "1.8÷3",
+      "basis": "12*3/10;24*5/100;48/4/10;3/4;84/7/100;53/10-2*26/10=1/10;24/3/10;1.8/3=.6",
+      "contentSha256": "18f0581f16c5272635ead449237814bca98f45ab5f7ed2d1943b80ffde3396ee"
+    },
+    "8250243150000000": {
+      "questions": [
+        "3/4",
+        "1と3/4",
+        "2/4",
+        "3/5",
+        "5/7",
+        [
+          "1/4",
+          "4/4",
+          "7/4"
+        ],
+        "1と3/6"
+      ],
+      "game": "5/6",
+      "basis": "proper numerator<denominator;7=4+3;1/2=2/4;2+1=3 fifths;(7+2-4)/7; order numerators;5+4=6+3 sixths;5<6",
+      "contentSha256": "a10c4aa1ec8bf5a3351ef0c6b9b6f5d93ad7d3b6bc2ee211eb3c3afac57fb5f2"
+    },
+    "8250243160000000": {
+      "questions": [
+        8,
+        68,
+        16,
+        "500−80×4",
+        28,
+        360,
+        9
+      ],
+      "game": "（2＋3）×2",
+      "basis": "20-12;17*4;(24/3)*2;purchase four total first;7*4;120*3;18/2;(2+3)*2=10",
+      "contentSha256": "ca692213e7bffc6fd76a1c05b892090335ed0273f809723b2685fda6832c1f10"
+    },
+    "8250243170000000": {
+      "questions": [
+        300,
+        127,
+        84,
+        "8×100−8",
+        "8×3＝3×8",
+        "積",
+        400
+      ],
+      "game": "25×4",
+      "basis": "25*12;38+27+62;7*12;8*(100-1);commutativity multiplication;product;16*25;25*4=100",
+      "contentSha256": "b12c554d9d714f82a78e627cbdc09dabbfaa8d6b32ba05697c166cb6cb709b22"
+    },
+    "8250243180000000": {
+      "questions": [
+        7,
+        0.7,
+        10,
+        1.5,
+        2.3,
+        5,
+        "下の珠2こを引く",
+        7,
+        50,
+        0.86
+      ],
+      "game": "上1こ・下3こ",
+      "basis": "5+2;(5+2)/10;place factor10;(12+3)/10;(28-5)/10;3+2;4+5-2=7;5+3=8;3+4億;20+30兆;(4+82)/100",
+      "contentSha256": "002215ddb0c3df40ad10f3cc281aa91988ef43477a47871f4029ec630d52ab8e"
+    },
+    "8250243210000000": {
+      "questions": [
+        "垂直",
+        "平行",
+        "平行四辺形",
+        "ひし形",
+        "向かい合う頂点を結ぶ線",
+        "向かい合う辺",
+        "1枚を半回転し、同じ斜めの辺を合わせる",
+        "垂直に交わる"
+      ],
+      "game": "正しくない",
+      "basis": "Euclidean plane definitions; equal vectors on opposite sides; 180deg congruent trapezoid assembly; rhombus diagonals orthogonal; rotation preserves side/angle lengths",
+      "contentSha256": "e36b063ed584a8fc79de2ecd0e261361640321fe02fe7f3f994219fe5bb50851"
+    },
+    "8250243220000000": {
+      "questions": [
+        6,
+        12,
+        8,
+        "平行",
+        "展開図",
+        "C",
+        "垂直"
+      ],
+      "game": "辺は8本",
+      "basis": "opposite-face pairs3*2;edges4+4+4;vertices4+4;parallel face normals;net unfolds;four-side ring indices0 and2 opposite;vertical edge normal to base",
+      "contentSha256": "509fe0c88c4934badfcac353d75373fda73e68a0735c1234fec9a69cf55036dc"
+    },
+    "8250243230000000": {
+      "questions": [
+        "右3、上2",
+        "（3,4）",
+        3,
+        "4",
+        "基準点・向き・単位・数の順番",
+        "（2,3,3）"
+      ],
+      "game": "（0,4）",
+      "basis": "ordered tuple components;add(1,0);second component3;third4;coordinate-frame requirements;(2,3,1)+(0,0,2);origin x0 andy4",
+      "contentSha256": "e534ba53385e056ae16404c7de8b191479574b222a88ed6218019e6d953e601c"
+    },
+    "8250243240000000": {
+      "questions": [
+        12,
+        49,
+        10000,
+        200,
+        30000,
+        1000000,
+        42,
+        "4×5",
+        4
+      ],
+      "game": "たて2cm・横6cm",
+      "basis": "3*4;7*7;100^2;2*100;3*10000;1000^2;8*6-2*3;unit-cell count;24/6;2*6=12",
+      "contentSha256": "7237987335b5ade2639a36bbe3c4d3b31de4f99f53549152edd45fcb21413acf"
+    },
+    "8250243250000000": {
+      "questions": [
+        90,
+        180,
+        360,
+        230,
+        "60°",
+        "変わらない",
+        280,
+        [
+          "中心を頂点に合わせる",
+          "0°線を一方の辺に合わせる",
+          "対応する目盛りを読む"
+        ]
+      ],
+      "game": "140°",
+      "basis": "quarter/half/full revolution;180+50;follow aligned zero;length scaling preserves angle;360-80;measurement procedure;90<140<180",
+      "contentSha256": "772561f2edb2dd3cb26c215cfd3493554927bfb74820a7070a09a8c90a1407b5"
+    },
+    "8250243310000000": {
+      "questions": [
+        13,
+        19,
+        "1＋3×□＝△",
+        4,
+        "1こ減る",
+        "同じ"
+      ],
+      "game": 5,
+      "basis": "4+3*(4-1);4+3*(6-1);4+3*(n-1)=1+3n;10-6;constant sum decrements;constant increments under equal axis scales;(16-1)/3",
+      "contentSha256": "92d3a5fda32b3e1a17648d126aaa000d54531895005ffa3f3557133cc24b049f"
+    },
+    "8250243320000000": {
+      "questions": [
+        3,
+        2,
+        "A",
+        15,
+        1.5,
+        "24÷8",
+        "同じ"
+      ],
+      "game": "5→10",
+      "basis": "12/4;12/6;6/2=3>8/4=2;5*3;3/2;comparison/reference;9/3=15/5=3;10/5=2",
+      "contentSha256": "88ba95ff37ac8780de0faf0f648259231b5f68b19ef6442b606a6dda27a70e42"
+    },
+    "8250243411100000": {
+      "questions": [
+        5,
+        7,
+        10,
+        "赤・丸の欄だけ",
+        "赤丸3枚を2回数えたから",
+        "4",
+        "表の総数と元のカード数も照合する"
+      ],
+      "game": "赤丸を2つの欄に置く",
+      "basis": "3+2;3+4;3+2+4+1;unique cell;red+circle double-counts3 and omits1 gives net+2;2*2;source reconciliation;double-count wrong",
+      "contentSha256": "769ce8ef1f1d080f222e392985528f96f59826f5309588381d136cc8ae85b776"
+    },
+    "8250243411200000": {
+      "questions": [
+        18,
+        2,
+        "10時〜11時",
+        "14℃",
+        4,
+        "それぞれの縦軸と単位",
+        "記録だけでは確定できない",
+        "棒グラフ"
+      ],
+      "game": "18℃→14℃",
+      "basis": "time10 datum18;18-16;18=18;2*7;18-14;axis dimensions;unobserved midpoint unconstrained;categorical counts;drop4>drop1>drop0",
+      "contentSha256": "76d87c7da27326941a589934e1b0529cbdf72d1130315c5124357385603efdbf"
+    },
+    "8250243130000000": {
+      "questions": [
+        12,
+        28,
+        "6あまり12",
+        26,
+        "24÷3",
+        "4あまり1",
+        96
+      ],
+      "game": "95÷30",
+      "basis": "144/12;672/24;156=24*6+12;780/30;240/30=24/3;9=2*4+1;16*6; floor(95/30)=3",
+      "contentSha256": "efabd5a453be42dab15252c77570fc3d6ef13dde0725158483fbcfb5de49f39d"
+    }
+  },
+  "metadataSha256": "7b43f189ba32f14510f1fd1e5ab2fab5ab6ec4d05982e2c5eba066f4be6a21fd"
+}

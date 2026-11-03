@@ -18,7 +18,8 @@ async function metrics(page){return page.evaluate(pattern=>{
   return {length:document.body.innerText.length,forbidden:(copy.match(bad)||[]).length,overflow:document.documentElement.scrollWidth>innerWidth,heading:document.querySelectorAll('main h1').length};
 },banned);}
 async function audit(page,context){const m=await metrics(page);assert.ok(m.length>80,context+': nonempty visible UI');assert.equal(m.forbidden,0,context+': forbidden copy');assert.equal(m.overflow,false,context+': horizontal overflow');assert.equal(m.heading,1,context+': one visible main heading');visited++;}
-async function navigate(page,hash){await page.evaluate(h=>{location.hash=h;},hash);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));}
+async function waitRoute(page,hash){const match=/^#(unit|practice|result|buddy)\/(825024[0-9A-Z]{10})$/.exec(hash);const expectedPage=match?match[1]:hash==='#list'?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';await page.waitForFunction(({hash,expectedPage,expectedCode})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode;},{hash,expectedPage,expectedCode});}
+async function navigate(page,hash){await page.evaluate(h=>{location.hash=h;},hash);await waitRoute(page,hash);}
 async function submit(page,q,kind,wrong){
   const form=page.locator('form[data-kind="'+kind+'"]');
   if(q.type==='number')await form.locator('input[name=answer]').fill(String(wrong?q.answer+1:q.answer));
@@ -40,10 +41,10 @@ async function run(){
   const browser=await chromium.launch({headless:true,executablePath:chrome});
   try{
     const context=await browser.newContext({viewport:{width:1440,height:1000}});
-    const unexpected=[];const errors=[];
+    const unexpected=[];const errors=[];context.on('page',p=>p.on('pageerror',error=>errors.push(error.name)));
     await context.route('https://**/*',route=>{const host=new URL(route.request().url()).hostname;if(host!=='fonts.googleapis.com'&&host!=='fonts.gstatic.com')unexpected.push(host);return route.abort();});
     await context.route('http://**/*',route=>{unexpected.push(new URL(route.request().url()).hostname);return route.abort();});
-    const page=await context.newPage();page.on('pageerror',error=>errors.push(error.name));
+    const page=await context.newPage();
     await page.goto(url+'#list');
     const units=await page.evaluate(()=>BL.core.units().map(u=>({code:u.code,questions:u.questions,game:u.game,buddy:u.buddy,entries:u.entries,workedExample:u.workedExample})));
     assert.ok(units.length>=16,'material loaded');
@@ -63,7 +64,7 @@ async function run(){
             await navigate(page,'#'+route+'/'+unit.code);await audit(page,route+' '+unit.code+' '+width+' '+mode);
           }
         }
-        await page.locator('[data-action=pause]').click();await audit(page,'paused '+width+' '+mode);
+        await page.locator('[data-action=pause]').click();await waitRoute(page,'#paused');await audit(page,'paused '+width+' '+mode);
       }
       await navigate(page,'#list');
       await page.screenshot({path:path.join(output,'list-'+width+'.png'),fullPage:true});
@@ -81,7 +82,7 @@ async function run(){
       const short=await page.locator('#explanation-copy').textContent();
       await page.locator('[data-action=length][data-length=detail]').click();
       assert.notEqual(await page.locator('#explanation-copy').textContent(),short,'detail changes explanation');
-      for(const entry of unit.entries){await page.locator('[data-action=interest][data-interest='+entry.category+']').click();assert.equal(await page.locator('#example-title').textContent(),entry.title,'interest visibly changes example');}
+      for(const entry of unit.entries){const selector=await page.evaluate(id=>'[data-action=interest][data-interest="'+CSS.escape(id)+'"]',entry.category);await page.locator(selector).click();assert.equal(await page.locator('#example-title').textContent(),entry.title,'interest visibly changes example');}
       for(let i=1;i<unit.workedExample.steps.length;i++)await page.locator('[data-action=worked-next]').click();
       assert.equal(await page.locator('.worked-answer').textContent(),unit.workedExample.answer,'all worked steps lead to answer');
       await page.locator('[data-action=worked-reset]').click();assert.equal(await page.locator('.worked-steps li').count(),1);
@@ -122,11 +123,11 @@ async function run(){
     await page.locator('#buddy-answer').fill('<img src=x onerror="window.injected=true">');await page.locator('form[data-kind=buddy] button[type=submit]').click();
     assert.equal(await page.locator('.message.own img').count(),0);assert.equal(await page.evaluate(()=>Boolean(window.injected)),false);
     assert.equal(await page.evaluate(()=>localStorage.getItem('des.basic-learning.v1').includes('<img')),false);
-    await page.locator('[data-action=pause]').click();await page.locator('.resume-card a').first().click();assert.notEqual(await page.evaluate(()=>location.hash),'#paused');
+    const resumeHash=await page.evaluate(()=>location.hash);await page.locator('[data-action=pause]').click();await waitRoute(page,'#paused');await page.locator('.resume-card a').first().click();await waitRoute(page,resumeHash);assert.equal(await page.locator('.message.own').count(),1,'pause/resume retains submitted text');
     await navigate(page,'#unit/not-a-code');await audit(page,'invalid route');
-    assert.equal(unexpected.length,0,'no unexpected remote requests');assert.equal(errors.length,0,'no application JS errors');
     const blocked=await context.newPage();await blocked.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw Error('blocked storage');}});});await blocked.goto(url+'#list');assert.ok(await blocked.locator('.storage-warning').isVisible());await audit(blocked,'blocked storage');await blocked.close();
     const corrupt=await context.newPage();await corrupt.addInitScript(()=>localStorage.setItem('des.basic-learning.v1','{bad'));await corrupt.goto(url+'#list');assert.equal(await corrupt.locator('.unit-card').count(),units.length);await audit(corrupt,'corrupt storage');await corrupt.close();
+    assert.equal(unexpected.length,0,'no unexpected remote requests');assert.equal(errors.length,0,'no application JS errors');
     const report={viewports:[1440,1024,390],modes:['es','js'],checkedViews:visited,practiceAnswers:answered,buddyDialogues:dialogues,interactiveVisuals:visuals,jsErrors:errors.length,unexpectedRequests:unexpected.length,offline:true};
     fs.writeFileSync(path.join(root,'output/browser-check.json'),JSON.stringify(report,null,2)+'\n');
     console.log('BROWSER_CHECK='+JSON.stringify(report));
