@@ -13,6 +13,8 @@ function fixture() {
     explanations:{es:{short:'3 × 4 = 12。',detail:'12 ÷ 3 = 4。3 × 4 = 12。'},js:{short:'3 × 4 = 12。',detail:'12 ÷ 3 = 4。3 × 4 = 12。'}},
     entries:[{category:'craft',title:'箱',text:'3 × 4 = 12。',activityIds:['craft-cardboard']},{category:'craft',title:'紙',text:'12 ÷ 3 = 4。',activityIds:['craft-lego']}],
     claims:[{id:'c',text:'3 × 4 = 12。',status:'verified',sourceIds:['s']}],
+    workedExample:{title:'計算',prompt:'12を分ける',steps:[{text:'3に着目する'},{text:'4つ集める'},{text:'12になる'}],answer:'4',claimIds:['c']},
+    misconception:{trap:'数を確かめる',correction:'3 × 4 = 12。',claimIds:['c']},
     'adapt-rules':{allowed:['言いかえ'],forbidden:['数を変えない']},review:{evidence:'verified',publication:'preview',humanApproval:null},
     questions:[q,Object.assign({},q,{id:'n2',answer:0}),Object.assign({},q,{id:'n3',answer:0.3}),{id:'c',type:'choice',prompt:'選ぶ',options:['12','13'],answer:'12',explanation:'3 × 4 = 12。',claimIds:['c']},{id:'o',type:'order',prompt:'小さい順',items:['12','3','4'],answer:['3','4','12'],explanation:'3 < 4 < 12。',claimIds:['c']}],
     game:Object.assign({},q,{id:'g'}),buddy:[{id:'b',prompt:'説明する',followUp:'確かめる',checkpoints:['3 × 4 = 12。'],sample:'3 × 4 = 12。',claimIds:['c']}]
@@ -34,6 +36,7 @@ check(core.units().length === 1, 'positive probe accepted unit');
 check(core.progress(code).percent === 0, 'starts at zero');
 check(core.unit('__proto__') === null && core.unit('constructor') === null, 'exact own key only');
 check(core.grade(unit.questions[0], '４') && core.grade(unit.questions[0], ' 4.00 '), 'normalized exact decimal');
+check(core.validAnswer(unit.questions[0], '4.00') && !core.validAnswer(unit.questions[0], '4cats'), 'input validity separate from correctness');
 ['',' ','4abc','4e0','0x4','Infinity','4+0',[],null,true].forEach(value => check(!core.grade(unit.questions[0],value), 'reject invalid numeric input'));
 check(!core.grade(unit.questions[1],'') && core.grade(unit.questions[1],'0'), 'zero is not blank');
 check(!core.grade(unit.questions[2],'0.30000000000000004'), 'no broad floating tolerance');

@@ -44,7 +44,11 @@
     if (!Array.isArray(unit.buddy) || !unit.buddy.length || unit.buddy.length > 2 || !unique(unit.buddy.map(function (b) { return b.id; })) || !unit.buddy.every(function (b) {
       return text(b.id) && text(b.prompt) && text(b.followUp) && text(b.sample) && Array.isArray(b.checkpoints) && b.checkpoints.length > 0 && b.checkpoints.every(text) && Array.isArray(b.claimIds) && b.claimIds.length > 0 && b.claimIds.every(function (id) { return own(claims, id); });
     })) return false;
-    return !forbidden.test(JSON.stringify([unit.title, unit.goal, unit.explanations, unit.entries, unit.questions, unit.game, unit.buddy]));
+    var example = unit.workedExample, misconception = unit.misconception;
+    if (!example || !text(example.title) || !text(example.prompt) || !text(example.answer) || !Array.isArray(example.steps) || example.steps.length < 3 || !example.steps.every(function (step) { return step && text(step.text); })) return false;
+    if (!misconception || !text(misconception.trap) || !text(misconception.correction)) return false;
+    if (![example, misconception].every(function (part) { return Array.isArray(part.claimIds) && part.claimIds.length > 0 && part.claimIds.every(function (id) { return own(claims, id); }); })) return false;
+    return !forbidden.test(JSON.stringify([unit.title, unit.goal, unit.explanations, unit.entries, unit.questions, unit.game, unit.buddy, example, misconception]));
   }
 
   // Exact schema and review gating run before any material can be rendered.
@@ -84,6 +88,7 @@
     if (question.type === 'order') return Array.isArray(value) && value.length === question.items.length && unique(value) && value.every(function (item) { return question.items.indexOf(item) !== -1; }) ? value.slice() : null;
     return null;
   }
+  core.validAnswer = function (question, value) { return Boolean(question) && cleanValue(question, value) !== null; };
   function defaults() { return {version: data.version, mode: 'es', interest: 'all', progress: dictionary(), resume: null}; }
   function sanitize(raw) {
     var state = defaults();
