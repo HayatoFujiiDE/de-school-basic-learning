@@ -6,14 +6,14 @@
     '8250243110000000': {kind:'large',title:'まとまりを変えて見る',note:'同じ大きさを、万・億・兆のまとまりで見てみよう。',defaults:{n:3},controls:[['n','兆のまとまり',1,9,1]]},
     '8250243120000000': {kind:'round',title:'数直線で四捨五入',note:'千の位までの概数にする。1500を境に、近い千のまとまりを確かめよう。',defaults:{n:1420},controls:[['n','もとの数',1000,2000,10]]},
     '8250243131100000': {kind:'divide',title:'同じ数ずつ分ける',note:'一つの箱に3個ずつ。箱の数と、残る個数を動かして確かめよう。',defaults:{n:26},controls:[['n','全部の個数',3,60,1]]},
-    '8250243131400000': {kind:'divide2',title:'12個のまとまりで分ける',note:'一つの箱に12個ずつ。箱がいくつできるか、残りはいくつか。',defaults:{n:158},controls:[['n','全部の個数',120,240,1]]},
+    '8250243130000000': {kind:'divide2',title:'12個のまとまりで分ける',note:'一つの箱に12個ずつ。箱がいくつできるか、残りはいくつか。',defaults:{n:158},controls:[['n','全部の個数',120,240,1]]},
     '8250243141200000': {kind:'decimal',title:'小数の位を分けて見る',note:'1を10こに分けた一つが0.1。さらに10こずつに分けていこう。',defaults:{n:1234},controls:[['n','0.001の個数',1,1999,1]]},
     '8250243141300000': {kind:'decimalAdd',title:'同じ位をそろえる',note:'1.25と、下のつまみで作った小数。小数点の位置をそろえて計算しよう。',defaults:{n:70,op:'add'},controls:[['n','0.01の個数',0,99,1]],choices:[['op','add','たす'],['op','subtract','ひく']]},
     '8250243141400000': {kind:'decimalMultiply',title:'0.4のまとまり',note:'かけ算でまとめる見方と、わり算で分ける見方を行き来してみよう。',defaults:{n:3},controls:[['n','まとまりの数',1,6,1]]},
     '8250243150000000': {kind:'fraction',title:'4分の1をならべる',note:'同じ大きさの1を、4つに等しく分ける。4分の1を足すと、どうなる？',defaults:{n:5},controls:[['n','4分の1の個数',0,12,1]]},
     '8250243160000000': {kind:'expression',title:'かっこの場所を変える',note:'同じ数でも、先に計算する場所で結果が変わる。色のついた部分から見よう。',defaults:{op:'outside'},choices:[['op','outside','3 + 2 × 4'],['op','inside','(3 + 2) × 4']]},
     '8250243170000000': {kind:'distribute',title:'長方形を分けて計算',note:'横を二つに分けても、全部のマスの数は変わらない。',defaults:{n:3},controls:[['n','たてのマス',1,6,1]]},
-    '8250243180000000': {kind:'abacus',title:'そろばんの珠を動かす',note:'梁に寄った珠を数える。上の珠は5、下の珠は一つ1の役目をする。位が変わると大きさも変わる。',defaults:{h:0,t:2,o:7,d:4}},
+    '8250243180000000': {kind:'abacus',title:'そろばんの珠を動かす',note:'梁に寄った珠を数える。上の珠は5、下の珠は一つ1の役目をする。位が変わると大きさも変わる。',defaults:{h:0,t:0,o:0,d:2,c:4}},
     '8250243210000000': {kind:'shapes',title:'四角形の形を変える',note:'平行な辺を見つけよう。長方形も平行四辺形の仲間。',defaults:{op:'rectangle'},choices:[['op','rectangle','長方形'],['op','parallelogram','平行四辺形'],['op','rhombus','ひし形'],['op','trapezoid','台形']]},
     '8250243220000000': {kind:'solid',title:'箱の面と辺をたどる',note:'同じ色の面は向かい合う面。ボタンで別の組を見てみよう。',defaults:{op:'front'},choices:[['op','front','前と後ろ'],['op','side','左と右'],['op','top','上と下']]},
     '8250243230000000': {kind:'position',title:'三つの数で場所を決める',note:'横・たて・高さの順に数を使う。格子の一つ分を1として動かそう。',defaults:{x:2,y:3,z:1},controls:[['x','横',0,5,1],['y','たて',0,5,1],['z','高さ',0,3,1]]},
@@ -84,10 +84,10 @@
       return grid(7,n,4)+out(n+' × (4 + 3) = '+n+' × 4 + '+n+' × 3 = '+(n*7))+'<p class="visual-note">色で分けた横のマスは4こ分と3こ分。</p>';
     }
     if(def.kind==='abacus') {
-      var rods=['h','t','o','d'], rodNames=['100','10','1','0.1'];
+      var rods=['h','t','o','d','c'], rodNames=['100','10','1','0.1','0.01'];
       body=rect(20,20,360,235,'rx="12" class="abacus-frame"')+line(25,105,375,105,'class="beam"');
-      rods.forEach(function(key,index){var x=65+index*90, digit=s[key];body+=line(x,35,x,240,'class="rod"');body+='<ellipse cx="'+x+'" cy="'+(digit>=5?87:55)+'" rx="26" ry="11" class="bead '+(digit>=5?'engaged':'')+'"/>';for(var k=0;k<4;k++){var engaged=k<digit%5;body+='<ellipse cx="'+x+'" cy="'+(engaged?125+k*24:160+k*24)+'" rx="26" ry="11" class="bead '+(engaged?'engaged':'')+'"/>';}body+=label(x,285,rodNames[index]+'の位','text-anchor="middle"');});
-      return svg(body,300,'そろばん。各桁の数は'+rods.map(function(k){return s[k];}).join('、'))+out('表す数：'+((s.h*1000+s.t*100+s.o*10+s.d)/10).toFixed(1));
+      rods.forEach(function(key,index){var x=60+index*70, digit=s[key];body+=line(x,35,x,240,'class="rod"');body+='<ellipse cx="'+x+'" cy="'+(digit>=5?87:55)+'" rx="26" ry="11" class="bead '+(digit>=5?'engaged':'')+'"/>';for(var k=0;k<4;k++){var engaged=k<digit%5;body+='<ellipse cx="'+x+'" cy="'+(engaged?125+k*24:160+k*24)+'" rx="26" ry="11" class="bead '+(engaged?'engaged':'')+'"/>';}body+=label(x,285,rodNames[index]+'の位','text-anchor="middle"');});
+      return svg(body,300,'そろばん。各桁の数は'+rods.map(function(k){return s[k];}).join('、'))+out('表す数：'+((s.h*10000+s.t*1000+s.o*100+s.d*10+s.c)/100).toFixed(2));
     }
     if(def.kind==='shapes') {
       var points={rectangle:'80,55 320,55 320,205 80,205',parallelogram:'120,55 350,55 280,205 50,205',rhombus:'200,25 330,130 200,235 70,130',trapezoid:'125,55 280,55 335,205 55,205'};
@@ -160,7 +160,7 @@
     var s=stateFor(unit),controls='';
     (def.controls||[]).forEach(function(c){controls+='<label class="visual-control">'+esc(c[1])+' <output data-value="'+c[0]+'">'+s[c[0]]+'</output><input type="range" data-visual-field="'+c[0]+'" min="'+c[2]+'" max="'+c[3]+'" step="'+c[4]+'" value="'+s[c[0]]+'" aria-label="'+esc(c[1])+'"></label>';});
     if(def.choices)controls+='<div class="visual-choices">'+def.choices.map(function(c){return '<button type="button" data-visual-field="'+c[0]+'" data-visual-value="'+c[1]+'" aria-pressed="'+(s[c[0]]===c[1])+'">'+esc(c[2])+'</button>';}).join('')+'</div>';
-    if(def.kind==='abacus')controls+='<div class="abacus-controls">'+['h','t','o','d'].map(function(key,index){return '<div><span>'+['100','10','1','0.1'][index]+'の位</span><button type="button" data-abacus="'+key+'" data-step="1" aria-label="'+['100','10','1','0.1'][index]+'の位の数を1増やす">＋</button><button type="button" data-abacus="'+key+'" data-step="-1" aria-label="'+['100','10','1','0.1'][index]+'の位の数を1減らす">−</button></div>';}).join('')+'</div>';
+    if(def.kind==='abacus')controls+='<div class="abacus-controls">'+['h','t','o','d','c'].map(function(key,index){return '<div><span>'+['100','10','1','0.1','0.01'][index]+'の位</span><button type="button" data-abacus="'+key+'" data-step="1" aria-label="'+['100','10','1','0.1','0.01'][index]+'の位の数を1増やす">＋</button><button type="button" data-abacus="'+key+'" data-step="-1" aria-label="'+['100','10','1','0.1','0.01'][index]+'の位の数を1減らす">−</button></div>';}).join('')+'</div>';
     return '<div class="visual-panel panel"><p class="panel-kicker">'+(BL.core.state.mode==='es'?'さわって、たしかめる例':'動かせる例')+'</p><h2 class="panel-title">'+esc(def.title)+'</h2><p class="visual-note">'+esc(def.note)+'</p><div data-visual-stage>'+stage(def,s)+'</div><div class="visual-controls">'+controls+'</div><button type="button" class="quiet-button" data-visual-reset>図をもとに戻す</button><p class="subtle-note">下の説明や練習では、別の数も使います。</p></div>';
   }
   function bind(container,unit) {
@@ -169,7 +169,7 @@
     container.addEventListener('input',function(event){var field=event.target.getAttribute('data-visual-field');var control=(def.controls||[]).filter(function(c){return c[0]===field;})[0];if(!control)return;var value=Number(event.target.value);if(!Number.isFinite(value)||value<control[2]||value>control[3])return;stateFor(unit)[field]=value;update();});
     container.addEventListener('click',function(event){var el=event.target.closest('button');if(!el || !container.contains(el))return;
       if(el.hasAttribute('data-visual-reset')){memories[unit.code]=Object.assign({},def.defaults);Array.prototype.forEach.call(container.querySelectorAll('input[data-visual-field]'),function(input){input.value=stateFor(unit)[input.getAttribute('data-visual-field')];});update();return;}
-      if(el.hasAttribute('data-abacus')){var key=el.getAttribute('data-abacus'),step=Number(el.getAttribute('data-step'));if(['h','t','o','d'].indexOf(key)!==-1&&(step===1||step===-1)){stateFor(unit)[key]=Math.max(0,Math.min(9,stateFor(unit)[key]+step));update();}return;}
+      if(el.hasAttribute('data-abacus')){var key=el.getAttribute('data-abacus'),step=Number(el.getAttribute('data-step'));if(['h','t','o','d','c'].indexOf(key)!==-1&&(step===1||step===-1)){stateFor(unit)[key]=Math.max(0,Math.min(9,stateFor(unit)[key]+step));update();}return;}
       var field=el.getAttribute('data-visual-field'),value=el.getAttribute('data-visual-value');if((def.choices||[]).some(function(c){return c[0]===field&&c[1]===value;})){stateFor(unit)[field]=value;update();}
     });
   }

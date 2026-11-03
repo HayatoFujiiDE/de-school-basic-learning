@@ -18,7 +18,7 @@ function mathematicalCheck(kind,s,html){
  case 'fraction':{assert.strictEqual((html.match(/class="grid-first"/g)||[]).length,n);assert.strictEqual((html.match(/class="grid-empty"/g)||[]).length,12-n);let text=n+'/4';if(n===0)text+=' = 0';else if(n%4===0)text+=' = '+n/4;else if(n>4)text+=' = '+Math.floor(n/4)+' と '+n%4+'/4';assert.strictEqual(r,text);break;}
  case 'expression':assert.strictEqual(r,'= '+(s.op==='inside'?(3+2)*4:3+2*4));break;
  case 'distribute':assert.strictEqual((html.match(/class="grid-first"/g)||[]).length,n*4);assert.strictEqual((html.match(/class="grid-second"/g)||[]).length,n*3);assert.strictEqual(r,`${n} × (4 + 3) = ${n} × 4 + ${n} × 3 = ${n*4+n*3}`);break;
- case 'abacus':{let ds=['h','t','o','d'].map(k=>s[k]);assert.strictEqual(r,'表す数：'+(s.h*100+s.t*10+s.o+s.d/10).toFixed(1));assert.strictEqual((html.match(/class="bead engaged"/g)||[]).length,ds.reduce((a,d)=>a+Math.floor(d/5)+d%5,0));break;}
+ case 'abacus':{let ds=['h','t','o','d','c'].map(k=>s[k]);assert.strictEqual(r,'表す数：'+(s.h*100+s.t*10+s.o+s.d/10+s.c/100).toFixed(2));assert.strictEqual((html.match(/class="bead engaged"/g)||[]).length,ds.reduce((a,d)=>a+Math.floor(d/5)+d%5,0));break;}
  case 'shapes':{let points=html.match(/<polygon points="([^"]+)"/)[1].split(' ').map(p=>p.split(',').map(Number));let edges=points.map((p,i)=>[points[(i+1)%4][0]-p[0],points[(i+1)%4][1]-p[1]]);const cross=(a,b)=>a[0]*b[1]-a[1]*b[0];assert(cross(edges[0],edges[2])===0);if(s.op!=='trapezoid')assert(cross(edges[1],edges[3])===0);else assert.notStrictEqual(cross(edges[1],edges[3]),0);if(s.op==='rhombus')assert(edges.map(v=>v[0]**2+v[1]**2).every(v=>v===27925));break;}
  case 'solid':assert(r.includes('面は6つ、辺は12本、頂点は8つ'));assert.strictEqual((html.match(/class="solid-selected"/g)||[]).length,2);break;
  case 'position':assert.strictEqual(r,`（横 ${s.x}、たて ${s.y}、高さ ${s.z}）`);assert(html.includes(`cx="${55+45*s.x+15*s.y}" cy="${250-25*s.y-35*s.z}"`));break;
@@ -41,7 +41,7 @@ for(const [code,def] of Object.entries(ctx.BL.visuals.definitions)){
  function enumerate(index){if(index===(def.controls||[]).length){mathematicalCheck(def.kind,values,stage.innerHTML||html);sliderStates++;return;}const c=def.controls[index];for(let v=c[2];v<=c[3];v+=c[4]){input(c[0],v);enumerate(index+1);}}
  if(def.controls)enumerate(0);
  if(def.choices)for(const c of def.choices){values[c[0]]=c[1];click({'data-visual-field':c[0],'data-visual-value':c[1]});mathematicalCheck(def.kind,values,stage.innerHTML);if(def.controls)enumerate(0);}
- if(def.kind==='abacus')for(const key of ['h','t','o','d']){while(values[key]>0){click({'data-abacus':key,'data-step':'-1'});values[key]--;}for(let d=0;d<10;d++){if(d){click({'data-abacus':key,'data-step':'1'});values[key]++;}mathematicalCheck(def.kind,values,stage.innerHTML||html);}}
+ if(def.kind==='abacus')for(const key of ['h','t','o','d','c']){while(values[key]>0){click({'data-abacus':key,'data-step':'-1'});values[key]--;}for(let d=0;d<10;d++){if(d){click({'data-abacus':key,'data-step':'1'});values[key]++;}mathematicalCheck(def.kind,values,stage.innerHTML||html);}}
 }
 console.log('VISUAL_INDEPENDENT_MATH=PASS modules='+Object.keys(ctx.BL.visuals.definitions).length+' assertions='+checks+' slider_combinations='+sliderStates);
 console.log('VISUAL_SHA256='+crypto.createHash('sha256').update(source).digest('hex'));
