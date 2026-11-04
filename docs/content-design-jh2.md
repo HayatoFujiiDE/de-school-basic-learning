@@ -8,7 +8,7 @@
 
 file://、ES2017、非moduleの通常scriptで動き、fetch・外部runtime・式評価器を追加しない。分数や文字式の答えは選択式、または指定された分母に対する分子などの数値で答える。数字入力へ文字式の評価器を持ち込まない。順序問題は操作の依存関係がある2問だけで、独立した証明根拠の並びを唯一の解として強制しない。
 
-作者版は全件review.evidence=pending、publication=preview、humanApproval=null。claimのverifiedは出典・作者検算を付した主張の状態であり、unitの独立承認とは別。独立担当の全件照合後、統合担当がunit.evidenceだけを昇格する。公開許可は別の承認記録に従う。追加後は143単元、練習1129問になる。
+作者版は全件review.evidence=pending、publication=preview、humanApproval=null。claimのverifiedは出典・作者検算を付した主張の状態であり、unitの独立承認とは別。独立担当の全件照合後、統合担当がunit.review.evidenceだけを昇格する。公開許可は別の承認記録に従う。追加後は143単元、練習1129問になる。
 
 ## 一次資料と再現抽出
 

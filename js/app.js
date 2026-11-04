@@ -33,7 +33,7 @@
   function route() {
     var hash = window.location.hash || '#list';
     if (hash === '#list' || hash === '#main') return { page: 'list', unit: null, grade: core.state.grade };
-    var gradeRoute = /^#list\/(4|5|6|7)$/.exec(hash);
+    var gradeRoute = /^#list\/(4|5|6|7|8)$/.exec(hash);
     if (gradeRoute && core.grades().indexOf(Number(gradeRoute[1])) !== -1) return { page: 'list', unit: null, grade: Number(gradeRoute[1]) };
     if (hash === '#paused') return { page: 'paused', unit: null };
     var match = /^#(unit|practice|result|buddy)\/([0-9A-Z]{16})$/.exec(hash);
@@ -122,7 +122,7 @@
     var fieldId = kind + '-answer';
     var html = '<form class="question-form" data-kind="' + kind + '" data-question="' + e(q.id) + '" novalidate><fieldset><legend class="sr-only">' + e(q.prompt) + '</legend>';
     if (q.type === 'number') {
-      html += '<label class="sr-only" for="' + fieldId + '">答え</label><div class="answer-row"><input class="number-input" id="' + fieldId + '" name="answer" type="text" inputmode="' + (core.gradeOf(unit) === 7 ? 'text' : 'decimal') + '" autocomplete="off" maxlength="30" value="' + e(value) + '" aria-label="答え"' + (feedback && feedback.invalid ? ' aria-invalid="true" aria-describedby="answer-feedback"' : '') + '>' + (q.suffix ? '<span class="input-suffix">' + e(q.suffix) + '</span>' : '') + '</div>';
+      html += '<label class="sr-only" for="' + fieldId + '">答え</label><div class="answer-row"><input class="number-input" id="' + fieldId + '" name="answer" type="text" inputmode="' + (core.gradeOf(unit) >= 7 ? 'text' : 'decimal') + '" autocomplete="off" maxlength="30" value="' + e(value) + '" aria-label="答え"' + (feedback && feedback.invalid ? ' aria-invalid="true" aria-describedby="answer-feedback"' : '') + '>' + (q.suffix ? '<span class="input-suffix">' + e(q.suffix) + '</span>' : '') + '</div>';
     } else if (q.type === 'choice') {
       html += '<div class="choice-list">' + q.options.map(function (option, index) {
         return '<label class="choice-option"><input name="answer" type="radio" value="' + index + '"' + (value === option ? ' checked' : '') + '><span>' + e(option) + '</span></label>';
