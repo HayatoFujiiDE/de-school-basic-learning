@@ -272,7 +272,7 @@
 
 - 状態数: 4、既定値: `{"t":1}`。
 - `t`: number / range / `[0,1,2,3]`。
-- 数学: `ideal motions A:s=t²,B:s=2t,t>=0`。期待: `{"A":"t*t","B":"2*t","equalTimes":[0,2],"difference":"t*t-2*t"}`。
+- 数学: `ideal motions A:s=t²,B:s=2t,0<=t<=3`。期待: `{"A":"t*t","B":"2*t","equalTimes":[0,2],"difference":"t*t-2*t"}`。
 - 条件: 二次と一次の交点の符号・時間範囲を確認。安全距離など実世界の保証へ広げない。
 - 構成: P(t,s)=(100+120t,290-24s); two curves onlyt0..3. Selected dots deliberately coincide at t0 and2, label both, not two counted objects.
 - 主なID: `jh3-visual-motion-quadratic`, `jh3-visual-motion-linear`, `jh3-visual-motion-point-A`, `jh3-visual-motion-point-B`, `jh3-visual-summary`。

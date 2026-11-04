@@ -13,20 +13,22 @@
   var unitMap = dictionary();
   var accepted = [];
   var core = {storageOK: true, rejectedCount: 0};
-  // The official school-stage prefix is part of the identity. Internal 7/8 mean
-  // junior-high years 1/2; never infer school stage from code character 6 alone.
+  // The official school-stage prefix is part of the identity. Internal 7/8/9 mean
+  // junior-high years 1/2/3; never infer school stage from code character 6 alone.
   var courses = {
     4: {label: '小学4年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
     5: {label: '小学5年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
     6: {label: '小学6年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
     7: {label: '中学1年生', subject: '数学', domainOrder: 'ACBD', domains: ['数と式', '図形', '関数', 'データの活用']},
-    8: {label: '中学2年生', subject: '数学', domainOrder: 'ACBD', domains: ['数と式', '図形', '関数', 'データの活用']}
+    8: {label: '中学2年生', subject: '数学', domainOrder: 'ACBD', domains: ['数と式', '図形', '関数', 'データの活用']},
+    9: {label: '中学3年生', subject: '数学', domainOrder: 'ACBD', domains: ['数と式', '図形', '関数', 'データの活用']}
   };
   function codeGrade(code) {
     if (typeof code !== 'string') return null;
     if (/^82502[456][0-9A-Z]{10}$/.test(code)) return Number(code.charAt(5));
     if (/^835021[0-9A-Z]{10}$/.test(code)) return 7;
-    return /^835022[0-9A-Z]{10}$/.test(code) ? 8 : null;
+    if (/^835022[0-9A-Z]{10}$/.test(code)) return 8;
+    return /^835023[0-9A-Z]{10}$/.test(code) ? 9 : null;
   }
   core.gradeLabel = function (grade) { return own(courses, grade) ? courses[grade].label : ''; };
   core.subject = function (grade) { return own(courses, grade) ? courses[grade].subject : ''; };
@@ -82,7 +84,7 @@
   });
   accepted.sort(function (a, b) { return codeGrade(a.code) - codeGrade(b.code) || a.order - b.order; });
   core.gradeOf = function (unit) { return unit && own(unitMap, unit.code) && unitMap[unit.code] === unit ? codeGrade(unit.code) : null; };
-  core.grades = function () { return [4, 5, 6, 7, 8].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
+  core.grades = function () { return [4, 5, 6, 7, 8, 9].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
   core.units = function (grade) { return grade === undefined ? accepted.slice() : accepted.filter(function (unit) { return core.gradeOf(unit) === grade; }); };
   core.unit = function (code) { return typeof code === 'string' && own(unitMap, code) ? unitMap[code] : null; };
   core.escape = function (value) {
@@ -95,8 +97,8 @@
   // substituted codes before saving can project away any existing record.
   var expectedCatalogue = BL.expectedCatalogue;
   var requiredVersion = typeof document !== 'undefined' && document.documentElement ? document.documentElement.getAttribute('data-catalogue-version') : null;
-  var catalogueSizes = {'4': 66, '5': 104, '6': 143};
-  var catalogueMaximumGrade = {'4': 6, '5': 7, '6': 8};
+  var catalogueSizes = {'4': 66, '5': 104, '6': 143, '7': 190};
+  var catalogueMaximumGrade = {'4': 6, '5': 7, '6': 8, '7': 9};
   var requireCatalogue = Boolean(expectedCatalogue) || Boolean(requiredVersion) || own(catalogueSizes, data.version);
   core.ready = true;
   if (requireCatalogue) {
@@ -107,7 +109,7 @@
   var catalogueReadOnly = !core.ready || core.rejectedCount > 0;
   core.readOnly = catalogueReadOnly;
   function supportedVersion(version) {
-    return version === data.version || (version === '2' && ['3', '4', '5', '6'].indexOf(data.version) !== -1) || (version === '3' && ['4', '5', '6'].indexOf(data.version) !== -1) || (version === '4' && ['5', '6'].indexOf(data.version) !== -1) || (version === '5' && data.version === '6');
+    return version === data.version || (version === '2' && ['3', '4', '5', '6', '7'].indexOf(data.version) !== -1) || (version === '3' && ['4', '5', '6', '7'].indexOf(data.version) !== -1) || (version === '4' && ['5', '6', '7'].indexOf(data.version) !== -1) || (version === '5' && ['6', '7'].indexOf(data.version) !== -1) || (version === '6' && data.version === '7');
   }
 
   function numeric(value) {
@@ -143,7 +145,7 @@
     if (core.unit(raw.resume)) state.resume = raw.resume;
     // Only byte-identical material that actually existed in the source version
     // migrates forward. A forged new-grade record in an old envelope is dropped.
-    var legacyMaximum = raw.version !== data.version && supportedVersion(raw.version) ? {'2': 4, '3': 5, '4': 6, '5': 7}[raw.version] : null;
+    var legacyMaximum = raw.version !== data.version && supportedVersion(raw.version) ? {'2': 4, '3': 5, '4': 6, '5': 7, '6': 8}[raw.version] : null;
     if (legacyMaximum) {
       if (state.grade > legacyMaximum) state.grade = 4;
       if (state.resume && core.gradeOf(core.unit(state.resume)) > legacyMaximum) state.resume = null;

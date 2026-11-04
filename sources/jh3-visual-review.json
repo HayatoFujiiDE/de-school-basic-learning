@@ -1,0 +1,23 @@
+{
+  "evidence": "verified",
+  "reviewer": "independent-primary-agent",
+  "scope": "Independent mathematics, all authored diagrams/scenes, and the exact referenced 47 visual, 8 motion and 2 video claims reviewed. Human publication approval remains unset.",
+  "visualsSha256": "7ed07cd7e30e381e4be5d20f2122ff28453bba8e204b6e6edf5977cf1b5bf365",
+  "scenesSha256": "feaa1545560fce6bf1371476b83b3a6d7f8ab8b1d231fbd0870f8ea0642514e7",
+  "units": 47,
+  "interactiveStates": 441,
+  "scenes": 8,
+  "steps": 32,
+  "sampledFrames": 3232,
+  "legacyDiagramsCompared": 143,
+  "legacyFramesCompared": 435,
+  "positiveProbes": 14,
+  "methods": [
+    "Frozen exact finite state domains and independent equations, intervals, side ratios, circle geometry, disjoint area partitions and sample combinations",
+    "All 441 visual states and 3232 intermediate scene frames checked",
+    "Old 143 diagrams and 435 sampled old scene frames unchanged",
+    "Real Chrome 390px font bounds, text collisions and overflow with dedicated positive and negative controls",
+    "Primary reviewer inspected all 47 default diagrams and 32 scene stages; revised range, similarity, parabola and Pythagoras stages inspected again",
+    "Equal-length marks on unequal corresponding sides and range labels among x-axis values are rejected by dedicated mutation probes"
+  ]
+}

@@ -2,7 +2,7 @@
 // All records are synthetic and all profiles are disposable.
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const {pathToFileURL}=require('node:url'),{chromium}=require('./dependencies.cjs')('playwright');
-const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/data-catalogue-version="[0-9]+"/,'data-catalogue-version="5"').replace(/^.*jh2.*\n/gm,'');
+const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/data-catalogue-version="[0-9]+"/,'data-catalogue-version="5"').replace(/^.*jh[23].*\n/gm,'');
 const w={};for(const f of ['units.js','units-grade5.js','units-grade6.js','units-jh1.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'js',f),'utf8'),{window:w});
 const records=Object.fromEntries(w.BL.data.units.map(u=>[u.code,{answers:Object.fromEntries(u.questions.map(q=>[q.id,{value:q.answer,correct:false}])),buddy:Object.fromEntries(u.buddy.map(b=>[b.id,true]))}]));
 const first=w.BL.data.units[0].code,added=w.BL.data.units[66].code;

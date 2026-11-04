@@ -2,12 +2,14 @@
 // All records are synthetic and all profiles are disposable.
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const {pathToFileURL}=require('node:url'),{chromium}=require('./dependencies.cjs')('playwright');
-const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/data-catalogue-version="[0-9]+"/,'data-catalogue-version="6"').replace(/^.*jh3.*\n/gm,'');
 const w={};for(const f of ['units.js','units-grade5.js','units-grade6.js','units-jh1.js','units-jh2.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'js',f),'utf8'),{window:w});
 const records=Object.fromEntries(w.BL.data.units.map(u=>[u.code,{answers:Object.fromEntries(u.questions.map(q=>[q.id,{value:q.answer,correct:false}])),buddy:Object.fromEntries(u.buddy.map(b=>[b.id,true]))}]));
 const first=w.BL.data.units[0].code,added=w.BL.data.units[104].code;
 const envelope=version=>JSON.stringify({version,grade:8,mode:'js',interest:'all',progress:records,resume:added});
 const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'jh2-storage-'));
+const registryPath=path.join(scratch,'catalogue-v6.js');
+fs.writeFileSync(registryPath,'window.BL=window.BL||{};BL.expectedCatalogue='+fs.readFileSync(path.join(root,'sources/catalogue-v6.json'),'utf8')+';');
 const chrome=process.env.BASIC_LEARNING_CHROME||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 async function run(){
  const browser=await chromium.launch({headless:true,executablePath:chrome});let cases=0;
@@ -30,6 +32,7 @@ async function run(){
   for(const f of fixtures){
    let source=html.replace('<head>','<head><base href="'+pathToFileURL(root+path.sep).href+'">');
    if(f.remove)source=source.replace('  <script src="js/'+f.remove+'" defer></script>','');
+   source=source.replace('src="js/catalogue.js"','src="'+pathToFileURL(registryPath).href+'"');
    if(f.inject){const script=path.join(scratch,f.name+'.js');fs.writeFileSync(script,f.inject);source=source.replace('  <script src="js/core.js" defer></script>','  <script src="'+pathToFileURL(script).href+'" defer></script>\n  <script src="js/core.js" defer></script>');}
    const file=path.join(scratch,f.name+'.html');fs.writeFileSync(file,source);
    const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage();let errors=0;page.on('pageerror',()=>errors++);

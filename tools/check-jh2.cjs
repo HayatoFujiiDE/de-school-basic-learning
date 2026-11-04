@@ -81,8 +81,8 @@ for(const row of coverage.rows){
  assert.deepEqual(row.unitCodes,actual,'coverage projection disagrees '+row.curriculumCode);
  assert.equal(row.classification,actual.length?'mapped':'heading','incomplete coverage classification');
 }
-const registryContext={window:{BL:{}}};vm.runInNewContext(read('js/catalogue.js'),registryContext,{timeout:1000});
-const registry=clone(registryContext.window.BL.expectedCatalogue);assert.equal(registry.version,'6');
+// The old course contract is pinned even as later catalogues are added.
+const registry=json('sources/catalogue-v6.json');assert.equal(registry.version,'6');
 assert.equal(new Set(registry.codes).size,143,'registry unique');
 assert.deepEqual(registry.codes.slice().sort(),base.units.map(u=>u.code).concat(expectedCodes).sort(),'complete independent registry set');
 const expectedIndex=[],knownSources=new Set(assembled.sources.map(s=>s.id));
