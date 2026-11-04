@@ -143,6 +143,6 @@ for(const alter of [u=>delete u.grade,u=>u.grade=4,u=>u.coverageCodes=[first.cod
 }
 const mutation=coreText.replace(/var legacyGrade4 = [^;]+;/,'var legacyGrade4 = false;');
 ok(mutation!==coreText,'migration mutation probe matched real implementation');
-const mutant=boot(combined,legacy,{script:mutation}).core;
-assert.throws(()=>assert.equal(mutant.progress(first.code).percent,100));checks++;
+const mutant=boot(combined,polluted,{script:mutation}).core;
+assert.throws(()=>assert.equal(mutant.progress(synthetic.code).percent,0));checks++;
 console.log('GRADE_MIGRATION=PASS checks='+checks+' grade4_records=20 synthetic_grade5_records=1 versions=2_to_3 roundtrip=true storage_failures=true mutation_detected=true');
