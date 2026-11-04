@@ -1,0 +1,80 @@
+{
+  "renderer": {
+    "version": "0.20.1",
+    "sourceSha256": "cf631e21271155206a55fe0735f9d8fac2414c7ddbd0146332be20a0dc5b6db2",
+    "runnerSha256": "8198cf5956a113d3a93de80fdcab8178f7c4e6d5cd86f61e7c74594ab11587c6"
+  },
+  "videos": [
+    {
+      "code": "8350223121300000",
+      "path": "assets/lessons/8350223121300000.mp4",
+      "sha256": "63fec154c08d84ac0f4b9363e2e9bc2df3c35944660e275ade5de2fc420e84c7",
+      "evidence": "verified",
+      "transcript": [
+        "二つの式を、同時に満たすxとyを求める。",
+        "左辺どうし、右辺どうしを足すと、yが消える。",
+        "3x＝9からx＝3。②へ代入するとy＝1。",
+        "元の二つの式へ戻し、両方で等しいと確かめる。"
+      ],
+      "claimIds": [
+        "video"
+      ],
+      "claimTextSha256": "0e4a6e89695a8ea50dbd0ac213fc1660f8688353211df8ffda28247da265c065",
+      "review": {
+        "durationSeconds": 22,
+        "decodedFrames": 660,
+        "codec": "h264",
+        "width": 1280,
+        "height": 720,
+        "audio": false,
+        "sampledSeconds": [
+          0.5,
+          5.5,
+          7.5,
+          11.5,
+          17.5,
+          21.5
+        ]
+      }
+    },
+    {
+      "code": "8350223311000000",
+      "path": "assets/lessons/8350223311000000.mp4",
+      "sha256": "59800591a62bb573bcb0edd12ce910f6cab1c67c811b28aed8620bdb4b3c59ed",
+      "evidence": "verified",
+      "transcript": [
+        "y＝2x＋1。x＝0のときy＝1、ここが切片。",
+        "傾きは2。xを1増やすと、yは2増える。",
+        "次の点は(1,3)。式へ入れても同じ値になる。",
+        "二つの点を通る直線。目盛と原点は動かさない。"
+      ],
+      "claimIds": [
+        "video"
+      ],
+      "claimTextSha256": "b4f2e730f9335ea1e77eb39c2cf909f35e5e50e85b718ab4874fa7e571b18421",
+      "review": {
+        "durationSeconds": 22,
+        "decodedFrames": 660,
+        "codec": "h264",
+        "width": 1280,
+        "height": 720,
+        "audio": false,
+        "sampledSeconds": [
+          0.5,
+          5.5,
+          7.5,
+          11.5,
+          17.5,
+          21.5
+        ]
+      }
+    }
+  ],
+  "publicationApproval": false,
+  "reviewedAt": "2026-11-04",
+  "method": "Independent source mathematics, all1320 frames decoded and measured,12 final image samples read, exact captions and referenced video claims checked. No operator publication approval.",
+  "limitations": [
+    "Image measurements allow bounded codec and rasterization variation. Green line endpoint measurements account only for the independently fixed blue markers; mutated slope/intercept/endpoint controls must fail.",
+    "Automated frame checks are not OCR of every caption; exact source hashes and independently read final image samples bind the caption review."
+  ]
+}

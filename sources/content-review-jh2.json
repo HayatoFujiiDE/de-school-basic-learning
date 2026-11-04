@@ -1,0 +1,993 @@
+{
+  "evidence": "verified",
+  "publicationApproval": false,
+  "reviewedBy": "Independent mathematical evidence reviewer, separate from material author",
+  "reviewedAt": "2026-11-04",
+  "sourceSnapshotSha256": "38bb767360c0a69d06d0e15ecb99ca8fe2c7aff190b9a80a8f8d727bfe2a5db6",
+  "normalizedSourceSha256": "e604924de0a7fc1a11fb117fcba29b07037b1e177ce57d30d6c399001ad392e1",
+  "sourceStatusAtReview": "verified",
+  "statusOnlyPromotionAllowed": true,
+  "counts": {
+    "units": 39,
+    "questions": 312,
+    "games": 39,
+    "claims": 751,
+    "numericRecomputed": 102,
+    "officialRows": 82,
+    "terminalCodes": 48,
+    "mappedRows": 69,
+    "headings": 13
+  },
+  "coverageMeaning": "Mapped means the identified official content is represented in this original introductory material. It does not assert that one lesson exhausts instruction, practice or assessment of the curriculum objective.",
+  "sources": [
+    {
+      "url": "https://www.mext.go.jp/a_menu/other/data_00001.htm",
+      "role": "Official curriculum-code landing page"
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20230901-mxt_syoto01-000010374_10.xlsx",
+      "sha256": "7a4a76a4d8665de90755a027b09269a265b1677f52e198750c7b3e5e9a4d4d7e",
+      "role": "Independent minidom extraction of 82 grade2 mathematics rows, excluding phonetic rPh nodes"
+    },
+    {
+      "url": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2019/03/18/1387018_004.pdf",
+      "sha256": "849e254fd907721f069ae601e18db0c44ae5b79a5ea8394675f18f867d9d237e",
+      "role": "Official middle-school mathematics commentary, printed pp100–130"
+    }
+  ],
+  "items": {
+    "8350223110000000": {
+      "evidence": "verified",
+      "contentSha256": "2a25eb0b4e3bbc2ba8437b1149a91e482a95e207db4c34e3e777fec6ef3b5dcb",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Terms preserve their signs; like terms require the same variable exponents, not degree alone.",
+        "Degree definitions must exclude the zero polynomial; clarification requested."
+      ]
+    },
+    "8350223111100000": {
+      "evidence": "verified",
+      "contentSha256": "6839406b65504419b34410bd978f2207b1f2e1c0700d23ca712962a1dab587a0",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Minus before parentheses applies to every term; worked example substitution gives7.",
+        "Buddy must say x-terms cancel, not x=0; expression2y may itself be0 when y=0. Clarification requested."
+      ]
+    },
+    "8350223112100000": {
+      "evidence": "verified",
+      "contentSha256": "3bbbbc5ea56d7def9cb3c87d7323db783f3c3d3939b835466c9e405ca66e3a13",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "All cancellation examples retain the original divisor's nonzero conditions, including after simplification.",
+        "Positive-length model x>0 and squared units are explicit."
+      ]
+    },
+    "8350223111400000": {
+      "evidence": "verified",
+      "contentSha256": "321e5459dd92cdc076c510223c95237b3a9b07a6cc4b88d6d6f3fa315546df9b",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Nonzero divisor, grouped numerator, height>0, and a=0 nonunique case checked.",
+        "Short advanced explanation typo: replace 除く式 with 割る式.",
+        "Order q8 explicitly specifies removing the constant term first. Reversing the two listed operations leaves y/3−2=x−4/3, not isolated x; final prompt reread required."
+      ]
+    },
+    "8350223111200000": {
+      "evidence": "verified",
+      "contentSha256": "31a86e05a378ae79672014cb5dabad38edf85403cfa34387057a2f00ebe96343",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Separate fixed shipping from per-item price, integer domain and geometric lengths."
+      ]
+    },
+    "8350223111300000": {
+      "evidence": "verified",
+      "contentSha256": "d535b875707e351312e4ad7ca86deaafd09826221349017e37fefc3f3eb48b22",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Independent variables represent arbitrary odd numbers; finite examples are not a universal proof.",
+        "Integer domain must be explicit in short explanation and standalone q4; requested."
+      ]
+    },
+    "8350223121100000": {
+      "evidence": "verified",
+      "contentSha256": "aed89a72c0178a05745a02d981c3a09ba148581c2fad3b15e30dc9aabab36d6a",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Ordered pair coordinates, simultaneous substitution, finite nonnegative integer vs all-real domain checked."
+      ]
+    },
+    "8350223121200000": {
+      "evidence": "verified",
+      "contentSha256": "964622fbed38fb7f85877d42ee01178dcfbb2a2dae34e29ad702ef00747cd2d2",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Both original equations required; incompatible and duplicated equations distinguished.",
+        "Standalone q3 lacks equations used by its explanation; buddy infinite-solutions statement needs unrestricted-number domain. Corrections requested."
+      ]
+    },
+    "8350223121300000": {
+      "evidence": "verified",
+      "contentSha256": "b0dd88050934d4b753480fa426ac6e8518317cf8683fd37e6bd81338a6c7deed",
+      "questions": 8,
+      "games": 1,
+      "claims": 21,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Adding equations gives a consequence; preserving one original equation permits reconstruction and preserves the system.",
+        "q4 original system must be restated for independent display; requested."
+      ]
+    },
+    "8350223122100000": {
+      "evidence": "verified",
+      "contentSha256": "108bc0847d44bb24e69749893de8f6b5a4832bae3d049347b05502c06b1929bf",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Substitute the whole expression with parentheses and retain original defining equation.",
+        "q5 distractor3=2+2-1 is also valid because2*2=2+2; author must replace it before approval."
+      ]
+    },
+    "8350223121000000": {
+      "evidence": "verified",
+      "contentSha256": "f2b2924ded6158f77ac4f77060368f485213bd9306bcd8537b3ad4b1a34f32c8",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Multiply both sides by a nonzero common denominator; zero multiplication loses the original condition. Independently substituted both recovered solutions."
+      ]
+    },
+    "8350223122200000": {
+      "evidence": "verified",
+      "contentSha256": "f21793aa1029254f3ea175b2cd43703c25d1997c14dc137f5d519e944ab9ce2e",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "Ticket counts must be nonnegative integers; both the total count and price are checked. Dependent equations do not determine a unique solution."
+      ]
+    },
+    "8350223311100000": {
+      "evidence": "verified",
+      "contentSha256": "6314c773fd020c975541b8f4ee0fc7639260982da20b618050cf40d19d43771c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Definition uses a nonzero linear coefficient. Constant comparison is labeled. Discrete quantity examples do not infer a continuous physical domain."
+      ]
+    },
+    "8350223312100000": {
+      "evidence": "verified",
+      "contentSha256": "5180c85088effc917830f55451353b8c6f56830a59decd2c40e1cc452fa0758d",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5,
+      "independentNotes": [
+        "Differences require distinct x values and a consistent subtraction order. Suggested explicit x nonzero for the separately discussed y/x."
+      ]
+    },
+    "8350223311000000": {
+      "evidence": "verified",
+      "contentSha256": "cae7ae8b57c78b1674b8cdc69a8466bd78ebeb4658de610b6ff522ea50e93a28",
+      "questions": 8,
+      "games": 1,
+      "claims": 21,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "All-number, interval, and discrete domains are distinguished. Plot angle is not invariant to unequal axis scales. Video claim remains pending."
+      ]
+    },
+    "8350223312000000": {
+      "evidence": "verified",
+      "contentSha256": "7bee8bf52c6479202d47e7def35026602d4d35816541b4d6c93da2d09d6dba17",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "Unique x inputs, constant slope-zero case, and incompatible equal-x outputs are distinguished; two observations alone do not establish linearity."
+      ]
+    },
+    "8350223311300000": {
+      "evidence": "verified",
+      "contentSha256": "87f0ffaf90db5e3ac993b772f10c72d3b638800d9c5ab7f70c6b8fd5f9b1e328",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "a and b not simultaneously zero. Vertical lines are not y as function of x. Requested all-number domain repeated in js.short/visual."
+      ]
+    },
+    "8350223310000000": {
+      "evidence": "verified",
+      "contentSha256": "acbcc0b1ae514263d8f57d5603ab545cf21202b355c6c1c4f8dcc154d77ca70f",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Nonparallel intersection, distinct parallel lines, and coincident lines checked independently. Exact substitution distinguished from pixel approximation."
+      ]
+    },
+    "8350223312200000": {
+      "evidence": "verified",
+      "contentSha256": "64247d66eecee62cc3882b1dae381f7b8fa74d0b85c92944d4b802fee356f24d",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "Fictional tariff domain is nonnegative integer count. Break-even and both sides checked. Requested q7 repeat tariff premises for standalone use."
+      ]
+    },
+    "8350223231000000": {
+      "evidence": "verified",
+      "contentSha256": "d759eb631f23ec25e4d5250a148abe75c9058373f4f46bd3be1ca6ad8bb61ac6",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "Opposite rays, supplementary adjacent angles, and vertical angle equality distinguished. Game four-angles wording clarified."
+      ]
+    },
+    "8350223211100000": {
+      "evidence": "verified",
+      "contentSha256": "9f63b5273eca32b0137b4643391ff627006ba2acae7d9b67f9f58bdfb580a0a4",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Parallel premise and converse separated. Worked example must begin with an interior angle for its chosen alternate-interior proof chain."
+      ]
+    },
+    "8350223211200000": {
+      "evidence": "verified",
+      "contentSha256": "7cb9d21d2fba2d04a370d7be35581d8aefc3fb28d2c5063bbef0eb3fde08d930",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 6,
+      "independentNotes": [
+        "Convex and consistent exterior-turn direction specified. Mean interior angle not confused with individual angles without equiangular condition."
+      ]
+    },
+    "8350223212100000": {
+      "evidence": "verified",
+      "contentSha256": "4bdb3b67fca07de32d7ecff69889fe965c6247fb2d1ef9b7148a0721349312b7",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Nondegenerate triangle, auxiliary parallel line, and alternate angles lead to the sum without circular reasoning. Measurement does not prove all cases.",
+        "Order q8 has a dependency chain: construct the parallel line before identifying alternate angles, then combine them into a straight angle. Independent facts are not artificially ordered."
+      ]
+    },
+    "8350223221100000": {
+      "evidence": "verified",
+      "contentSha256": "0dc6896af09819b792689bc6167759d4683f662d72866ee2db28029c2e7618f8",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 0,
+      "independentNotes": [
+        "SSS/SAS included angle/ASA adjacent angles require corresponding positions. AAA and general SSA do not suffice. Triangle sides4,5,6 satisfy strict triangle inequalities. Reflection preserves congruence."
+      ]
+    },
+    "8350223221200000": {
+      "evidence": "verified",
+      "contentSha256": "456ceb853957a219e3d5e3865c75dad8b88da54d68de9225158ee64e4c32f659",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 0,
+      "independentNotes": [
+        "Definitions distinguished from properties; common side and midpoint support SSS. Requested explicit triangleABC hypothesis so A=D degenerate point configuration is not implicitly allowed."
+      ]
+    },
+    "8350223236000000": {
+      "evidence": "verified",
+      "contentSha256": "d0124ca81f9d2a9a51269fba2dc0d72edfd11800c273661238d22cea9b113c5c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 0,
+      "independentNotes": [
+        "Counterexamples satisfy hypothesis and violate conclusion. Symmetric trapezoid with bases2,6 and height2 has congruent diagonals by reflection but is not rectangular. Converse is separately justified."
+      ]
+    },
+    "8350223221000000": {
+      "evidence": "verified",
+      "contentSha256": "ef25571a516ae3805aa5a5d3584f13f9cdfbc2457a5fdbc0dd7db15af4c2278b",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "SSS vertex order ABD/ACD and correspondence checked. q6 needed D between B,C: collinearity alone permits equal45-degree angles on same ray. q8 must restate premises rather than refer to an unseen proof."
+      ]
+    },
+    "8350223222100000": {
+      "evidence": "verified",
+      "contentSha256": "3acbf605fc5cbce168663529ee7911f5ee7ef5e8de1a0f38addb53dc5cc39ef3",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Equal sides correspond to opposite angles. Isosceles definition includes equilateral case. Midpoint proof uses SSS and the correct vertex correspondence."
+      ]
+    },
+    "8350223222000000": {
+      "evidence": "verified",
+      "contentSha256": "0c0080d4845b14906c8ea55c0328820b925eed57bb479c14bceec80a17a5f7da",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "Both right-triangle premises distinguish RHS from insufficient generic SSA. Hypotenuse-angle is reduced to ASA by complementary acute angles. One distractor about checking position needed an unambiguously false statement."
+      ]
+    },
+    "8350223220000000": {
+      "evidence": "verified",
+      "contentSha256": "46dd650f2882f7c3eeec9773406baf94edf76091362981408e2a94b7d3eeff3c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "Definition based on opposite parallel sides; congruence ABC/CDA is consistent. Diagonal bisection differs from equal total lengths and perpendicularity."
+      ]
+    },
+    "8350223222200000": {
+      "evidence": "verified",
+      "contentSha256": "cefd3516ca07e1b1d043df48063a3cf692cd2b71dc3563f0b4883972faa288a6",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 0,
+      "independentNotes": [
+        "Simple nondegenerate quadrilateral scope. Same pair must be both parallel and equal: otherwise an isosceles trapezoid is a counterexample. BAC/DCA SAS correspondence and resulting alternate angles are correct."
+      ]
+    },
+    "8350225100000000": {
+      "evidence": "verified",
+      "contentSha256": "6db91deae4c778f01dca66fa59ecadf53a47ac62b405c550f23fe16d52c17aab",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "Inclusive classification: squares are rectangles/rhombi/parallelograms. Diagonal length/perpendicular tests are valid only under the parallelogram premise."
+      ]
+    },
+    "8350223411100000": {
+      "evidence": "verified",
+      "contentSha256": "e3980140fa0c0eabf2e35e0ef171e118b3f879b78cabaf799c23cb41e9e85d65",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7,
+      "independentNotes": [
+        "Fixed quartile convention excludes the global median for odd n. Sorting preserves duplicates; data-size lower bound2 supports two nonempty halves. Eight and nine-value summaries independently recomputed."
+      ]
+    },
+    "8350223411200000": {
+      "evidence": "verified",
+      "contentSha256": "152cd77699fe6c36675c300f55096b19cf7cfdbc224dd717ef001bece5af1916",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Whiskers use extrema, not an outlier rule. IQR0 does not imply all values equal: [1,4,4,4,4,4,4,9] independently gives Q1=Q2=Q3=4 with extrema1,9. Zero width is not missing data."
+      ]
+    },
+    "8350223412100000": {
+      "evidence": "verified",
+      "contentSha256": "3619f473563d56d3c505987524761af42eba364638eec284628c7218934a839b",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "Position/dispersion/scale distinguished. Same five-number summaries do not uniquely determine the raw data. With ties, closed interval Q1..Q3 can contain more than half the values."
+      ]
+    },
+    "8350223421100000": {
+      "evidence": "verified",
+      "contentSha256": "1842d20663ff1cf3ba7c3f1e4bfbfc2c085ddf87a34be2df3dbfa36c55dfa3ae",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Equal likelihood of elementary outcomes is required. Spinner sector probability requires uniform stopping angle. Finite frequencies are not guaranteed theoretical proportions or monotonic convergence; independent trials retain the next-trial probability."
+      ]
+    },
+    "8350223421200000": {
+      "evidence": "verified",
+      "contentSha256": "f3cf9c22f238517dfb1861905c6f944a9c97066d1757538ee46fc86cd536b483",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Independently enumerated HH/HT/TH/TT. Independence and fairness produce four equal probabilities; head-count categories are not equiprobable. Complete tree leaves form the sample space."
+      ]
+    },
+    "8350223422100000": {
+      "evidence": "verified",
+      "contentSha256": "567b5360c0dd2fdb229e53ff20076b16e6aa9bf86ee9963ca2c47b20fa449a7e",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5,
+      "independentNotes": [
+        "Independently enumerated all36 ordered die pairs. Sum7 has6; at least one6 has11; complement has25. Pairs(6,1) demonstrate that at least one non6 is not the complement."
+      ]
+    },
+    "8350223422200000": {
+      "evidence": "verified",
+      "contentSha256": "56461bab9125ce56b89ef62de5dce4da6ff4417ba6bc554a81a2ace6717ec082",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "Uniform selection of individual objects, not color labels, is the model. Red replacement preserves2/5 under independent resampling; observed red without replacement leaves1/4 under uniform remaining selection. Probability comparison does not guarantee a particular trial."
+      ]
+    }
+  },
+  "limitations": [
+    "Independent agent mathematical/text review does not grant operator publication approval. Unit publication remains preview and humanApproval remains null.",
+    "Exact-text hashes prevent unnoticed changes but are not an automated proof of newly authored prose. New semantic changes require independent rereading.",
+    "Numerical answers are recomputed exactly. Choice, order, proofs, conditions, examples and language were read separately; the author audit is not the source of expected answers.",
+    "Browser layout, accessibility, storage and full animation geometry have their own independent gates; this record does not replace them.",
+    "Quartiles use the explicitly stated convention excluding the median for odd sample sizes; box whiskers represent extrema. Probability conclusions require stated equiprobability and retain the finite-trial distinction."
+  ]
+}
