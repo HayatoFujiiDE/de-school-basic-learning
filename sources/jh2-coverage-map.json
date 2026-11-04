@@ -1,0 +1,914 @@
+{
+  "grade": 8,
+  "curriculumGrade": 2,
+  "sourceRows": 82,
+  "unitCount": 39,
+  "note": "Representative primary keys and shared coverage; the mapping does not certify learner mastery.",
+  "rows": [
+    {
+      "curriculumCode": "8350220000000000",
+      "row": 717,
+      "text": "〔第２学年〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350222100000000",
+      "row": 718,
+      "text": "１　目標",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350222110000000",
+      "row": 719,
+      "text": "(1) 文字を用いた式と連立二元一次方程式，平面図形と数学的な推論，一次関数，データの分布と確率などについての基礎的な概念や原理・法則などを理解するとともに，事象を数学化したり，数学的に解釈したり，数学的に表現・処理したりする技能を身に付けるようにする。",
+      "unitCodes": [
+        "8350223110000000",
+        "8350223111100000",
+        "8350223121100000",
+        "8350223121300000",
+        "8350223311100000",
+        "8350223311000000",
+        "8350223211100000",
+        "8350223221100000",
+        "8350223411100000",
+        "8350223411200000",
+        "8350223421100000",
+        "8350223421200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350222220000000",
+      "row": 720,
+      "text": "(2) 文字を用いて数量の関係や法則などを考察する力，数学的な推論の過程に着目し，図形の性質や関係を論理的に考察し表現する力，関数関係に着目し，その特徴を表，式，グラフを相互に関連付けて考察する力，複数の集団のデータの分布に着目し，その傾向を比較して読み取り批判的に考察して判断したり，不確定な事象の起こりやすさについて考察したりする力を養う。",
+      "unitCodes": [
+        "8350223111300000",
+        "8350223122100000",
+        "8350223122200000",
+        "8350223312000000",
+        "8350223312200000",
+        "8350223212100000",
+        "8350223221200000",
+        "8350223236000000",
+        "8350223221000000",
+        "8350223222200000",
+        "8350223412100000",
+        "8350223422100000",
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350222330000000",
+      "row": 721,
+      "text": "(3) 数学的活動の楽しさや数学のよさを実感して粘り強く考え，数学を生活や学習に生かそうとする態度，問題解決の過程を振り返って評価・改善しようとする態度，多様な考えを認め，よりよく問題解決しようとする態度を養う。",
+      "unitCodes": [
+        "8350223111300000",
+        "8350223122200000",
+        "8350223312200000",
+        "8350223221000000",
+        "8350223412100000",
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223000000000",
+      "row": 722,
+      "text": "２　内容",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223100000000",
+      "row": 723,
+      "text": "Ａ　数と式",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223110000000",
+      "row": 724,
+      "text": "(1) 文字を用いた式について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223110000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223111000000",
+      "row": 725,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223110000000",
+        "8350223111100000",
+        "8350223112100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223111100000",
+      "row": 726,
+      "text": "(ｱ) 簡単な整式の加法と減法及び単項式の乗法と除法の計算をすること。",
+      "unitCodes": [
+        "8350223110000000",
+        "8350223111100000",
+        "8350223112100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223111200000",
+      "row": 727,
+      "text": "(ｲ) 具体的な事象の中の数量の関係を文字を用いた式で表したり，式の意味を読み取ったりすること。",
+      "unitCodes": [
+        "8350223111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223111300000",
+      "row": 728,
+      "text": "(ｳ) 文字を用いた式で数量及び数量の関係を捉え説明できることを理解すること。",
+      "unitCodes": [
+        "8350223111300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223111400000",
+      "row": 729,
+      "text": "(ｴ) 目的に応じて，簡単な式を変形すること。",
+      "unitCodes": [
+        "8350223111400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223112000000",
+      "row": 730,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223112100000",
+        "8350223111300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223112100000",
+      "row": 731,
+      "text": "(ｱ) 具体的な数の計算や既に学習した計算の方法と関連付けて，整式の加法と減法及び単項式の乗法と除法の計算の方法を考察し表現すること。",
+      "unitCodes": [
+        "8350223111100000",
+        "8350223112100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223112200000",
+      "row": 732,
+      "text": "(ｲ) 文字を用いた式を具体的な場面で活用すること。",
+      "unitCodes": [
+        "8350223111400000",
+        "8350223111200000",
+        "8350223111300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223120000000",
+      "row": 733,
+      "text": "(2) 連立二元一次方程式について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223121100000",
+        "8350223121200000",
+        "8350223121300000",
+        "8350223122200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223121000000",
+      "row": 734,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223121100000",
+        "8350223121200000",
+        "8350223121300000",
+        "8350223122100000",
+        "8350223121000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223121100000",
+      "row": 735,
+      "text": "(ｱ) 二元一次方程式とその解の意味を理解すること。",
+      "unitCodes": [
+        "8350223121100000",
+        "8350223121200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223121200000",
+      "row": 736,
+      "text": "(ｲ) 連立二元一次方程式の必要性と意味及びその解の意味を理解すること。",
+      "unitCodes": [
+        "8350223121200000",
+        "8350223310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223121300000",
+      "row": 737,
+      "text": "(ｳ) 簡単な連立二元一次方程式を解くこと。",
+      "unitCodes": [
+        "8350223121300000",
+        "8350223122100000",
+        "8350223121000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223122000000",
+      "row": 738,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223121300000",
+        "8350223122100000",
+        "8350223122200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223122100000",
+      "row": 739,
+      "text": "(ｱ) 一元一次方程式と関連付けて，連立二元一次方程式を解く方法を考察し表現すること。",
+      "unitCodes": [
+        "8350223121300000",
+        "8350223122100000",
+        "8350223121000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223122200000",
+      "row": 740,
+      "text": "(ｲ) 連立二元一次方程式を具体的な場面で活用すること。",
+      "unitCodes": [
+        "8350223122200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223130000000",
+      "row": 741,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223131000000",
+      "row": 742,
+      "text": "同類項",
+      "unitCodes": [
+        "8350223110000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223200000000",
+      "row": 743,
+      "text": "Ｂ　図形",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223210000000",
+      "row": 744,
+      "text": "(1) 基本的な平面図形の性質について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223231000000",
+        "8350223211100000",
+        "8350223211200000",
+        "8350223212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223211000000",
+      "row": 745,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223231000000",
+        "8350223211100000",
+        "8350223211200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223211100000",
+      "row": 746,
+      "text": "(ｱ) 平行線や角の性質を理解すること。",
+      "unitCodes": [
+        "8350223231000000",
+        "8350223211100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223211200000",
+      "row": 747,
+      "text": "(ｲ) 多角形の角についての性質が見いだせることを知ること。",
+      "unitCodes": [
+        "8350223211200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223212000000",
+      "row": 748,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223212100000",
+      "row": 749,
+      "text": "(ｱ) 基本的な平面図形の性質を見いだし，平行線や角の性質を基にしてそれらを確かめ説明すること。",
+      "unitCodes": [
+        "8350223211100000",
+        "8350223212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223220000000",
+      "row": 750,
+      "text": "(2) 図形の合同について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223221000000",
+      "row": 751,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223221100000",
+        "8350223221200000",
+        "8350223221000000",
+        "8350223220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223221100000",
+      "row": 752,
+      "text": "(ｱ) 平面図形の合同の意味及び三角形の合同条件について理解すること。",
+      "unitCodes": [
+        "8350223221100000",
+        "8350223221000000",
+        "8350223222100000",
+        "8350223222000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223221200000",
+      "row": 753,
+      "text": "(ｲ) 証明の必要性と意味及びその方法について理解すること。",
+      "unitCodes": [
+        "8350223221200000",
+        "8350223236000000",
+        "8350223221000000",
+        "8350223222100000",
+        "8350223222000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223222000000",
+      "row": 754,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223222000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223222100000",
+      "row": 755,
+      "text": "(ｱ) 三角形の合同条件などを基にして三角形や平行四辺形の基本的な性質を論理的に確かめたり，証明を読んで新たな性質を見いだしたりすること。",
+      "unitCodes": [
+        "8350223221000000",
+        "8350223222100000",
+        "8350223222000000",
+        "8350223220000000",
+        "8350223222200000",
+        "8350225100000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223222200000",
+      "row": 756,
+      "text": "(ｲ) 三角形や平行四辺形の基本的な性質などを具体的な場面で活用すること。",
+      "unitCodes": [
+        "8350223222100000",
+        "8350223220000000",
+        "8350223222200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223230000000",
+      "row": 757,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223231000000",
+      "row": 758,
+      "text": "対頂角",
+      "unitCodes": [
+        "8350223231000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223232000000",
+      "row": 759,
+      "text": "内角",
+      "unitCodes": [
+        "8350223211200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223233000000",
+      "row": 760,
+      "text": "外角",
+      "unitCodes": [
+        "8350223211200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223234000000",
+      "row": 761,
+      "text": "定義",
+      "unitCodes": [
+        "8350223221200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223235000000",
+      "row": 762,
+      "text": "証明",
+      "unitCodes": [
+        "8350223221200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223236000000",
+      "row": 763,
+      "text": "逆",
+      "unitCodes": [
+        "8350223236000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223237000000",
+      "row": 764,
+      "text": "反例",
+      "unitCodes": [
+        "8350223236000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223238000000",
+      "row": 765,
+      "text": "≡",
+      "unitCodes": [
+        "8350223221100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223300000000",
+      "row": 766,
+      "text": "Ｃ　関数",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223310000000",
+      "row": 767,
+      "text": "(1) 一次関数について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223311000000",
+      "row": 768,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223311100000",
+        "8350223311000000",
+        "8350223311300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223311100000",
+      "row": 769,
+      "text": "(ｱ) 一次関数について理解すること。",
+      "unitCodes": [
+        "8350223311100000",
+        "8350223312100000",
+        "8350223311000000",
+        "8350223312000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223311200000",
+      "row": 770,
+      "text": "(ｲ) 事象の中には一次関数として捉えられるものがあることを知ること。",
+      "unitCodes": [
+        "8350223311100000",
+        "8350223312200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223311300000",
+      "row": 771,
+      "text": "(ｳ) 二元一次方程式を関数を表す式とみること。",
+      "unitCodes": [
+        "8350223311300000",
+        "8350223310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223312000000",
+      "row": 772,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223312000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223312100000",
+      "row": 773,
+      "text": "(ｱ) 一次関数として捉えられる二つの数量について，変化や対応の特徴を見いだし，表，式，グラフを相互に関連付けて考察し表現すること。",
+      "unitCodes": [
+        "8350223312100000",
+        "8350223311000000",
+        "8350223312000000",
+        "8350223311300000",
+        "8350223310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223312200000",
+      "row": 774,
+      "text": "(ｲ) 一次関数を用いて具体的な事象を捉え考察し表現すること。",
+      "unitCodes": [
+        "8350223312200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223320000000",
+      "row": 775,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223321000000",
+      "row": 776,
+      "text": "変化の割合",
+      "unitCodes": [
+        "8350223312100000",
+        "8350223312000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223322000000",
+      "row": 777,
+      "text": "傾き",
+      "unitCodes": [
+        "8350223311000000",
+        "8350223312000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223400000000",
+      "row": 778,
+      "text": "Ｄ　データの活用",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223410000000",
+      "row": 779,
+      "text": "(1) データの分布について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223411100000",
+        "8350223411200000",
+        "8350223412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223411000000",
+      "row": 780,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223411100000",
+        "8350223411200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223411100000",
+      "row": 781,
+      "text": "(ｱ) 四分位範囲や箱ひげ図の必要性と意味を理解すること。",
+      "unitCodes": [
+        "8350223411100000",
+        "8350223411200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223411200000",
+      "row": 782,
+      "text": "(ｲ) コンピュータなどの情報手段を用いるなどしてデータを整理し箱ひげ図で表すこと。",
+      "unitCodes": [
+        "8350223411200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223412000000",
+      "row": 783,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223412100000",
+      "row": 784,
+      "text": "(ｱ) 四分位範囲や箱ひげ図を用いてデータの分布の傾向を比較して読み取り，批判的に考察し判断すること。",
+      "unitCodes": [
+        "8350223412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223420000000",
+      "row": 785,
+      "text": "(2) 不確定な事象の起こりやすさについて，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350223421100000",
+        "8350223421200000",
+        "8350223422100000",
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223421000000",
+      "row": 786,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350223421100000",
+        "8350223421200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223421100000",
+      "row": 787,
+      "text": "(ｱ) 多数回の試行によって得られる確率と関連付けて，場合の数を基にして得られる確率の必要性と意味を理解すること。",
+      "unitCodes": [
+        "8350223421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223421200000",
+      "row": 788,
+      "text": "(ｲ) 簡単な場合について確率を求めること。",
+      "unitCodes": [
+        "8350223421200000",
+        "8350223422100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223422000000",
+      "row": 789,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350223422100000",
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223422100000",
+      "row": 790,
+      "text": "(ｱ) 同様に確からしいことに着目し，場合の数を基にして得られる確率の求め方を考察し表現すること。",
+      "unitCodes": [
+        "8350223421200000",
+        "8350223422100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223422200000",
+      "row": 791,
+      "text": "(ｲ) 確率を用いて不確定な事象を捉え考察し表現すること。",
+      "unitCodes": [
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223500000000",
+      "row": 792,
+      "text": "〔数学的活動〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223510000000",
+      "row": 793,
+      "text": "(1) 「Ａ数と式」，「Ｂ図形」，「Ｃ関数」及び「Ｄデータの活用」の学習やそれらを相互に関連付けた学習において，次のような数学的活動に取り組むものとする。",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350223511000000",
+      "row": 794,
+      "text": "ア　日常の事象や社会の事象を数理的に捉え，数学的に表現・処理し，問題を解決したり，解決の過程や結果を振り返って考察したりする活動",
+      "unitCodes": [
+        "8350223122200000",
+        "8350223312200000",
+        "8350223412100000",
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223512000000",
+      "row": 795,
+      "text": "イ　数学の事象から見通しをもって問題を見いだし解決したり，解決の過程や結果を振り返って統合的・発展的に考察したりする活動",
+      "unitCodes": [
+        "8350223111300000",
+        "8350223312000000",
+        "8350223212100000",
+        "8350223236000000",
+        "8350223222200000",
+        "8350223422100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350223513000000",
+      "row": 796,
+      "text": "ウ　数学的な表現を用いて論理的に説明し伝え合う活動",
+      "unitCodes": [
+        "8350223111300000",
+        "8350223221200000",
+        "8350223221000000",
+        "8350223412100000",
+        "8350223422200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    },
+    {
+      "curriculumCode": "8350225000000000",
+      "row": 797,
+      "text": "３　内容の取扱い",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350225100000000",
+      "row": 798,
+      "text": "(1) 内容の「Ｂ図形」の(2)のイの(ｱ)に関連して，正方形，ひし形及び長方形が平行四辺形の特別な形であることを取り扱うものとする。",
+      "unitCodes": [
+        "8350225100000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Shared official item addressed by the original unit surfaces."
+    }
+  ]
+}
