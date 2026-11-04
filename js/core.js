@@ -13,6 +13,26 @@
   var unitMap = dictionary();
   var accepted = [];
   var core = {storageOK: true, rejectedCount: 0};
+  // The official school-stage prefix is part of the identity. Internal 7 means
+  // junior-high year 1; it must never be inferred from code character 6 alone.
+  var courses = {
+    4: {label: '小学4年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
+    5: {label: '小学5年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
+    6: {label: '小学6年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
+    7: {label: '中学1年生', subject: '数学', domainOrder: 'ACBD', domains: ['数と式', '図形', '関数', 'データの活用']}
+  };
+  function codeGrade(code) {
+    if (typeof code !== 'string') return null;
+    if (/^82502[456][0-9A-Z]{10}$/.test(code)) return Number(code.charAt(5));
+    return /^835021[0-9A-Z]{10}$/.test(code) ? 7 : null;
+  }
+  core.gradeLabel = function (grade) { return own(courses, grade) ? courses[grade].label : ''; };
+  core.subject = function (grade) { return own(courses, grade) ? courses[grade].subject : ''; };
+  core.domains = function (grade) {
+    if (!own(courses, grade)) return [];
+    var course = courses[grade];
+    return (course.domainOrder || 'ABCD').split('').map(function (id) { return {id: id, title: course.domains['ABCD'.indexOf(id)]}; });
+  };
 
   function validQuestion(question, claims) {
     if (!isObject(question) || !text(question.id) || !text(question.prompt) || !text(question.explanation)) return false;
@@ -24,10 +44,10 @@
   }
 
   function validUnit(unit) {
-    if (!isObject(unit) || !/^82502[456][0-9A-Z]{10}$/.test(unit.code) || !text(unit.title) || !text(unit.goal) || ['A', 'B', 'C', 'D'].indexOf(unit.domain) === -1 || !Number.isFinite(unit.order)) return false;
-    if ((unit.grade === undefined && unit.code.charAt(5) !== '4') || (unit.grade !== undefined && unit.grade !== Number(unit.code.charAt(5)))) return false;
+    if (!isObject(unit) || codeGrade(unit.code) === null || !text(unit.title) || !text(unit.goal) || ['A', 'B', 'C', 'D'].indexOf(unit.domain) === -1 || !Number.isFinite(unit.order)) return false;
+    if ((unit.grade === undefined && codeGrade(unit.code) !== 4) || (unit.grade !== undefined && unit.grade !== codeGrade(unit.code))) return false;
     if (!unit.review || unit.review.evidence !== 'verified' || unit.review.publication !== 'preview') return false;
-    if (!Array.isArray(unit.coverageCodes) || !unit.coverageCodes.length || !unit.coverageCodes.every(function (code) { return /^82502[456][0-9A-Z]{10}$/.test(code) && code.charAt(5) === unit.code.charAt(5); })) return false;
+    if (!Array.isArray(unit.coverageCodes) || !unit.coverageCodes.length || !unit.coverageCodes.every(function (code) { return codeGrade(code) === codeGrade(unit.code); })) return false;
     if (!unit.explanations || !['es', 'js'].every(function (mode) { return unit.explanations[mode] && text(unit.explanations[mode].short) && text(unit.explanations[mode].detail); })) return false;
     if (!Array.isArray(unit.claims) || !unit.claims.length) return false;
     var claims = dictionary();
@@ -58,9 +78,9 @@
     accepted.push(unit);
     unitMap[unit.code] = unit;
   });
-  accepted.sort(function (a, b) { return Number(a.code.charAt(5)) - Number(b.code.charAt(5)) || a.order - b.order; });
-  core.gradeOf = function (unit) { return unit && own(unitMap, unit.code) && unitMap[unit.code] === unit ? Number(unit.code.charAt(5)) : null; };
-  core.grades = function () { return [4, 5, 6].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
+  accepted.sort(function (a, b) { return codeGrade(a.code) - codeGrade(b.code) || a.order - b.order; });
+  core.gradeOf = function (unit) { return unit && own(unitMap, unit.code) && unitMap[unit.code] === unit ? codeGrade(unit.code) : null; };
+  core.grades = function () { return [4, 5, 6, 7].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
   core.units = function (grade) { return grade === undefined ? accepted.slice() : accepted.filter(function (unit) { return core.gradeOf(unit) === grade; }); };
   core.unit = function (code) { return typeof code === 'string' && own(unitMap, code) ? unitMap[code] : null; };
   core.escape = function (value) {
@@ -73,22 +93,23 @@
   // substituted codes before saving can project away any existing record.
   var expectedCatalogue = BL.expectedCatalogue;
   var requiredVersion = typeof document !== 'undefined' && document.documentElement ? document.documentElement.getAttribute('data-catalogue-version') : null;
-  var requireCatalogue = Boolean(expectedCatalogue) || requiredVersion === '4' || data.version === '4';
+  var catalogueSizes = {'4': 66, '5': 104};
+  var requireCatalogue = Boolean(expectedCatalogue) || Boolean(requiredVersion) || own(catalogueSizes, data.version);
   core.ready = true;
   if (requireCatalogue) {
     var expectedCodes = expectedCatalogue && expectedCatalogue.codes;
     var actualCodes = data.units.map(function (unit) { return unit && unit.code; });
-    core.ready = Boolean(expectedCatalogue && expectedCatalogue.version === '4' && data.version === '4' && (!requiredVersion || requiredVersion === '4') && Array.isArray(expectedCodes) && expectedCodes.length === 66 && unique(expectedCodes) && expectedCodes.every(function (code) { return typeof code === 'string' && /^82502[456][0-9A-Z]{10}$/.test(code); }) && actualCodes.length === expectedCodes.length && unique(actualCodes) && actualCodes.every(function (code) { return expectedCodes.indexOf(code) !== -1; }) && data.units.every(function (unit) { return unit && ((unit.grade === undefined && unit.code.charAt(5) === '4') || unit.grade === Number(unit.code.charAt(5))); }));
+    core.ready = Boolean(expectedCatalogue && own(catalogueSizes, data.version) && expectedCatalogue.version === data.version && (!requiredVersion || requiredVersion === data.version) && Array.isArray(expectedCodes) && expectedCodes.length === catalogueSizes[data.version] && unique(expectedCodes) && expectedCodes.every(function (code) { var grade = codeGrade(code); return grade !== null && (data.version === '5' || grade <= 6); }) && actualCodes.length === expectedCodes.length && unique(actualCodes) && actualCodes.every(function (code) { return expectedCodes.indexOf(code) !== -1; }) && data.units.every(function (unit) { return unit && ((unit.grade === undefined && codeGrade(unit.code) === 4) || unit.grade === codeGrade(unit.code)); }));
   }
   var catalogueReadOnly = !core.ready || core.rejectedCount > 0;
   core.readOnly = catalogueReadOnly;
   function supportedVersion(version) {
-    return version === data.version || (version === '2' && (data.version === '3' || data.version === '4')) || (version === '3' && data.version === '4');
+    return version === data.version || (version === '2' && ['3', '4', '5'].indexOf(data.version) !== -1) || (version === '3' && ['4', '5'].indexOf(data.version) !== -1) || (version === '4' && data.version === '5');
   }
 
   function numeric(value) {
     if (typeof value !== 'string' && typeof value !== 'number') return null;
-    var input = String(value).trim().replace(/[０-９．＋－]/g, function (character) { return String.fromCharCode(character.charCodeAt(0) - 65248); });
+    var input = String(value).trim().replace(/−/g, '-').replace(/[０-９．＋－]/g, function (character) { return String.fromCharCode(character.charCodeAt(0) - 65248); });
     // Full input must be a decimal number. Blank, exponent, infinity and expressions are rejected.
     if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(input) || input.length > 40) return null;
     var result = Number(input);
@@ -117,22 +138,16 @@
     if (raw.mode === 'js' || raw.mode === 'es') state.mode = raw.mode;
     if (raw.interest === 'all' || data.categories.some(function (category) { return category.id === raw.interest; })) state.interest = raw.interest;
     if (core.unit(raw.resume)) state.resume = raw.resume;
-    // Version 2 contained only the byte-identical grade-4 material. Migrate that
-    // reviewed grade only. Version 3 may similarly carry grades 4 and 5 into 4.
-    var legacyGrade4 = (data.version === '3' || data.version === '4') && raw.version === '2';
-    var legacyGrade45 = data.version === '4' && raw.version === '3';
-    if (legacyGrade4) {
-      state.grade = 4;
-      if (state.resume && core.gradeOf(core.unit(state.resume)) !== 4) state.resume = null;
-    }
-    if (legacyGrade45) {
-      if (state.grade === 6) state.grade = 4;
-      if (state.resume && core.gradeOf(core.unit(state.resume)) === 6) state.resume = null;
+    // Only byte-identical material that actually existed in the source version
+    // migrates forward. A forged new-grade record in an old envelope is dropped.
+    var legacyMaximum = raw.version !== data.version && supportedVersion(raw.version) ? {'2': 4, '3': 5, '4': 6}[raw.version] : null;
+    if (legacyMaximum) {
+      if (state.grade > legacyMaximum) state.grade = 4;
+      if (state.resume && core.gradeOf(core.unit(state.resume)) > legacyMaximum) state.resume = null;
     }
     if (!supportedVersion(raw.version) || !isObject(raw.progress)) return state;
     accepted.forEach(function (unit) {
-      if (legacyGrade4 && core.gradeOf(unit) !== 4) return;
-      if (legacyGrade45 && core.gradeOf(unit) === 6) return;
+      if (legacyMaximum && core.gradeOf(unit) > legacyMaximum) return;
       if (!own(raw.progress, unit.code) || !isObject(raw.progress[unit.code])) return;
       var stored = raw.progress[unit.code];
       var record = {answers: dictionary(), buddy: dictionary()};

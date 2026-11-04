@@ -141,7 +141,7 @@ for(const alter of [u=>delete u.grade,u=>u.grade=4,u=>u.coverageCodes=[first.cod
   equal(run.units(4).length,20,'invalid new material does not remove grade4');
   equal(run.progress(first.code).percent,100,'invalid new material does not remove old progress');
 }
-const mutation=coreText.replace(/var legacyGrade4 = [^;]+;/,'var legacyGrade4 = false;');
+const mutation=coreText.replace(/var legacyMaximum = [^;]+;/,'var legacyMaximum = null;');
 ok(mutation!==coreText,'migration mutation probe matched real implementation');
 const mutant=boot(combined,polluted,{script:mutation}).core;
 assert.throws(()=>assert.equal(mutant.progress(synthetic.code).percent,0));checks++;

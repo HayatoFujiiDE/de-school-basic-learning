@@ -58,8 +58,8 @@ const leaves=fixture.officialRows.filter(r=>/^82502636(?:0[1-9]|1[01])000000$/.t
 assert.strictEqual(leaves.length,47);assert.deepStrictEqual(leaves.map(r=>r.code),fixture.terminalCodes);
 for(const u of result.units){assert(official.has(u.code));for(const c of u.coverageCodes)assert(official.has(c),'unknown curriculum code');}
 const covered=new Set(result.units.flatMap(u=>u.coverageCodes));for(const l of leaves)assert(covered.has(l.code),'terminal requirement not mapped '+l.code);
-const registryScope={window:{BL:{}}};vm.runInNewContext(read('js/catalogue.js'),registryScope,{timeout:1000});
-const registry=clone(registryScope.window.BL.expectedCatalogue);assert.strictEqual(registry.version,'4');
+// Isolated v4 regression: the live v5 registry has its own complete-set gate.
+const registry=json('sources/catalogue-v4.json');assert.strictEqual(registry.version,'4');
 assert.deepStrictEqual(registry.codes.slice().sort(),base.units.map(u=>u.code).concat(expectedCodes).sort(),'independent expected complete catalogue set');
 assert.strictEqual(new Set(registry.codes).size,66,'catalogue codes unique');
 const coverage=json('sources/grade6-coverage-map.json');assert.strictEqual(coverage.grade,6);assert.strictEqual(coverage.unitCount,22);assert.strictEqual(coverage.sourceRows,88);
