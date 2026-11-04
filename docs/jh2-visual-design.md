@@ -83,6 +83,8 @@ rollbackは新入口を非表示にし、v6対応coreと保存対象を保持。
 検証対象SHA-256：
 
 - visuals-jh2.js: `0b572acce2f47d9828f571a733cedecc51e2d85dbb6b9b30f5bdc3937935bdef`
-- lesson-scenes-jh2.js: `ddd95631ccc34c667dcdfd360f8ec22d87b2838ee05b6ea5037235fe1a687db0`
+- lesson-scenes-jh2.js: `bc3ec00a09b2b1b9f144674bada747ad4c4268594db08ae5b35e803354e87651`
 
 全原稿・独立review・poster/videoを含む統合後の実教材での全39単元、両mode、control/tryIt/keyboard/focus/動画の検証は、着地担当の統合後に実施する。ここでの単独描画検査を統合アプリ完了とは扱わない。
+
+仕上げの相互目視で、合同sceneの根拠に無関係な右側の装飾線を削除。辺の印と対応角の4段階は維持し、ES2017・全3,232frame・独立数学189,284検査・旧339frame一致を再確認した。
