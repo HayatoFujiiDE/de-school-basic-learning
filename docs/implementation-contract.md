@@ -1,3 +1,5 @@
+> 2026-11-04追加依頼の現行差分: 第4・第5学年に対応。下記は初期4年版の契約記録で、学年追加の正本は `grade5-plan.md` と `content-contract.md`。教材版3、学年URL `#list/4`・`#list/5`、全学年を保持するcoreと版2の4年限定移行を適用する。公開GitHubへのpush・mergeは利用者が明示的に依頼済み。子どもへの配信承認は別。
+
 # 実装契約
 
 対象は正本 2026-11-04 に従い小学算数 第4学年。第1学年/4学年分との表記は旧記述として QUESTIONS に残す。参照元 Learning-Agents main 0157d23 は fetch 後 0 ahead/0 behind。

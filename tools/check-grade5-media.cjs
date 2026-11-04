@@ -1,0 +1,31 @@
+'use strict';
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto'),cp=require('child_process'),vm=require('vm');
+const root=process.env.BASIC_LEARNING_ROOT||path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+const manifest=JSON.parse(read('sources/media-grade5-manifest.json'));
+assert.deepEqual(manifest.videos.map(x=>x.code).sort(),['8250253150000000','8250253420000000']);
+assert.equal(manifest.renderer.version,'0.20.1');
+assert.equal(hash('tools/media-scenes-grade5.py'),manifest.renderer.sourceSha256,'independently reviewed video source');
+const sandbox={window:{}};['units.js','units-grade5.js'].forEach(f=>vm.runInNewContext(read('js/'+f),sandbox));
+let seconds=0,bytes=0;
+for(const item of manifest.videos){
+ assert.equal(item.evidence,'verified');
+ assert.equal(item.path,'assets/lessons/'+item.code+'.mp4');
+ assert.equal(hash(item.path),item.sha256,'independently reviewed video bytes');
+ const unit=sandbox.window.BL.data.units.find(u=>u.code===item.code);assert.ok(unit);
+ assert.ok(item.claimIds.length>0 && item.claimIds.every(id=>unit.claims.some(c=>c.id===id&&c.status==='verified')),'reviewed claim references');
+ assert.ok(item.transcript.length>=4);
+ item.transcript.forEach(line=>assert.ok(read('tools/media-scenes-grade5.py').includes(line),'transcript exists in source'));
+ const file=path.join(root,item.path);
+ const meta=JSON.parse(cp.execFileSync('ffprobe',['-v','error','-show_entries','format=duration,size:stream=codec_type,codec_name,width,height,pix_fmt','-of','json',file],{encoding:'utf8'}));
+ assert.equal(meta.streams.length,1);const s=meta.streams[0];
+ assert.deepEqual([s.codec_type,s.codec_name,s.width,s.height,s.pix_fmt],['video','h264',1280,720,'yuv420p']);
+ assert.ok(Number(meta.format.duration)>=15&&Number(meta.format.duration)<=40);
+ cp.execFileSync('ffmpeg',['-nostdin','-v','error','-i',file,'-f','null','-'],{stdio:['ignore','ignore','pipe']});
+ seconds+=Number(meta.format.duration);bytes+=Number(meta.format.size);
+}
+const runner=read('tools/render-media-grade5.py');
+for(const guard of ['sys.addaudithook(no_network)','config.notify_outdated_version = False','config.plugins = []'])assert.ok(runner.includes(guard));
+assert.throws(()=>assert.equal(manifest.videos[0].sha256,hash('README.md')),'positive hash mismatch');
+console.log('GRADE5_MEDIA=PASS clips=2 decoded=2 h264=1280x720 audio=none seconds='+seconds.toFixed(1)+' bytes='+bytes);

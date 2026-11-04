@@ -16,7 +16,7 @@
   var e = function (value) { return core.escape(String(value == null ? '' : value)); };
   var t = function (es, js) { return core.state.mode === 'es' ? es : js; };
   var categories = function () { return (window.BL.data.categories || []).filter(function (category) { return category && typeof category.id === 'string' && typeof category.label === 'string'; }); };
-  var allUnits = function () { return core.units(); };
+  var allUnits = function () { return core.units(core.state.grade); };
   var categoryLabel = function (id) { var item = categories().filter(function (category) { return category.id === id; })[0]; return item ? item.label : 'おまかせ'; };
   var domainLabel = function (id) { var item = domains.filter(function (domain) { return domain.id === id; })[0]; return item ? item.title : '算数'; };
   var progress = function (code) { return core.progress(code); };
@@ -30,9 +30,11 @@
 
   function route() {
     var hash = window.location.hash || '#list';
-    if (hash === '#list' || hash === '#main') return { page: 'list', unit: null };
+    if (hash === '#list' || hash === '#main') return { page: 'list', unit: null, grade: core.state.grade };
+    var gradeRoute = /^#list\/(4|5)$/.exec(hash);
+    if (gradeRoute && core.grades().indexOf(Number(gradeRoute[1])) !== -1) return { page: 'list', unit: null, grade: Number(gradeRoute[1]) };
     if (hash === '#paused') return { page: 'paused', unit: null };
-    var match = /^#(unit|practice|result|buddy)\/(825024[0-9A-Z]{10})$/.exec(hash);
+    var match = /^#(unit|practice|result|buddy)\/(82502[45][0-9A-Z]{10})$/.exec(hash);
     if (!match) return { page: 'missing', unit: null };
     var unit = core.unit(match[2]);
     return unit ? { page: match[1], unit: unit } : { page: 'missing', unit: null };
@@ -48,9 +50,13 @@
   }
 
   function sidebar(page) {
-    return '<aside class="sidebar"><div><a class="brand" href="#list">' + brand() + '<span>基礎学習</span></a><p class="sidebar-caption">ためす・考える・はなす</p></div><div class="side-nav"><a href="#list" class="nav-link main-nav' + (page === 'list' ? ' active' : '') + '"' + (page === 'list' ? ' aria-current="page"' : '') + '><span class="nav-symbol" aria-hidden="true">＋</span>単元をえらぶ</a><p class="side-label">小学4年生・算数</p>' + domains.map(function (domain) {
+    return '<aside class="sidebar"><div><a class="brand" href="#list/' + core.state.grade + '">' + brand() + '<span>基礎学習</span></a><p class="sidebar-caption">ためす・考える・はなす</p></div><div class="side-nav"><a href="#list/' + core.state.grade + '" class="nav-link main-nav' + (page === 'list' ? ' active' : '') + '"' + (page === 'list' ? ' aria-current="page"' : '') + '><span class="nav-symbol" aria-hidden="true">＋</span>単元をえらぶ</a><p class="side-label">小学' + core.state.grade + '年生・算数</p>' + domains.map(function (domain) {
       return '<button type="button" class="nav-link" data-action="domain" data-domain="' + domain.id + '"><span class="nav-symbol" aria-hidden="true">' + domain.id + '</span>' + domain.title + '</button>';
     }).join('') + '</div><div class="sidebar-bottom"><span class="tiny-rule"></span><p>ひとつずつ、自分のペースで。</p><p>いつでも休んで、<br>続きから始められます。</p></div></aside>';
+  }
+
+  function gradeTabs() {
+    return '<nav class="grade-tabs" aria-label="学年を選ぶ">' + core.grades().map(function (grade) { return '<button type="button" class="grade-tab" data-action="grade" data-grade="' + grade + '" aria-pressed="' + (core.state.grade === grade) + '">小学' + grade + '年生</button>'; }).join('') + '</nav>';
   }
 
   function topbar(page) {
@@ -58,7 +64,7 @@
   }
 
   function footer() {
-    return '<footer class="page-footer"><span>小学4年生の算数 · 学習指導要領につながる教材</span><span>回答はこのブラウザに保存</span></footer>';
+    return '<footer class="page-footer"><span>小学' + core.state.grade + '年生の算数 · 学習指導要領につながる教材</span><span>回答はこのブラウザに保存</span></footer>';
   }
 
   function progressBar(p, label) {
@@ -75,7 +81,7 @@
   function listPage() {
     var units = allUnits();
     var started = units.filter(function (unit) { var item = core.state.progress[unit.code]; return item && Object.keys(item.answers).length > 0; }).length;
-    return '<section class="list-hero"><div><p class="eyebrow">小学4年生 / 算数</p><h1 class="page-title">' + t('算数を、ためしてみよう。', 'ためして、考える算数。') + '</h1><p class="page-lead">' + t('気になる単元から、ひとつずつ。<br>クイズでためして、自分の言葉で確かめよう。', 'クイズ・練習・対話で、考え方を確かめます。<br>どの単元からでも、自分のペースで。') + '</p><div class="summary-strip"><div class="summary-item"><strong>' + units.length + '</strong><span>つの単元</span></div><span class="summary-divider" aria-hidden="true"></span><div class="summary-item"><strong>' + started + '</strong><span>つに取り組み中</span></div></div></div><div class="hero-art" aria-hidden="true"><div class="art-grid">' + Array(9).fill('<span class="tile"></span>').join('') + '</div><span class="art-dot"></span></div></section>' + interestPanel(false) + (units.length ? domains.map(function (domain) {
+    return '<section class="list-hero"><div><p class="eyebrow">小学' + core.state.grade + '年生 / 算数</p><h1 class="page-title">' + t('算数を、ためしてみよう。', 'ためして、考える算数。') + '</h1><p class="page-lead">' + t('気になる単元から、ひとつずつ。<br>クイズでためして、自分の言葉で確かめよう。', 'クイズ・練習・対話で、考え方を確かめます。<br>どの単元からでも、自分のペースで。') + '</p><div class="summary-strip"><div class="summary-item"><strong>' + units.length + '</strong><span>つの単元</span></div><span class="summary-divider" aria-hidden="true"></span><div class="summary-item"><strong>' + started + '</strong><span>つに取り組み中</span></div></div></div><div class="hero-art" aria-hidden="true"><div class="art-grid">' + Array(9).fill('<span class="tile"></span>').join('') + '</div><span class="art-dot"></span></div></section>' + interestPanel(false) + (units.length ? domains.map(function (domain) {
       var group = units.filter(function (unit) { return unit.domain === domain.id; });
       if (!group.length) return '';
       return '<section class="domain-section" id="domain-' + domain.id + '" aria-labelledby="heading-' + domain.id + '"><div class="section-heading"><span class="domain-symbol" aria-hidden="true">' + domain.id + '</span><h2 id="heading-' + domain.id + '">' + domain.title + '</h2><span class="section-meta">' + group.length + 'つの単元</span></div><div class="unit-grid">' + group.map(function (unit) {
@@ -86,11 +92,11 @@
   }
 
   function breadcrumb(unit, label) {
-    return '<nav class="breadcrumb" aria-label="現在の場所"><a href="#list">単元一覧</a><span aria-hidden="true">/</span>' + (label ? '<a href="#unit/' + e(unit.code) + '">' + e(unit.title) + '</a><span aria-hidden="true">/</span><span>' + e(label) + '</span>' : '<span>' + e(unit.title) + '</span>') + '</nav>';
+    return '<nav class="breadcrumb" aria-label="現在の場所"><a href="#list/' + core.state.grade + '">単元一覧</a><span aria-hidden="true">/</span>' + (label ? '<a href="#unit/' + e(unit.code) + '">' + e(unit.title) + '</a><span aria-hidden="true">/</span><span>' + e(label) + '</span>' : '<span>' + e(unit.title) + '</span>') + '</nav>';
   }
 
   function unitHeading(unit) {
-    return '<div class="unit-header"><div><p class="eyebrow">小学4年生 / ' + e(domainLabel(unit.domain)) + '</p><h1 class="page-title">' + e(unit.title) + '</h1><p class="page-lead">' + e(unit.goal) + '</p></div><div class="compact-progress">' + progressBar(progress(unit.code), 'この単元の達成率') + '</div></div>';
+    return '<div class="unit-header"><div><p class="eyebrow">小学' + core.state.grade + '年生 / ' + e(domainLabel(unit.domain)) + '</p><h1 class="page-title">' + e(unit.title) + '</h1><p class="page-lead">' + e(unit.goal) + '</p></div><div class="compact-progress">' + progressBar(progress(unit.code), 'この単元の達成率') + '</div></div>';
   }
 
   function savedAnswer(unit, q) {
@@ -179,7 +185,7 @@
     return '<div class="practice-main">' + breadcrumb(unit, 'ここまで') + '<section class="result-hero"><p class="eyebrow">' + e(unit.title) + '</p><h1 class="page-title">' + t('ここまでを、確かめよう。', '取り組みを確かめる') + '</h1><div class="result-ring" style="--progress:' + clampPercent(p.percent) + '%"><div class="result-ring-inner"><div class="result-number">' + clampPercent(p.percent) + '<small>%</small></div><span>この単元の達成率</span></div></div></section><div class="result-grid"><section class="result-component"><h2>練習で確かめる</h2><div class="component-count">' + p.correct + '<small> / ' + p.total + ' 問</small></div><p>答えが合っている問い。<br>もう一度、取り組めます。</p></section><section class="result-component"><h2>自分の言葉で話す</h2><div class="component-count">' + p.explained + '<small> / ' + p.buddyTotal + ' つ</small></div><p>自分で「説明できた」と確認したもの。</p></section></div><p class="result-breakdown">達成率は、練習80%と「説明できた」の自己確認20%を合わせたものです。</p><div class="button-row center-actions"><a class="button" href="#buddy/' + e(unit.code) + '">バディと話してみる →</a><a class="button secondary" href="#practice/' + e(unit.code) + '">もう一度練習する</a></div><section class="panel" style="margin-top:30px"><h2 class="panel-title">練習のふり返り</h2><ul class="review-list">' + unit.questions.map(function (q, index) {
       var answer = savedAnswer(unit, q);
       return '<li><span class="review-label">' + (answer ? answer.correct ? '確かめた' : 'もう一度' : 'これから') + '</span><span class="review-title">' + e(q.prompt) + '</span><button class="quiet-button" type="button" data-action="review-question" data-index="' + index + '">開く</button></li>';
-    }).join('') + '</ul></section><div class="button-row"><a class="text-link" href="#list">単元一覧へ戻る</a></div>' + footer() + '</div>';
+    }).join('') + '</ul></section><div class="button-row"><a class="text-link" href="#list/' + core.state.grade + '">単元一覧へ戻る</a></div>' + footer() + '</div>';
   }
 
   function buddyItem(unit) {
@@ -225,19 +231,26 @@
 
   function pausedPage() {
     var unit = core.state.resume ? core.unit(core.state.resume) : null;
-    return '<section class="paused-screen"><div class="paused-art" aria-hidden="true"><span class="pause-icon"></span></div><p class="eyebrow">ひと休み</p><h1 class="page-title">' + t('きょうは、ここまで。', '今日は、ここまで。') + '</h1><p class="page-lead">' + (core.storageOK ? '取り組んだところは、このブラウザに残っています。' : 'このページを開いている間は、続きから始められます。') + '<br>またやってみたくなったら、いつでも。</p>' + (unit ? '<div class="resume-card"><p>続きからできる単元</p><h2>' + e(unit.title) + '</h2><a class="button" href="' + e(/^#(unit|practice|result|buddy)\/825024[0-9A-Z]{10}$/.test(lastRoute) && lastRoute.slice(lastRoute.lastIndexOf('/') + 1) === unit.code ? lastRoute : '#unit/' + unit.code) + '">' + t('つづきをする', '続きをする') + ' →</a></div>' : '') + '<div class="button-row"><a class="text-link" href="#list">単元一覧を見る</a></div></section>';
+    return '<section class="paused-screen"><div class="paused-art" aria-hidden="true"><span class="pause-icon"></span></div><p class="eyebrow">ひと休み</p><h1 class="page-title">' + t('きょうは、ここまで。', '今日は、ここまで。') + '</h1><p class="page-lead">' + (core.storageOK ? '取り組んだところは、このブラウザに残っています。' : 'このページを開いている間は、続きから始められます。') + '<br>またやってみたくなったら、いつでも。</p>' + (unit ? '<div class="resume-card"><p>続きからできる単元</p><h2>' + e(unit.title) + '</h2><a class="button" href="' + e(/^#(unit|practice|result|buddy)\/82502[45][0-9A-Z]{10}$/.test(lastRoute) && lastRoute.slice(lastRoute.lastIndexOf('/') + 1) === unit.code ? lastRoute : '#unit/' + unit.code) + '">' + t('つづきをする', '続きをする') + ' →</a></div>' : '') + '<div class="button-row"><a class="text-link" href="#list/' + core.state.grade + '">単元一覧を見る</a></div></section>';
   }
 
   function render(focusMain) {
     if (window.BL.lessons) window.BL.lessons.destroy();
     var current = route();
+    if (current.page === 'list') {
+      core.state.grade = current.grade;
+      // Canonicalize old bookmarks without adding an extra history entry.
+      if (window.location.hash !== '#list/' + current.grade) window.history.replaceState(null, '', '#list/' + current.grade);
+      core.save();
+    }
     document.documentElement.setAttribute('data-mode', core.state.mode);
     if (current.unit) {
+      core.state.grade = core.gradeOf(current.unit);
       core.state.resume = current.unit.code;
       core.save();
     }
-    var content = current.page === 'list' ? listPage() : current.page === 'unit' ? unitPage(current.unit) : current.page === 'practice' ? practicePage(current.unit) : current.page === 'result' ? resultPage(current.unit) : current.page === 'buddy' ? buddyPage(current.unit) : current.page === 'paused' ? pausedPage() : '<section class="route-error"><h1>この単元を開けませんでした</h1><p>単元一覧から、もう一度選んでみてください。</p><a class="button" href="#list">単元一覧へ</a></section>';
-    app.innerHTML = '<div class="app-shell">' + sidebar(current.page) + '<div class="workspace">' + topbar(current.page) + (!core.storageOK ? '<div class="storage-warning" role="status">このブラウザでは保存できません。今は取り組めますが、ページを閉じると回答が消えます。</div>' : '') + '<main id="main" class="main" tabindex="-1" data-page="' + e(current.page) + '" data-unit="' + e(current.unit ? current.unit.code : '') + '">' + content + '</main></div></div>';
+    var content = current.page === 'list' ? listPage() : current.page === 'unit' ? unitPage(current.unit) : current.page === 'practice' ? practicePage(current.unit) : current.page === 'result' ? resultPage(current.unit) : current.page === 'buddy' ? buddyPage(current.unit) : current.page === 'paused' ? pausedPage() : '<section class="route-error"><h1>この単元を開けませんでした</h1><p>単元一覧から、もう一度選んでみてください。</p><a class="button" href="#list/' + core.state.grade + '">単元一覧へ</a></section>';
+    app.innerHTML = '<div class="app-shell">' + sidebar(current.page) + '<div class="workspace">' + topbar(current.page) + gradeTabs() + (!core.storageOK ? '<div class="storage-warning" role="status">このブラウザでは保存できません。今は取り組めますが、ページを閉じると回答が消えます。</div>' : '') + '<main id="main" class="main" tabindex="-1" data-page="' + e(current.page) + '" data-grade="' + core.state.grade + '" data-unit="' + e(current.unit ? current.unit.code : '') + '">' + content + '</main></div></div>';
     if (current.page === 'unit' && window.BL.visuals) {
       var visual = document.getElementById('unit-visual');
       if (visual) { visual.innerHTML = window.BL.visuals.render(current.unit); window.BL.visuals.bind(visual, current.unit); }
@@ -342,7 +355,14 @@
     if (!button || !app.contains(button) || button.disabled) return;
     var action = button.getAttribute('data-action');
     var current = route();
-    if (action === 'mode') {
+    if (action === 'grade') {
+      var grade = Number(button.getAttribute('data-grade'));
+      if (core.grades().indexOf(grade) === -1) return;
+      core.state.grade = grade;
+      core.save();
+      go('#list/' + core.state.grade);
+      announce('小学' + grade + '年生の単元を表示しました。');
+    } else if (action === 'mode') {
       var mode = button.getAttribute('data-mode');
       if (mode !== 'es' && mode !== 'js') return;
       core.state.mode = mode;
@@ -367,7 +387,7 @@
       var domain = button.getAttribute('data-domain');
       if (!domains.some(function (item) { return item.id === domain; })) return;
       if (current.page !== 'list') {
-        go('#list');
+        go('#list/' + core.state.grade);
         window.setTimeout(function () { var heading = document.getElementById('heading-' + domain); if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus(); heading.scrollIntoView({ block: 'start' }); } }, 50);
       } else {
         var heading = document.getElementById('heading-' + domain);
@@ -449,6 +469,12 @@
         focusSelector('#buddy-answer');
       }
     }
+  });
+
+  document.querySelector('.skip-link').addEventListener('click', function (event) {
+    event.preventDefault();
+    var main = document.getElementById('main');
+    if (main) { main.focus(); main.scrollIntoView({block: 'start', behavior: 'auto'}); }
   });
 
   window.addEventListener('hashchange', function () { render(true); });

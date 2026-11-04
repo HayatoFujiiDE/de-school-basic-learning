@@ -21,7 +21,7 @@ async function audit(page,code){
  await context.route(/^https?:/,r=>{if(!/^https:\/\/fonts\.(googleapis|gstatic)\.com\//.test(r.request().url()))requests.push(r.request().url());return r.abort();});
  const page=await context.newPage();await page.goto(app);await page.waitForSelector('main[data-page=list]');
  const items=await page.evaluate(()=>JSON.parse(JSON.stringify(BL.lessonScenes.items)));
- const codes=Object.keys(items);assert.equal(codes.length,8);
+ const codes=Object.keys(items);const added=JSON.parse(fs.readFileSync(path.join(root,'sources/grade5-lesson-manifest.json'),'utf8'));const legacy=Object.keys(JSON.parse(fs.readFileSync(path.join(root,'sources/lesson-review.json'),'utf8')).items);assert.deepEqual(codes.slice().sort(),legacy.concat(added.codes).sort(),'all expected lessons loaded');
  for(const width of [1440,1024,390]){
   await page.setViewportSize({width,height:1000});
   for(const mode of ['es','js']){
@@ -82,9 +82,9 @@ async function audit(page,code){
  await motion.locator(action('reset')).click();await motion.locator(action('play')).click();await motion.clock.runFor(500);
  await motion.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,get:()=>true});document.dispatchEvent(new Event('visibilitychange'));});
  assert.equal(await motion.locator(action('play')).getAttribute('aria-pressed'),'false','visibility stops');await motion.evaluate(()=>delete document.hidden);
- await motion.locator(action('play')).click();await motion.evaluate(()=>{location.hash='#list';});await motion.waitForSelector('main[data-page=list]');await motion.clock.runFor(5000);assert.equal(await motion.locator('[data-lesson-stage]').count(),0,'navigation cleans up');await motion.close();
+ await motion.locator(action('play')).click();await motion.evaluate(()=>{location.hash='#list/5';});await motion.waitForSelector('main[data-page=list]');await motion.clock.runFor(5000);assert.equal(await motion.locator('[data-lesson-stage]').count(),0,'navigation cleans up');await motion.close();
  const videos=await context.newPage();await videos.emulateMedia({reducedMotion:'no-preference'});await videos.goto(app);await videos.waitForSelector('main[data-page=list]');
- for(const code of ['8250243150000000','8250243240000000','8250243250000000','8250243310000000']){
+ for(const code of ['8250243150000000','8250243240000000','8250243250000000','8250243310000000'].concat(added.videos)){
   await go(videos,code);const video=videos.locator('video');
   const initial=await video.evaluate(v=>({paused:v.paused,autoplay:v.autoplay,preload:v.preload,controls:v.controls,inline:v.playsInline}));
   assert.deepEqual(initial,{paused:true,autoplay:false,preload:'none',controls:true,inline:true});
@@ -94,7 +94,7 @@ async function audit(page,code){
   await videos.locator('[data-lesson-video] summary').click();await videos.waitForFunction(()=>document.querySelector('video').paused);
  }
  assert.equal(errors.length,0,JSON.stringify(errors));assert.equal(requests.length,0,'unexpected network');
- const result={lessons:8,steps:33,checkedViews:views,predictions,localVideosPlayed:played,viewports:[1440,1024,390],modes:['es','js'],errors:errors.length,unexpectedRequests:requests.length,offline:true};
+ const result={lessons:codes.length,steps:codes.reduce((n,c)=>n+items[c].steps.length,0),checkedViews:views,predictions,localVideosPlayed:played,viewports:[1440,1024,390],modes:['es','js'],errors:errors.length,unexpectedRequests:requests.length,offline:true};
  fs.writeFileSync(path.join(out,'check.json'),JSON.stringify(result,null,2)+'\n');console.log('LESSON_BROWSER_CHECK='+JSON.stringify(result));
  await context.close();
  }finally{await browser.close();}

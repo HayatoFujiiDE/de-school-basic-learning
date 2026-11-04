@@ -10,3 +10,5 @@ button,.mode-button,.interest-button,.length-tab,.question-dot,.nav-link,.quiet-
 
 .sidebar-caption{font-size:10px;letter-spacing:.04em;white-space:nowrap;margin-left:38px}
 @media(max-width:760px){.list-hero{grid-template-columns:1fr}.hero-art{display:none}.page-title{font-size:25px}.list-hero .page-title{font-size:25px}}
+
+.grade-tabs{display:flex;gap:8px;margin:8px clamp(18px,3.3vw,56px) 0}.grade-tab{min-height:48px;padding:10px 22px;border:1px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}.grade-tab[aria-pressed=true]{background:var(--green-soft);border-color:var(--green);color:var(--green)}.grade-tab:focus-visible{outline:3px solid #a9590b;outline-offset:4px}

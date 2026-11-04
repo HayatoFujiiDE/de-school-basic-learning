@@ -18,7 +18,7 @@ async function metrics(page){return page.evaluate(pattern=>{
   return {length:document.body.innerText.length,forbidden:(copy.match(bad)||[]).length,overflow:document.documentElement.scrollWidth>innerWidth,heading:document.querySelectorAll('main h1').length};
 },banned);}
 async function audit(page,context){const m=await metrics(page);assert.ok(m.length>80,context+': nonempty visible UI');assert.equal(m.forbidden,0,context+': forbidden copy');assert.equal(m.overflow,false,context+': horizontal overflow');assert.equal(m.heading,1,context+': one visible main heading');visited++;}
-async function waitRoute(page,hash){const match=/^#(unit|practice|result|buddy)\/(825024[0-9A-Z]{10})$/.exec(hash);const expectedPage=match?match[1]:hash==='#list'?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';await page.waitForFunction(({hash,expectedPage,expectedCode})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode;},{hash,expectedPage,expectedCode});}
+async function waitRoute(page,hash){if(hash==='#list')hash='#list/'+await page.evaluate(()=>BL.core.state.grade);const match=/^#(unit|practice|result|buddy)\/(82502[45][0-9A-Z]{10})$/.exec(hash);const expectedPage=match?match[1]:/^#list\/[45]$/.test(hash)?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';const expectedGrade=match?match[2][5]:/^#list\/[45]$/.test(hash)?hash.slice(-1):null;await page.waitForFunction(({hash,expectedPage,expectedCode,expectedGrade})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode && (!expectedGrade || main.dataset.grade===expectedGrade);},{hash,expectedPage,expectedCode,expectedGrade});}
 async function navigate(page,hash){await page.evaluate(h=>{location.hash=h;},hash);await waitRoute(page,hash);}
 async function submit(page,q,kind,wrong){
   const form=page.locator('form[data-kind="'+kind+'"]');
@@ -47,7 +47,14 @@ async function run(){
     const page=await context.newPage();
     await page.goto(url+'#list');
     const units=await page.evaluate(()=>BL.core.units().map(u=>({code:u.code,questions:u.questions,game:u.game,buddy:u.buddy,entries:u.entries,workedExample:u.workedExample})));
-    assert.ok(units.length>=16,'material loaded');
+    const expected5=JSON.parse(fs.readFileSync(path.join(root,'sources/grade5-unit-manifest.json'),'utf8')).codes;
+    const expected4=Object.keys(JSON.parse(fs.readFileSync(path.join(root,'tools/math-review-expectations.json'),'utf8')).units);
+    assert.deepEqual(units.map(u=>u.code).sort(),expected4.concat(expected5).sort(),'exact material set loaded');
+    // A changed hash alone must not identify an old list as the new grade.
+    await navigate(page,'#list/5');
+    const readinessProbe=await page.evaluate(()=>{document.querySelector('[data-action=grade][data-grade="4"]').click();const m=document.querySelector('main');return {oldReady:location.hash==='#list/4'&&m.dataset.page==='list'&&m.dataset.unit==='',newReady:m.dataset.grade==='4',rendered:m.dataset.grade};});
+    assert.deepEqual(readinessProbe,{oldReady:true,newReady:false,rendered:'5'},'old wait accepts stale grade positive probe');
+    await waitRoute(page,'#list/4');assert.equal(await page.locator('main').getAttribute('data-grade'),'4');
     // Prove the same visible-DOM detectors can fail before using negative findings.
     await page.evaluate(()=>{const probe=document.createElement('div');probe.id='positive-probe';probe.textContent='ランキング';probe.style.width=(innerWidth+200)+'px';document.body.appendChild(probe);});
     const positive=await metrics(page);assert.ok(positive.forbidden>0&&positive.overflow,'forbidden/overflow positive probes');
@@ -58,10 +65,17 @@ async function run(){
       for(const mode of ['es','js']){
         await page.locator('[data-action=mode][data-mode='+mode+']').click();
         await navigate(page,'#list');await audit(page,'list '+width+' '+mode);
-        assert.equal(await page.locator('.unit-card').count(),units.length,'all units remain visible');
+        for(const grade of [4,5]) {
+          await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);
+          assert.deepEqual((await page.locator('.unit-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.unit))).sort(),(grade===4?expected4:expected5).slice().sort(),'exact visible grade '+grade);
+          assert.equal(await page.locator('[data-action=grade][data-grade="'+grade+'"]').getAttribute('aria-pressed'),'true');
+          await audit(page,'grade '+grade+' '+width+' '+mode);
+        }
         for(const unit of units){
           for(const route of ['unit','practice','result','buddy']){
             await navigate(page,'#'+route+'/'+unit.code);await audit(page,route+' '+unit.code+' '+width+' '+mode);
+            assert.equal(await page.locator('[data-action=grade][data-grade="'+unit.code[5]+'"]').getAttribute('aria-pressed'),'true','deep link synchronizes grade');
+            if(route==='unit'&&unit.code[5]==='5'&&width===390&&mode==='es'){await page.locator('#unit-visual').scrollIntoViewIfNeeded();await page.locator('#unit-visual').screenshot({path:path.join(output,unit.code+'-visual.png')});}
           }
         }
         await page.locator('[data-action=pause]').click();await waitRoute(page,'#paused');await audit(page,'paused '+width+' '+mode);
@@ -72,7 +86,16 @@ async function run(){
       await page.screenshot({path:path.join(output,'angle-'+width+'.png'),fullPage:true});
       console.log('VIEWPORT='+width+' MODES=es,js ALL_ROUTES=PASS');
     }
-    await page.setViewportSize({width:1024,height:1000});
+    // Browser history records the selected grade, and skip links keep the unit route.
+    await navigate(page,'#list/4');
+    await page.locator('[data-action=grade][data-grade="5"]').click();await waitRoute(page,'#list/5');
+    await page.goBack();await waitRoute(page,'#list/4');assert.equal(await page.evaluate(()=>BL.core.state.grade),4);
+    await page.goForward();await waitRoute(page,'#list/5');assert.equal(await page.evaluate(()=>BL.core.state.grade),5);
+    await navigate(page,'#unit/'+expected5[0]);const skipHash=await page.evaluate(()=>location.hash);
+    await page.locator('.skip-link').focus();await page.locator('.skip-link').press('Enter');
+    assert.equal(await page.evaluate(()=>location.hash),skipHash,'keyboard skip preserves unit');
+    assert.equal(await page.evaluate(()=>document.activeElement.id),'main','skip focuses main content');
+await page.setViewportSize({width:1024,height:1000});
     await page.locator('[data-action=mode][data-mode=es]').click();
     for(const unit of units){
       await navigate(page,'#unit/'+unit.code);
@@ -91,7 +114,11 @@ async function run(){
       const range=page.locator('input[data-visual-field]').first();
       if(await range.count()){await range.focus();await range.press('ArrowRight');}
       else if(await page.locator('[data-abacus]').count())await page.locator('[data-abacus]').first().click();
-      else await page.locator('button[data-visual-field]').nth(1).click();
+      else {
+        const selected=page.locator('button[data-visual-field][aria-pressed="true"]').first();
+        await selected.click();assert.equal(await stage.innerHTML(),initial,'same selection stays stable');
+        await page.locator('button[data-visual-field][aria-pressed="false"]').first().click();
+      }
       assert.notEqual(await stage.innerHTML(),initial,'visual reacts '+unit.code);visuals++;
       await page.locator('[data-visual-reset]').click();assert.equal(await stage.innerHTML(),initial,'visual resets '+unit.code);
       await navigate(page,'#practice/'+unit.code);
@@ -117,6 +144,8 @@ async function run(){
       await page.locator('[data-action=buddy-confirm]').click();
       await audit(page,'completed buddy '+unit.code);
     }
+    for(const grade of [4,5,4,5]){await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);await page.reload();assert.equal(await page.evaluate(()=>BL.core.state.grade),grade);assert.equal(await page.evaluate(()=>BL.core.units().every(u=>BL.core.progress(u.code).percent===100)),true,'grade switch preserves all progress');}
+    await navigate(page,'#buddy/'+units[units.length-1].code);
     await page.reload();assert.equal(await page.evaluate(()=>BL.core.units().every(u=>BL.core.progress(u.code).percent===100)),true,'reload all progress');
     assert.equal(await page.locator('#buddy-answer').inputValue(),'','conversation text not reloaded');
     // Untrusted user prose stays text and is never persisted or executed.
@@ -126,7 +155,7 @@ async function run(){
     const resumeHash=await page.evaluate(()=>location.hash);await page.locator('[data-action=pause]').click();await waitRoute(page,'#paused');await page.locator('.resume-card a').first().click();await waitRoute(page,resumeHash);assert.equal(await page.locator('.message.own').count(),1,'pause/resume retains submitted text');
     await navigate(page,'#unit/not-a-code');await audit(page,'invalid route');
     const blocked=await context.newPage();await blocked.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw Error('blocked storage');}});});await blocked.goto(url+'#list');assert.ok(await blocked.locator('.storage-warning').isVisible());await audit(blocked,'blocked storage');await blocked.close();
-    const corrupt=await context.newPage();await corrupt.addInitScript(()=>localStorage.setItem('des.basic-learning.v1','{bad'));await corrupt.goto(url+'#list');assert.equal(await corrupt.locator('.unit-card').count(),units.length);await audit(corrupt,'corrupt storage');await corrupt.close();
+    const corrupt=await context.newPage();await corrupt.addInitScript(()=>localStorage.setItem('des.basic-learning.v1','{bad'));await corrupt.goto(url+'#list');assert.equal(await corrupt.locator('.unit-card').count(),expected4.length);await audit(corrupt,'corrupt storage');await corrupt.close();
     assert.equal(unexpected.length,0,'no unexpected remote requests');assert.equal(errors.length,0,'no application JS errors');
     const report={viewports:[1440,1024,390],modes:['es','js'],checkedViews:visited,practiceAnswers:answered,buddyDialogues:dialogues,interactiveVisuals:visuals,jsErrors:errors.length,unexpectedRequests:unexpected.length,offline:true};
     fs.writeFileSync(path.join(root,'output/browser-check.json'),JSON.stringify(report,null,2)+'\n');
