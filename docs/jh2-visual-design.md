@@ -34,8 +34,8 @@
 |3221100000|`{"condition":"sss","pose":"rotate"}`|condition sss/sas/asa; pose rotate/reflect|6|同一三角形の合同変換。三辺、二辺とその間の角、一辺とその両端の角の対応を強調。|congruence-source/target; congruence-mark-*|
 |3221200000|`{"step":0}`|step0..3|4|AB=AC、DはBC中点、AD共通の図。仮定→三辺一致→合同→結論の役割を区別。|proofstructure-triangle; proofstructure-midline; proofstructure-*|
 |3236000000|`{"example":"triangle","direction":"original"}`|example triangle/rectangle; direction original/converse|4|二等辺三角形と底角の逆は成立。長方形なら対角線等長の逆は不成立：非長方形の等脚台形を反例に。|converse-body; converse-diagonal-*|
-|3221000000|`{"step":0}`|step0..3|4|A(300,70),B(180,270),C(420,270),D(300,270)。AB=AC、BD=CD、AD共通→△ABD≅△ACD→∠BAD=∠CAD。|proof-triangle; proof-midline; proof-side-*; proof-arc-*|
-|3222100000|`{"half":3,"height":4}`|half2..4; height3..4|6|等脚三角形底辺2half、高さheight。等しい斜辺と底角、頂点から中点への線。角を丸めて等しいと判定しない。|isosceles-body; isosceles-midline; isosceles-arc-*|
+|3221000000|`{"step":0}`|step0..3|4|A(300,70),B(180,270),C(420,270),D(300,270)。AB=AC、BD=CD、AD共通→△ABD≡△ACD→∠BAD=∠CAD。|proof-triangle; proof-midline; proof-side-*; proof-arc-*|
+|3222100000|`{"half":3,"height":4}`|half2..4; height3..4|6|等脚三角形底辺2half、高さheight。等しい二辺と底角、頂点から中点への線。角を丸めて等しいと判定しない。|isosceles-body; isosceles-midline; isosceles-arc-*|
 |3222000000|`{"condition":"leg","pose":"same"}`|condition leg/angle; pose same/reflect|4|3-4-5直角三角形2枚。斜辺と他の一辺、斜辺と一鋭角の合同条件。直角は仮定として表示。|right-source/target; right-mark-*|
 |3220000000|`{"shear":1}`|shear−2..2|5|底辺5、高さ3の平行四辺形。対辺平行/等長、対角線が互いに中点で交わる。|parallelogram-body; parallelogram-diagonal-0/1; parallelogram-midpoint|
 |3222200000|`{"condition":"parallel","shear":1}`|condition parallel/equal/both/diagonal/angle; shear0..2|15|平行四辺形になる5条件を同一の成立する図で対応表示。1組だけの対辺等長を十分条件にしない。|condition-body; condition-mark-*|
@@ -58,7 +58,7 @@
 3. 312130 加減：2x+y=7,x−y=2→両式を加えて3x=9、元のx−y=2も残す→x3,y1→両元式を確認。root動画同例。tryIt {step:0}。
 4. 331100 一次グラフ：y2x+1と切片(0,1)→右へ1→上へ2で(1,3)→直線。途中の補助線は案内、点は正確な座標で固定。root動画同例。tryIt {a:'2',b:1}。
 5. 321110 平行線：水平な二直線の平行を仮定→横切る60°の直線→同位角60°→対頂角から錯角60°。円弧と線の角度一致。tryIt {angle:'60',pair:'alternate'}。
-6. 322100 合同：AB=ACとD中点→BD=CD、AD共通→三辺一致で△ABD≅△ACD→∠BAD=∠CAD。三角形の構造は固定し根拠を強調。tryIt {step:0}。
+6. 322100 合同：AB=ACとD中点→BD=CD、AD共通→三辺一致で△ABD≡△ACD→∠BAD=∠CAD。三角形の構造は固定し根拠を強調。tryIt {step:0}。
 7. 341120 箱ひげ：元8値[2,4,4,6,8,8,10,12]を並べる→中央値7→Q1=4,Q3=9→min2/max12と箱ひげ。全8値は残し、並び替えるアニメで数字を遮蔽しない。tryIt {dataset:'even',step:0}。
 8. 342120 硬貨：独立で公平な区別した2枚→第一の表裏→第二を各枝へ→全4結果のうち表1枚は2/4=1/2。出現済みの葉は固定し、未完成途中を全標本数と呼ばない。tryIt {event:'one'}。
 
@@ -73,7 +73,7 @@ rollbackは新入口を非表示にし、v6対応coreと保存対象を保持。
 作者専用worktreeで実行。新ファイル以外の製品ソースは変更していない。
 
 - 構文・登録境界：`JH2_AUTHOR_CONTRACT=PASS ES2017=2 files states=460 frames=3232 tryIt=8 invalid=48 clamp=16 duplicate_load=PASS exact_legacy_delegation=PASS ids=PASS prohibited_copy=0`。全図の状態直積、sceneの101phase、tryItの合法状態、無効step/phase、二重load、既存rendererへのexact委譲を確認。
-- 独立数学検査：`JH2_VISUAL_MATH=PASS units=39 states=460 checks=7141 legacy_diagrams=104 positive_probes=4 partial=false`。
+- 独立数学検査：`JH2_VISUAL_MATH=PASS units=39 states=460 checks=8408 legacy_diagrams=104 positive_probes=8 partial=false`。
 - 独立scene数学検査：`JH2_LESSON_MATH=PASS scenes=8 steps=32 frames=3232 checks=189284 legacy_frames=339 positive_probes=3`。旧28sceneの339frame一致。
 - 実Chrome・幅390：`JH2_TYPOGRAPHY=PASS modules=39 states=460 scenes=8 frames=3232 width=390 text_collisions=0 text_clipping=0 overflow=0 positive_probes=1 negative_probes=1`。共通CSSと専用CSSを含む実計測。
 - 目視：`JH2_GALLERY=PASS sheets=15 figures=39 scene_steps=32`。39既定図と32段のギャラリー15枚を確認。
@@ -82,8 +82,8 @@ rollbackは新入口を非表示にし、v6対応coreと保存対象を保持。
 
 検証対象SHA-256：
 
-- visuals-jh2.js: `0b572acce2f47d9828f571a733cedecc51e2d85dbb6b9b30f5bdc3937935bdef`
-- lesson-scenes-jh2.js: `bc3ec00a09b2b1b9f144674bada747ad4c4268594db08ae5b35e803354e87651`
+- visuals-jh2.js: `09c953f9851b0db5380f78dd206f16b3d738a06c2a1edde3993e04239c93e688`
+- lesson-scenes-jh2.js: `b11cd5e1d4d166670f1294fc19084c6dea12b7765af2fe6e5e2a0a6c8d98956e`
 
 全原稿・独立review・poster/videoを含む統合後の実教材での全39単元、両mode、control/tryIt/keyboard/focus/動画の検証は、着地担当の統合後に実施する。ここでの単独描画検査を統合アプリ完了とは扱わない。
 
@@ -101,3 +101,8 @@ rollbackは新入口を非表示にし、v6対応coreと保存対象を保持。
 - B13のorder問題は23q8の1件。補助線を引く→錯角を対応→一直線の角へまとめるという依存順であり、独立なSSSの3根拠を恣意的な単一順に採点する問題はない。
 
 この段階の13単元JSON投影SHA-256は `cbc34093b54b211464d10f693eafcd695e611c57da07380161f82d29879f7913`。31q2の問いの目的再掲、32の「四つの角」への表記整理は作者へ依頼済みで数値・正答変更はない。全39単元生成後のmotion claims21/27同期確認と、統合アプリの実操作は引き続き必要。
+
+
+最終表記を本文・公式コードの合同記号「≡」へ統一した。数値・幾何は不変。全460状態＋3,232frameのES2017/数学/実Chrome文字bbox検査は再PASS。B31の問いの目的再掲、B32の「四つの角」も作者原稿の修正を再読した。全39原稿に追加されたB21/27 motion claimsはsceneの角位置とSSSの根拠に一致し、B13の117答案も再PASS。最後に残るのは、独立承認と素材を統合したアプリの実操作である。
+
+独立検査器の追加レビューでは、同数の選択値変更、既定値型違い、零長グラフ、抽選盤円弧flag変更を旧検査が見逃すことを隔離改変で確認した。親の許可で `tools/check-jh2-visuals.cjs` に独立した39状態契約のexact検査、線の長さと描画境界、扇形の全flagと閉路を追加。正規図は8,408検査でPASSし、4改変はそれぞれ意図したassertで拒否される。これは検査器の境界補強で、制作済み図の数値変更ではない。

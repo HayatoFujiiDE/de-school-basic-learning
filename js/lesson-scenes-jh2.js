@@ -53,7 +53,7 @@
   add('3221000000',def('三辺の根拠から、対応する角へ','AB=AC、DはBCの中点。△ABDと△ACDが合同になる根拠をそろえよう。',[
     ['仮定を図へ写す','AB=AC、DはBCの中点が仮定。まずABとACに同じ印を付ける。','二等辺三角形ABCと底辺の中点D。ABとACに等しい印。'],
     ['中点から二辺をそろえる','DがBCの中点なのでBD=CD。仮定から分かった二つ目の辺の関係。','AB=ACの印を残し、BD=CDにも別の等しい印を付ける。'],
-    ['共通の辺を使って合同へ','ADは二つの三角形に共通。三辺がそれぞれ等しいので、対応順をそろえて△ABD≅△ACD。','ADの共通を加え、三組の辺の対応が全てそろう。'],
+    ['共通の辺を使って合同へ','ADは二つの三角形に共通。三辺がそれぞれ等しいので、対応順をそろえて△ABD≡△ACD。','ADの共通を加え、三組の辺の対応が全てそろう。'],
     ['対応する角を結論にする','合同な図形の対応する角は等しい。Aの対応から∠BAD=∠CADといえる。','固定した合同な二つの三角形で、Aの両側の対応する角を強調する。']
   ],['AD=ADといえる根拠は？',['共通の辺','Dが中点だから','図で縦に見えるから'],'共通の辺','同じ線分ADが両方の三角形に含まれている。'],{step:0},'同じ証明の根拠を、自分でたどる'),function(step,p){var b=polygon([A,B,C],pale,'proof-triangle')+line(A[0],A[1],D[0],D[1],green,'proof-midline');[[A,'A'],[B,'B'],[C,'C'],[D,'D']].forEach(function(v){b+=text(v[0][0]+(v[1]==='D'?20:0),v[0][1]+(v[1]==='A'?-16:30),v[1],25);});b+=tick(A,B,1,'proof-ab')+tick(A,C,1,'proof-ac');if(step>=1)b+=tick(B,D,2,'proof-bd')+tick(D,C,2,'proof-dc');if(step>=2)b+=tick(A,D,3,'proof-ad');if(step===3){var t=Math.atan2(200,120);b+=arc(300,70,36,Math.PI+t,1.5*Math.PI,'proof-angle-0',orange)+arc(300,70,36,1.5*Math.PI,2*Math.PI-t,'proof-angle-1',orange);}return b+footer(step===0?'AB=AC は仮定':step===1?'Dが中点 → BD=CD':step===2?'三辺がそれぞれ等しいので合同':'対応する角：∠BAD=∠CAD');});
   var boxData=[2,4,4,6,8,8,10,12];
