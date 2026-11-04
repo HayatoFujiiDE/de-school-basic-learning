@@ -1,0 +1,1347 @@
+{
+  "grade": 5,
+  "sourceRows": 118,
+  "unitCount": 24,
+  "note": "Alignment is not a guarantee of full classroom competency; physical construction, measurement, explanation and teacher judgement remain necessary.",
+  "rows": [
+    {
+      "curriculumCode": "8250250000000000",
+      "row": 2064,
+      "text": "〔第５学年〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250252000000000",
+      "row": 2065,
+      "text": "１　目　標　",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250252100000000",
+      "row": 2066,
+      "text": "(1) 整数の性質，分数の意味，小数と分数の計算の意味，面積の公式，図形の意味と性質，図形の体積，速さ，割合，帯グラフなどについて理解するとともに，小数や分数の計算をしたり，図形の性質を調べたり，図形の面積や体積を求めたり，表やグラフに表したりすることなどについての技能を身に付けるようにする。",
+      "unitCodes": [
+        "8250253120000000",
+        "8250253111100000",
+        "8250253111200000",
+        "8250253131100000",
+        "8250253131200000",
+        "8250253141200000",
+        "8250253140000000",
+        "8250253150000000",
+        "8250253160000000",
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000",
+        "8250253231100000",
+        "8250253232100000",
+        "8250253220000000",
+        "8250253240000000",
+        "8250253310000000",
+        "8250253321100000",
+        "8250253320000000",
+        "8250253331100000",
+        "8250253331200000",
+        "8250253420000000",
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250252200000000",
+      "row": 2067,
+      "text": "(2) 数とその表現や計算の意味に着目し，目的に合った表現方法を用いて数の性質や計算の仕方などを考察する力，図形を構成する要素や図形間の関係などに着目し，図形の性質や図形の計量について考察する力，伴って変わる二つの数量やそれらの関係に着目し，変化や対応の特徴を見いだして，二つの数量の関係を表や式を用いて考察する力，目的に応じてデータを収集し，データの特徴や傾向に着目して表やグラフに的確に表現し，それらを用いて問題解決したり，解決の過程や結果を多面的に捉え考察したりする力などを養う。",
+      "unitCodes": [
+        "8250253120000000",
+        "8250253111100000",
+        "8250253111200000",
+        "8250253131100000",
+        "8250253131200000",
+        "8250253141200000",
+        "8250253140000000",
+        "8250253150000000",
+        "8250253160000000",
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000",
+        "8250253231100000",
+        "8250253232100000",
+        "8250253220000000",
+        "8250253240000000",
+        "8250253310000000",
+        "8250253321100000",
+        "8250253320000000",
+        "8250253331100000",
+        "8250253331200000",
+        "8250253420000000",
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250252300000000",
+      "row": 2068,
+      "text": "(3) 数学的に表現・処理したことを振り返り，多面的に捉え検討してよりよいものを求めて粘り強く考える態度，数学のよさに気付き学習したことを生活や学習に活用しようとする態度を養う。",
+      "unitCodes": [
+        "8250253120000000",
+        "8250253111100000",
+        "8250253111200000",
+        "8250253131100000",
+        "8250253131200000",
+        "8250253141200000",
+        "8250253140000000",
+        "8250253150000000",
+        "8250253160000000",
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000",
+        "8250253231100000",
+        "8250253232100000",
+        "8250253220000000",
+        "8250253240000000",
+        "8250253310000000",
+        "8250253321100000",
+        "8250253320000000",
+        "8250253331100000",
+        "8250253331200000",
+        "8250253420000000",
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253000000000",
+      "row": 2069,
+      "text": "２　内　容",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253100000000",
+      "row": 2070,
+      "text": "Ａ　数と計算",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253110000000",
+      "row": 2071,
+      "text": "(1) 整数の性質及び整数の構成に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253111100000",
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253111000000",
+      "row": 2072,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253111100000",
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253111100000",
+      "row": 2073,
+      "text": "(ｱ) 整数は，観点を決めると偶数と奇数に類別されることを知ること。",
+      "unitCodes": [
+        "8250253111100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253111200000",
+      "row": 2074,
+      "text": "(ｲ) 約数，倍数について知ること。",
+      "unitCodes": [
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253112000000",
+      "row": 2075,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253111100000",
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253112100000",
+      "row": 2076,
+      "text": "(ｱ) 乗法及び除法に着目し，観点を決めて整数を類別する仕方を考えたり，数の構成について考察したりするとともに，日常生活に生かすこと。",
+      "unitCodes": [
+        "8250253111100000",
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253120000000",
+      "row": 2077,
+      "text": "(2) 整数及び小数の表し方に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253120000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253121000000",
+      "row": 2078,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253120000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253121100000",
+      "row": 2079,
+      "text": "(ｱ) ある数の10倍，100倍，1000倍，1/10 ， 1/100などの大きさの数を，小数点の位置を移してつくること。",
+      "unitCodes": [
+        "8250253120000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253122000000",
+      "row": 2080,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253120000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253122100000",
+      "row": 2081,
+      "text": "(ｱ) 数の表し方の仕組みに着目し，数の相対的な大きさを考察し，計算などに有効に生かすこと。",
+      "unitCodes": [
+        "8250253120000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253130000000",
+      "row": 2082,
+      "text": "(3) 小数の乗法及び除法に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253131000000",
+      "row": 2083,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253131100000",
+      "row": 2084,
+      "text": "(ｱ) 乗数や除数が小数である場合の小数の乗法及び除法の意味について理解すること。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253131200000",
+      "row": 2085,
+      "text": "(ｲ) 小数の乗法及び除法の計算ができること。また，余りの大きさについて理解すること。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253131300000",
+      "row": 2086,
+      "text": "(ｳ) 小数の乗法及び除法についても整数の場合と同じ関係や法則が成り立つことを理解すること。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253132000000",
+      "row": 2087,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253132100000",
+      "row": 2088,
+      "text": "(ｱ) 乗法及び除法の意味に着目し，乗数や除数が小数である場合まで数の範囲を広げて乗法及び除法の意味を捉え直すとともに，それらの計算の仕方を考えたり，それらを日常生活に生かしたりすること。",
+      "unitCodes": [
+        "8250253131100000",
+        "8250253131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253140000000",
+      "row": 2089,
+      "text": "(4) 分数に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253141200000",
+        "8250253140000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253141000000",
+      "row": 2090,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253141200000",
+        "8250253140000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253141100000",
+      "row": 2091,
+      "text": "(ｱ) 整数及び小数を分数の形に直したり，分数を小数で表したりすること。",
+      "unitCodes": [
+        "8250253141200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253141200000",
+      "row": 2092,
+      "text": "(ｲ) 整数の除法の結果は，分数を用いると常に一つの数として表すことができることを理解すること。",
+      "unitCodes": [
+        "8250253141200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253141300000",
+      "row": 2093,
+      "text": "(ｳ) 一つの分数の分子及び分母に同じ数を乗除してできる分数は，元の分数と同じ大きさを表すことを理解すること。",
+      "unitCodes": [
+        "8250253140000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253141400000",
+      "row": 2094,
+      "text": "(ｴ) 分数の相等及び大小について知り，大小を比べること。",
+      "unitCodes": [
+        "8250253140000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253142000000",
+      "row": 2095,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253141200000",
+        "8250253140000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253142100000",
+      "row": 2096,
+      "text": "(ｱ) 数を構成する単位に着目し，数の相等及び大小関係について考察すること。",
+      "unitCodes": [
+        "8250253140000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253142200000",
+      "row": 2097,
+      "text": "(ｲ) 分数の表現に着目し，除法の結果の表し方を振り返り，分数の意味をまとめること。",
+      "unitCodes": [
+        "8250253141200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253150000000",
+      "row": 2098,
+      "text": "(5) 分数の加法及び減法に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253151000000",
+      "row": 2099,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253151100000",
+      "row": 2100,
+      "text": "(ｱ) 異分母の分数の加法及び減法の計算ができること。",
+      "unitCodes": [
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253152000000",
+      "row": 2101,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253152100000",
+      "row": 2102,
+      "text": "(ｱ) 分数の意味や表現に着目し，計算の仕方を考えること。",
+      "unitCodes": [
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253160000000",
+      "row": 2103,
+      "text": "(6) 数量の関係を表す式に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253160000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253161000000",
+      "row": 2104,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253160000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253161100000",
+      "row": 2105,
+      "text": "(ｱ) 数量の関係を表す式についての理解を深めること。",
+      "unitCodes": [
+        "8250253160000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253162000000",
+      "row": 2106,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253160000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253162100000",
+      "row": 2107,
+      "text": "(ｱ) 二つの数量の対応や変わり方に着目し，簡単な式で表されている関係について考察すること。",
+      "unitCodes": [
+        "8250253160000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253200000000",
+      "row": 2108,
+      "text": "Ｂ　図形 ",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253210000000",
+      "row": 2109,
+      "text": "(1) 平面図形に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253211000000",
+      "row": 2110,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253211100000",
+      "row": 2111,
+      "text": "(ｱ) 図形の形や大きさが決まる要素について理解するとともに，図形の合同について理解すること。",
+      "unitCodes": [
+        "8250253211100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253211200000",
+      "row": 2112,
+      "text": "(ｲ) 三角形や四角形など多角形についての簡単な性質を理解すること。",
+      "unitCodes": [
+        "8250253211200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253211300000",
+      "row": 2113,
+      "text": "(ｳ) 円と関連させて正多角形の基本的な性質を知ること。",
+      "unitCodes": [
+        "8250253211300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253211400000",
+      "row": 2114,
+      "text": "(ｴ) 円周率の意味について理解し，それを用いること。",
+      "unitCodes": [
+        "8250253211400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253212000000",
+      "row": 2115,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253212100000",
+      "row": 2116,
+      "text": "(ｱ) 図形を構成する要素及び図形間の関係に着目し，構成の仕方を考察したり，図形の性質を見いだし，その性質を筋道を立てて考え説明したりすること。",
+      "unitCodes": [
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253220000000",
+      "row": 2117,
+      "text": "(2) 立体図形に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253221000000",
+      "row": 2118,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253221100000",
+      "row": 2119,
+      "text": "(ｱ) 基本的な角柱や円柱について知ること。",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253222000000",
+      "row": 2120,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253222100000",
+      "row": 2121,
+      "text": "(ｱ) 図形を構成する要素に着目し，図形の性質を見いだすとともに，その性質を基に既習の図形を捉え直すこと。",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253230000000",
+      "row": 2122,
+      "text": "(3) 平面図形の面積に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253231100000",
+        "8250253232100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253231000000",
+      "row": 2123,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253231100000",
+        "8250253232100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253231100000",
+      "row": 2124,
+      "text": "(ｱ) 三角形，平行四辺形，ひし形，台形の面積の計算による求め方について理解すること。",
+      "unitCodes": [
+        "8250253231100000",
+        "8250253232100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253232000000",
+      "row": 2125,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253231100000",
+        "8250253232100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253232100000",
+      "row": 2126,
+      "text": "(ｱ) 図形を構成する要素などに着目して，基本図形の面積の求め方を見いだすとともに，その表現を振り返り，簡潔かつ的確な表現に高め，公式として導くこと。",
+      "unitCodes": [
+        "8250253231100000",
+        "8250253232100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253240000000",
+      "row": 2127,
+      "text": "(4) 立体図形の体積に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253240000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253241000000",
+      "row": 2128,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253240000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253241100000",
+      "row": 2129,
+      "text": "(ｱ) 体積の単位（立方センチメートル（cm3），立方メートル（m3））について知ること。",
+      "unitCodes": [
+        "8250253240000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253241200000",
+      "row": 2130,
+      "text": "(ｲ) 立方体及び直方体の体積の計算による求め方について理解すること。",
+      "unitCodes": [
+        "8250253240000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253242000000",
+      "row": 2131,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253240000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253242100000",
+      "row": 2132,
+      "text": "(ｱ) 体積の単位や図形を構成する要素に着目し，図形の体積の求め方を考えるとともに，体積の単位とこれまでに学習した単位との関係を考察すること。",
+      "unitCodes": [
+        "8250253240000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253300000000",
+      "row": 2133,
+      "text": "Ｃ　変化と関係",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253310000000",
+      "row": 2134,
+      "text": "(1) 伴って変わる二つの数量に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253311000000",
+      "row": 2135,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253311100000",
+      "row": 2136,
+      "text": "(ｱ) 簡単な場合について，比例の関係があることを知ること。",
+      "unitCodes": [
+        "8250253310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253312000000",
+      "row": 2137,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253312100000",
+      "row": 2138,
+      "text": "(ｱ) 伴って変わる二つの数量を見いだして，それらの関係に着目し，表や式を用いて変化や対応の特徴を考察すること。",
+      "unitCodes": [
+        "8250253310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253320000000",
+      "row": 2139,
+      "text": "(2) 異種の二つの量の割合として捉えられる数量に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253321100000",
+        "8250253320000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253321000000",
+      "row": 2140,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253321100000",
+        "8250253320000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253321100000",
+      "row": 2141,
+      "text": "(ｱ) 速さなど単位量当たりの大きさの意味及び表し方について理解し，それを求めること。",
+      "unitCodes": [
+        "8250253321100000",
+        "8250253320000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253322000000",
+      "row": 2142,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253321100000",
+        "8250253320000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253322100000",
+      "row": 2143,
+      "text": "(ｱ) 異種の二つの量の割合として捉えられる数量の関係に着目し，目的に応じて大きさを比べたり表現したりする方法を考察し，それらを日常生活に生かすこと。",
+      "unitCodes": [
+        "8250253321100000",
+        "8250253320000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253330000000",
+      "row": 2144,
+      "text": "(3) 二つの数量の関係に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253331100000",
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253331000000",
+      "row": 2145,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253331100000",
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253331100000",
+      "row": 2146,
+      "text": "(ｱ) ある二つの数量の関係と別の二つの数量の関係とを比べる場合に割合を用いる場合があることを理解すること。",
+      "unitCodes": [
+        "8250253331100000",
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253331200000",
+      "row": 2147,
+      "text": "(ｲ) 百分率を用いた表し方を理解し，割合などを求めること。",
+      "unitCodes": [
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253332000000",
+      "row": 2148,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253331100000",
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253332100000",
+      "row": 2149,
+      "text": "(ｱ) 日常の事象における数量の関係に着目し，図や式などを用いて，ある二つの数量の関係と別の二つの数量の関係との比べ方を考察し，それを日常生活に生かすこと。",
+      "unitCodes": [
+        "8250253331100000",
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253400000000",
+      "row": 2150,
+      "text": "Ｄ　データの活用",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253410000000",
+      "row": 2151,
+      "text": "(1) データの収集とその分析に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253411000000",
+      "row": 2152,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253411100000",
+      "row": 2153,
+      "text": "(ｱ) 円グラフや帯グラフの特徴とそれらの用い方を理解すること。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253411200000",
+      "row": 2154,
+      "text": "(ｲ) データの収集や適切な手法の選択など統計的な問題解決の方法を知ること。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253412000000",
+      "row": 2155,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253412100000",
+      "row": 2156,
+      "text": "(ｱ) 目的に応じてデータを集めて分類整理し，データの特徴や傾向に着目し，問題を解決するために適切なグラフを選択して判断し，その結論について多面的に捉え考察すること。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253420000000",
+      "row": 2157,
+      "text": "(2) 測定した結果を平均する方法に関わる数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8250253420000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253421000000",
+      "row": 2158,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8250253420000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253421100000",
+      "row": 2159,
+      "text": "(ｱ) 平均の意味について理解すること。",
+      "unitCodes": [
+        "8250253420000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253422000000",
+      "row": 2160,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8250253420000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253422100000",
+      "row": 2161,
+      "text": "(ｱ) 概括的に捉えることに着目し，測定した結果を平均する方法について考察し，それを学習や日常生活に生かすこと。",
+      "unitCodes": [
+        "8250253420000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253500000000",
+      "row": 2162,
+      "text": "〔数学的活動〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253510000000",
+      "row": 2163,
+      "text": "(1) 内容の「Ａ数と計算」，「Ｂ図形」，「Ｃ変化と関係」及び「Ｄデータの活用」に示す学習については，次のような数学的活動に取り組むものとする。",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253511000000",
+      "row": 2164,
+      "text": "ア　日常の事象から算数の問題を見いだして解決し，結果を確かめたり，日常生活等に生かしたりする活動",
+      "unitCodes": [
+        "8250253120000000",
+        "8250253111100000",
+        "8250253111200000",
+        "8250253131100000",
+        "8250253131200000",
+        "8250253141200000",
+        "8250253140000000",
+        "8250253150000000",
+        "8250253160000000",
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000",
+        "8250253231100000",
+        "8250253232100000",
+        "8250253220000000",
+        "8250253240000000",
+        "8250253310000000",
+        "8250253321100000",
+        "8250253320000000",
+        "8250253331100000",
+        "8250253331200000",
+        "8250253420000000",
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253512000000",
+      "row": 2165,
+      "text": "イ　算数の学習場面から算数の問題を見いだして解決し，結果を確かめたり，発展的に考察したりする活動",
+      "unitCodes": [
+        "8250253120000000",
+        "8250253111100000",
+        "8250253111200000",
+        "8250253131100000",
+        "8250253131200000",
+        "8250253141200000",
+        "8250253140000000",
+        "8250253150000000",
+        "8250253160000000",
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000",
+        "8250253231100000",
+        "8250253232100000",
+        "8250253220000000",
+        "8250253240000000",
+        "8250253310000000",
+        "8250253321100000",
+        "8250253320000000",
+        "8250253331100000",
+        "8250253331200000",
+        "8250253420000000",
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253513000000",
+      "row": 2166,
+      "text": "ウ　問題解決の過程や結果を，図や式などを用いて数学的に表現し伝え合う活動",
+      "unitCodes": [
+        "8250253120000000",
+        "8250253111100000",
+        "8250253111200000",
+        "8250253131100000",
+        "8250253131200000",
+        "8250253141200000",
+        "8250253140000000",
+        "8250253150000000",
+        "8250253160000000",
+        "8250253211100000",
+        "8250253211200000",
+        "8250253211300000",
+        "8250253211400000",
+        "8250253231100000",
+        "8250253232100000",
+        "8250253220000000",
+        "8250253240000000",
+        "8250253310000000",
+        "8250253321100000",
+        "8250253320000000",
+        "8250253331100000",
+        "8250253331200000",
+        "8250253420000000",
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253600000000",
+      "row": 2167,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250253601000000",
+      "row": 2168,
+      "text": "最大公約数",
+      "unitCodes": [
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253602000000",
+      "row": 2169,
+      "text": "最小公倍数",
+      "unitCodes": [
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253603000000",
+      "row": 2170,
+      "text": "通分",
+      "unitCodes": [
+        "8250253140000000",
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253604000000",
+      "row": 2171,
+      "text": "約分",
+      "unitCodes": [
+        "8250253140000000",
+        "8250253150000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253605000000",
+      "row": 2172,
+      "text": "底面",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253606000000",
+      "row": 2173,
+      "text": "側面",
+      "unitCodes": [
+        "8250253220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253607000000",
+      "row": 2174,
+      "text": "比例",
+      "unitCodes": [
+        "8250253310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250253608000000",
+      "row": 2175,
+      "text": "％",
+      "unitCodes": [
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250255000000000",
+      "row": 2176,
+      "text": "３　内容の取扱い",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "structural heading"
+    },
+    {
+      "curriculumCode": "8250255100000000",
+      "row": 2177,
+      "text": "(1) 内容の「Ａ数と計算」の(1)のアの(ｲ)については，最大公約数や最小公倍数を形式的に求めることに偏ることなく，具体的な場面に即して取り扱うものとする。",
+      "unitCodes": [
+        "8250253111200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250255200000000",
+      "row": 2178,
+      "text": "(2) 内容の「Ｂ図形」の(1)については，平面を合同な図形で敷き詰めるなどの操作的な活動を重視するよう配慮するものとする。",
+      "unitCodes": [
+        "8250253211100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250255300000000",
+      "row": 2179,
+      "text": "(3) 内容の「Ｂ図形」の(1)のアの(ｴ)については，円周率は3.14を用いるものとする。",
+      "unitCodes": [
+        "8250253211400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250255400000000",
+      "row": 2180,
+      "text": "(4) 内容の「Ｃ変化と関係」の(3)のアの(ｲ)については，歩合の表し方について触れるものとする。",
+      "unitCodes": [
+        "8250253331200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    },
+    {
+      "curriculumCode": "8250255500000000",
+      "row": 2181,
+      "text": "(5) 内容の「Ｄデータの活用」の(1)については，複数の帯グラフを比べることにも触れるものとする。",
+      "unitCodes": [
+        "8250253410000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Coverage is collective where several lessons share a MEXT item; see explanations, questions, workedExample, buddy and visual claims."
+    }
+  ]
+}

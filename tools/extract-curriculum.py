@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce exact grade-4 mathematics rows; no third-party dependencies."""
+"""Reproduce exact grade-4 or grade-5 mathematics rows; no third-party dependencies."""
 import argparse
 import hashlib
 import json
@@ -15,9 +15,12 @@ EXPECTED_SHA256 = 'f32ba37970cac91a26656a4f317ca755e2536aa525fc439d214391904e24c
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--grade', type=int, choices=(4, 5), default=4)
     parser.add_argument('--input', type=Path, default=ROOT / 'sources/mext-20230901-codes.xlsx')
-    parser.add_argument('--output', type=Path, default=ROOT / 'sources/grade4-math-codes.json')
+    parser.add_argument('--output', type=Path)
     args = parser.parse_args()
+    prefix = '82502' + str(args.grade)
+    output_path = args.output or ROOT / ('sources/grade' + str(args.grade) + '-math-codes.json')
     digest = hashlib.sha256(args.input.read_bytes()).hexdigest()
     if digest != EXPECTED_SHA256:
         raise SystemExit('Source checksum differs; review source before changing pinned checksum.')
@@ -37,14 +40,14 @@ def main():
                         continue
                     cells[re.sub(r'\d', '', cell.attrib['r'])] = strings[int(value.text)] if cell.attrib.get('t') == 's' else value.text
                 code = cells.get('D', '')
-                if cells.get('A') == '算数' and code.startswith('825024'):
+                if cells.get('A') == '算数' and code.startswith(prefix):
                     if not re.fullmatch(r'[0-9A-Z]{16}', code):
                         raise SystemExit('Unexpected code format')
                     rows.append({'row': int(row.attrib['r']), 'code': code, 'text': cells['C']})
-    if len(rows) != 138 or len({r['code'] for r in rows}) != len(rows):
+    if len(rows) != {4: 138, 5: 118}[args.grade] or len({r['code'] for r in rows}) != len(rows):
         raise SystemExit('Unexpected row count or duplicated code: ' + str(len(rows)))
-    output = {'source': URL, 'sha256': digest, 'retrievedAt': '2026-11-04', 'subject': '算数', 'grade': 4, 'selection': 'A == 算数 AND D starts with 825024', 'rows': rows}
-    args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n')
+    output = {'source': URL, 'sha256': digest, 'retrievedAt': '2026-11-04', 'subject': '算数', 'grade': args.grade, 'selection': 'A == 算数 AND D starts with ' + prefix, 'rows': rows}
+    output_path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n')
     print('EXTRACT_RESULT=PASS rows=' + str(len(rows)) + ' sha256=' + digest)
 
 if __name__ == '__main__':

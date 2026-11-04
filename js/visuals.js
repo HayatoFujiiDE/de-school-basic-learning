@@ -41,6 +41,7 @@
     return svg(body,height*size+80,'横'+width+'、たて'+height+'のマス目');
   }
   function stage(def,s) {
+    if (typeof def.draw === 'function') return def.draw(s);
     var body='',i,j,n=s.n,answer,a,b;
     if(def.kind==='large') {
       return '<div class="place-cards">'+['兆','億','万','一'].map(function(v,index){return '<div><small>'+v+'のまとまり</small><strong>'+(index===0?n:'0000')+'</strong></div>';}).join('')+'</div>'+out(n+'兆 = '+(n*10000)+'億 = '+(n*100000000)+'万');

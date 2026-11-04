@@ -76,3 +76,9 @@ lock の hash は記録された来歴情報であり、署名検証や remote c
 ## 適用範囲と未確認
 
 本調査は、読み取ったスナップショットを参考に既存版でローカル教材を制作する可否の判断に限る。人による教材公開承認、学習効果の実証、全依存関係の安全認証は含まない。レンダー成功・字幕可読性・画面内配置・最終動画の数学的整合は、生成後に別途検証する。
+
+## 第5学年追加時の適用（2026-11-04）
+同じ既存Manim CE 0.20.1と検査済みSkillを使用。新規のSkill・Python/npm依存はインストールしていない。`render-media-grade5.py`も通信を監査hookで遮断し、更新通知を停止、pluginを空にし、ローカルの独自素材2本だけを有限回描画する。字幕はインストール済みフォントで作り、TeX、外部画像、録音を使わない。固定版ドキュメントの個別URLはこの環境から取得できなかったため、公式リポジトリのv0.20.1ソースと実際のローカル描画でAPIを確認した。
+- https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/mobject/geometry/polygram.py
+- https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/animation/transform.py
+人気や採用数を教材の正確さの証明とせず、新しい原稿・図・動画を別担当が検証する。

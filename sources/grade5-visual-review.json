@@ -1,0 +1,20 @@
+{
+  "evidence": "verified",
+  "reviewer": "independent-primary-agent",
+  "scope": "mathematical invariants, authored text and matching claims; production publication remains unapproved",
+  "visualsSha256": "2329615bb76b683070b6f7b5b6988dce78e316651639213a7b03451c60eb495e",
+  "scenesSha256": "3e4ea0cd599ae387f8704856f288b625d703a697af9948c65d1897d5adeabc3c",
+  "units": 24,
+  "interactiveStates": 2958,
+  "scenes": 6,
+  "steps": 24,
+  "sampledFrames": 2424,
+  "legacyFramesCompared": 99,
+  "positiveProbes": 5,
+  "methods": [
+    "independent arithmetic and polygon area",
+    "quantity counts and equal subdivisions",
+    "all intermediate token bounding boxes",
+    "literal source and claims review"
+  ]
+}

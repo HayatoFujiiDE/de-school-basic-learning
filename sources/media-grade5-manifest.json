@@ -1,0 +1,46 @@
+{
+  "renderer": {
+    "version": "0.20.1",
+    "sourceSha256": "074c6cd0b673c2cb4b618e5255e569a2761a6c7b2848ce157dc385af0ba47f25"
+  },
+  "videos": [
+    {
+      "code": "8250253150000000",
+      "path": "assets/lessons/8250253150000000.mp4",
+      "sha256": "bbad06c05c1d5900915828e9aaaf11edbc9a6589d355fe8d00e015583a141be6",
+      "evidence": "verified",
+      "transcript": [
+        "同じ長さの1本を、1とする。",
+        "どちらも6等分する。色の広さは変えない。",
+        "1/6が、3こと2こ。合わせて5こ。",
+        "分母は6のまま。共通の単位で数える。"
+      ],
+      "claimIds": [
+        "c17",
+        "visual",
+        "motion"
+      ],
+      "reviewedBy": "independent-evidence-agent",
+      "publicationApproval": false
+    },
+    {
+      "code": "8250253420000000",
+      "path": "assets/lessons/8250253420000000.mp4",
+      "sha256": "5e1b49b48e7e9bceb9e8be2532171ad1d1dced5fe8fd702786a1066930681647",
+      "evidence": "verified",
+      "transcript": [
+        "Aは2こ、Bは4こ、Cは6こ。全部で12こ。",
+        "CからAへ2こ移す。全部の数は変わらない。",
+        "12こを3組に同じ数ずつ分けると、1組は4こ。",
+        "平均は4こ。合計を、組の数でわる。"
+      ],
+      "claimIds": [
+        "c17",
+        "visual",
+        "motion"
+      ],
+      "reviewedBy": "independent-evidence-agent",
+      "publicationApproval": false
+    }
+  ]
+}
