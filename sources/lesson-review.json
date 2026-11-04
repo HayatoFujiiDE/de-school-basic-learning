@@ -1,0 +1,123 @@
+{
+  "reviewType": "independent-agent-math-evidence",
+  "reviewedAt": "2026-11-04",
+  "sourceSha256": "871d6f79fd9b5eb135cb07a09b4d5fb0c0d51b8f015252beb66774a17b75f950",
+  "humanPublicationApproval": false,
+  "method": "All33 step explanations/alt descriptions and8 challenges read; exact supporting claims matched. Independent quantities/geometry checked at7 phase values per step; source snapshot pinned. Layout and interaction separately verified.",
+  "items": {
+    "8250243131100000": {
+      "evidence": "verified",
+      "stepCount": 5,
+      "claimIds": [
+        "c16"
+      ],
+      "itemSha256": "80c08efd2977ed2b1f11caf06e601bdc8119b2e933b5e908dadd1e50b0d86f1d",
+      "claimTextSha256": {
+        "c16": "ba6dc21ec06e24a6fa53552a513f47361855bee8776bee80ac916d68671dfccf"
+      },
+      "independentChallengeAnswer": "0を入れる"
+    },
+    "8250243141300000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c15",
+        "motion1"
+      ],
+      "itemSha256": "5e332fed4b73e00b078832c67f0eeaf75d9e85491a68befd2ab81a8009357c0d",
+      "claimTextSha256": {
+        "c15": "f7dc57e44f8a81db6c199445bcae6daf4d73d6886fe8c18406009b40ad0fd5e1",
+        "motion1": "79ee40b926e9a873efc2a0c08be67411f96c121010751be33be5e05fd46a1474"
+      },
+      "independentChallengeAnswer": "4こ"
+    },
+    "8250243150000000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c16"
+      ],
+      "itemSha256": "27bc3d60b3af84a449ce9b3db3fca1ca23295adbccba7dc880eaedf384d7d358",
+      "claimTextSha256": {
+        "c16": "23a219f5f07602947eb55af052eab08457d05b9828ce881997795cd71b24e57d"
+      },
+      "independentChallengeAnswer": "5のまま"
+    },
+    "8250243240000000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c18"
+      ],
+      "itemSha256": "3963101b7c7608ed7da352f878e5842691bc69c0da014819b1f5ec27051cec09",
+      "claimTextSha256": {
+        "c18": "69a9c781598bfa1b6ee13df5ec7ffac3733c15a182b32999149636f2dfed8219"
+      },
+      "independentChallengeAnswer": "6cm²"
+    },
+    "8250243250000000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c17"
+      ],
+      "itemSha256": "4f04f49731922fb98d17ae27345d820f506a7507e89e03afa6688ba30058f371",
+      "claimTextSha256": {
+        "c17": "b4499d1a799d640c8f1b61a5e537254ad0d5b87e898bcb787d6926283d6554cb"
+      },
+      "independentChallengeAnswer": "70°"
+    },
+    "8250243310000000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c15"
+      ],
+      "itemSha256": "1a17beb01d27f2392767704b77506614cf0b829de6ea7e176c2aecb9e768a450",
+      "claimTextSha256": {
+        "c15": "5d93df549927123a1584f98b537ebc11645642fc2641a72ec2efdb242665a578"
+      },
+      "independentChallengeAnswer": "3本"
+    },
+    "8250243320000000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c16"
+      ],
+      "itemSha256": "a61c55a5bd7cd3e3c2dc4092d314564c1c13dd7ff4411a0d8c8856c6e373febf",
+      "claimTextSha256": {
+        "c16": "ac40d959734fb189ac521841afb930cf56fb08ec51d0f62120f71f7da1e2b5bc"
+      },
+      "independentChallengeAnswer": "A"
+    },
+    "8250243411200000": {
+      "evidence": "verified",
+      "stepCount": 4,
+      "claimIds": [
+        "c17"
+      ],
+      "itemSha256": "518e4a8eff44c61cba8fec25a264a3e6f1ad7f14225cb36137d920487af05056",
+      "claimTextSha256": {
+        "c17": "af9cb442474e5df34d0a53cdd86a47ac88fafaa8e14d5ad5d833497031f6632d"
+      },
+      "independentChallengeAnswer": "3℃"
+    }
+  },
+  "validation": {
+    "scenes": 8,
+    "steps": 33,
+    "frames": 231,
+    "assertions": 1687,
+    "phaseValues": [
+      0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      1
+    ],
+    "mutationProbes": 4
+  }
+}

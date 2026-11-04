@@ -1,0 +1,753 @@
+{
+  "method": "Independent expressions derived from question statements, recomputed using exact rational arithmetic and restricted AST (+ - * / % floor ceil). Covers every numeric question and game. Choice/order semantics are independently reviewed by evidence agent, not covered by this numerical check.",
+  "numericChecks": 83,
+  "results": [
+    {
+      "unitCode": "8250243110000000",
+      "questionId": "q1",
+      "expression": "100000000/10000",
+      "exactNumerator": 10000,
+      "exactDenominator": 1,
+      "answer": 10000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "questionId": "q2",
+      "expression": "3*100000000+500*10000",
+      "exactNumerator": 305000000,
+      "exactDenominator": 1,
+      "answer": 305000000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "questionId": "q6",
+      "expression": "1000*100000000*10/1000000000000",
+      "exactNumerator": 1,
+      "exactDenominator": 1,
+      "answer": 1,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "questionId": "q1",
+      "expression": "floor((3460+500)/1000)*1000",
+      "exactNumerator": 3000,
+      "exactDenominator": 1,
+      "answer": 3000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "questionId": "q2",
+      "expression": "floor((3500+500)/1000)*1000",
+      "exactNumerator": 4000,
+      "exactDenominator": 1,
+      "answer": 4000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "questionId": "q5",
+      "expression": "floor((398+50)/100)*100+floor((203+50)/100)*100",
+      "exactNumerator": 600,
+      "exactDenominator": 1,
+      "answer": 600,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "questionId": "q6",
+      "expression": "floor((79+5)/10)*10*floor((21+5)/10)*10",
+      "exactNumerator": 1600,
+      "exactDenominator": 1,
+      "answer": 1600,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "questionId": "q7",
+      "expression": "600/30",
+      "exactNumerator": 20,
+      "exactDenominator": 1,
+      "answer": 20,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "questionId": "q8",
+      "expression": "800-300",
+      "exactNumerator": 500,
+      "exactDenominator": 1,
+      "answer": 500,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "questionId": "q1",
+      "expression": "84/3",
+      "exactNumerator": 28,
+      "exactDenominator": 1,
+      "answer": 28,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "questionId": "q2",
+      "expression": "936/4",
+      "exactNumerator": 234,
+      "exactDenominator": 1,
+      "answer": 234,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "questionId": "q3",
+      "expression": "816/8",
+      "exactNumerator": 102,
+      "exactDenominator": 1,
+      "answer": 102,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "questionId": "q4",
+      "expression": "85%3",
+      "exactNumerator": 1,
+      "exactDenominator": 1,
+      "answer": 1,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "questionId": "q6",
+      "expression": "ceil(65/8)",
+      "exactNumerator": 9,
+      "exactDenominator": 1,
+      "answer": 9,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "questionId": "q1",
+      "expression": "144/12",
+      "exactNumerator": 12,
+      "exactDenominator": 1,
+      "answer": 12,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "questionId": "q2",
+      "expression": "672/24",
+      "exactNumerator": 28,
+      "exactDenominator": 1,
+      "answer": 28,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "questionId": "q4",
+      "expression": "780/30",
+      "exactNumerator": 26,
+      "exactDenominator": 1,
+      "answer": 26,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "questionId": "q7",
+      "expression": "16*6",
+      "exactNumerator": 96,
+      "exactDenominator": 1,
+      "answer": 96,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "questionId": "q1",
+      "expression": "45/100",
+      "exactNumerator": 9,
+      "exactDenominator": 20,
+      "answer": 0.45,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "questionId": "q2",
+      "expression": "2305%10",
+      "exactNumerator": 5,
+      "exactDenominator": 1,
+      "answer": 5,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "questionId": "q5",
+      "expression": "1000/1000",
+      "exactNumerator": 1,
+      "exactDenominator": 1,
+      "answer": 1,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "questionId": "q6",
+      "expression": "347/100/(1/100)",
+      "exactNumerator": 347,
+      "exactDenominator": 1,
+      "answer": 347,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "questionId": "q1",
+      "expression": "235/100+8/10",
+      "exactNumerator": 63,
+      "exactDenominator": 20,
+      "answer": 3.15,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "questionId": "q2",
+      "expression": "4-127/100",
+      "exactNumerator": 273,
+      "exactDenominator": 100,
+      "answer": 2.73,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "questionId": "q3",
+      "expression": "406/1000+73/1000",
+      "exactNumerator": 479,
+      "exactDenominator": 1000,
+      "answer": 0.479,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "questionId": "q4",
+      "expression": "302/100-85/100",
+      "exactNumerator": 217,
+      "exactDenominator": 100,
+      "answer": 2.17,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "questionId": "q6",
+      "expression": "15/10+75/100",
+      "exactNumerator": 9,
+      "exactDenominator": 4,
+      "answer": 2.25,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "questionId": "q1",
+      "expression": "12/10*3",
+      "exactNumerator": 18,
+      "exactDenominator": 5,
+      "answer": 3.6,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "questionId": "q2",
+      "expression": "24/100*5",
+      "exactNumerator": 6,
+      "exactDenominator": 5,
+      "answer": 1.2,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "questionId": "q3",
+      "expression": "48/10/4",
+      "exactNumerator": 6,
+      "exactDenominator": 5,
+      "answer": 1.2,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "questionId": "q4",
+      "expression": "3/4",
+      "exactNumerator": 3,
+      "exactDenominator": 4,
+      "answer": 0.75,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "questionId": "q5",
+      "expression": "84/100/7",
+      "exactNumerator": 3,
+      "exactDenominator": 25,
+      "answer": 0.12,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "questionId": "q7",
+      "expression": "24/10/3",
+      "exactNumerator": 4,
+      "exactDenominator": 5,
+      "answer": 0.8,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "questionId": "q1",
+      "expression": "20-3*4",
+      "exactNumerator": 8,
+      "exactDenominator": 1,
+      "answer": 8,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "questionId": "q2",
+      "expression": "(20-3)*4",
+      "exactNumerator": 68,
+      "exactDenominator": 1,
+      "answer": 68,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "questionId": "q3",
+      "expression": "24/3*2",
+      "exactNumerator": 16,
+      "exactDenominator": 1,
+      "answer": 16,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "questionId": "q5",
+      "expression": "7*4",
+      "exactNumerator": 28,
+      "exactDenominator": 1,
+      "answer": 28,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "questionId": "q6",
+      "expression": "120*3",
+      "exactNumerator": 360,
+      "exactDenominator": 1,
+      "answer": 360,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "questionId": "q7",
+      "expression": "18/2",
+      "exactNumerator": 9,
+      "exactDenominator": 1,
+      "answer": 9,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "questionId": "q1",
+      "expression": "25*12",
+      "exactNumerator": 300,
+      "exactDenominator": 1,
+      "answer": 300,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "questionId": "q2",
+      "expression": "38+27+62",
+      "exactNumerator": 127,
+      "exactDenominator": 1,
+      "answer": 127,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "questionId": "q3",
+      "expression": "7*(10+2)",
+      "exactNumerator": 84,
+      "exactDenominator": 1,
+      "answer": 84,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "questionId": "q7",
+      "expression": "16*25",
+      "exactNumerator": 400,
+      "exactDenominator": 1,
+      "answer": 400,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q1",
+      "expression": "5+2",
+      "exactNumerator": 7,
+      "exactDenominator": 1,
+      "answer": 7,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q2",
+      "expression": "(5+2)/10",
+      "exactNumerator": 7,
+      "exactDenominator": 10,
+      "answer": 0.7,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q3",
+      "expression": "10/1",
+      "exactNumerator": 10,
+      "exactDenominator": 1,
+      "answer": 10,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q4",
+      "expression": "12/10+3/10",
+      "exactNumerator": 3,
+      "exactDenominator": 2,
+      "answer": 1.5,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q5",
+      "expression": "28/10-5/10",
+      "exactNumerator": 23,
+      "exactDenominator": 10,
+      "answer": 2.3,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q6",
+      "expression": "3+2",
+      "exactNumerator": 5,
+      "exactDenominator": 1,
+      "answer": 5,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q8",
+      "expression": "3+4",
+      "exactNumerator": 7,
+      "exactDenominator": 1,
+      "answer": 7,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q9",
+      "expression": "20+30",
+      "exactNumerator": 50,
+      "exactDenominator": 1,
+      "answer": 50,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "questionId": "q10",
+      "expression": "4/100+82/100",
+      "exactNumerator": 43,
+      "exactDenominator": 50,
+      "answer": 0.86,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "questionId": "q1",
+      "expression": "2+2+2",
+      "exactNumerator": 6,
+      "exactDenominator": 1,
+      "answer": 6,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "questionId": "q2",
+      "expression": "4+4+4",
+      "exactNumerator": 12,
+      "exactDenominator": 1,
+      "answer": 12,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "questionId": "q3",
+      "expression": "4+4",
+      "exactNumerator": 8,
+      "exactDenominator": 1,
+      "answer": 8,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "questionId": "q3",
+      "expression": "3",
+      "exactNumerator": 3,
+      "exactDenominator": 1,
+      "answer": 3,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q1",
+      "expression": "3*4",
+      "exactNumerator": 12,
+      "exactDenominator": 1,
+      "answer": 12,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q2",
+      "expression": "7*7",
+      "exactNumerator": 49,
+      "exactDenominator": 1,
+      "answer": 49,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q3",
+      "expression": "100*100",
+      "exactNumerator": 10000,
+      "exactDenominator": 1,
+      "answer": 10000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q4",
+      "expression": "2*100",
+      "exactNumerator": 200,
+      "exactDenominator": 1,
+      "answer": 200,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q5",
+      "expression": "3*10000",
+      "exactNumerator": 30000,
+      "exactDenominator": 1,
+      "answer": 30000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q6",
+      "expression": "1000*1000",
+      "exactNumerator": 1000000,
+      "exactDenominator": 1,
+      "answer": 1000000,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q7",
+      "expression": "8*6-2*3",
+      "exactNumerator": 42,
+      "exactDenominator": 1,
+      "answer": 42,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "questionId": "q9",
+      "expression": "24/6",
+      "exactNumerator": 4,
+      "exactDenominator": 1,
+      "answer": 4,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "questionId": "q1",
+      "expression": "360/4",
+      "exactNumerator": 90,
+      "exactDenominator": 1,
+      "answer": 90,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "questionId": "q2",
+      "expression": "360/2",
+      "exactNumerator": 180,
+      "exactDenominator": 1,
+      "answer": 180,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "questionId": "q3",
+      "expression": "90*4",
+      "exactNumerator": 360,
+      "exactDenominator": 1,
+      "answer": 360,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "questionId": "q4",
+      "expression": "180+50",
+      "exactNumerator": 230,
+      "exactDenominator": 1,
+      "answer": 230,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "questionId": "q7",
+      "expression": "360-80",
+      "exactNumerator": 280,
+      "exactDenominator": 1,
+      "answer": 280,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "questionId": "q1",
+      "expression": "1+3*4",
+      "exactNumerator": 13,
+      "exactDenominator": 1,
+      "answer": 13,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "questionId": "q2",
+      "expression": "1+3*6",
+      "exactNumerator": 19,
+      "exactDenominator": 1,
+      "answer": 19,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "questionId": "q4",
+      "expression": "10-6",
+      "exactNumerator": 4,
+      "exactDenominator": 1,
+      "answer": 4,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "questionId": "game",
+      "expression": "(16-1)/3",
+      "exactNumerator": 5,
+      "exactDenominator": 1,
+      "answer": 5,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "questionId": "q1",
+      "expression": "12/4",
+      "exactNumerator": 3,
+      "exactDenominator": 1,
+      "answer": 3,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "questionId": "q2",
+      "expression": "12/6",
+      "exactNumerator": 2,
+      "exactDenominator": 1,
+      "answer": 2,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "questionId": "q4",
+      "expression": "5*3",
+      "exactNumerator": 15,
+      "exactDenominator": 1,
+      "answer": 15,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "questionId": "q5",
+      "expression": "3/2",
+      "exactNumerator": 3,
+      "exactDenominator": 2,
+      "answer": 1.5,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "questionId": "q1",
+      "expression": "3+2",
+      "exactNumerator": 5,
+      "exactDenominator": 1,
+      "answer": 5,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "questionId": "q2",
+      "expression": "3+4",
+      "exactNumerator": 7,
+      "exactDenominator": 1,
+      "answer": 7,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "questionId": "q3",
+      "expression": "3+2+4+1",
+      "exactNumerator": 10,
+      "exactDenominator": 1,
+      "answer": 10,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "questionId": "q1",
+      "expression": "18",
+      "exactNumerator": 18,
+      "exactDenominator": 1,
+      "answer": 18,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "questionId": "q2",
+      "expression": "18-16",
+      "exactNumerator": 2,
+      "exactDenominator": 1,
+      "answer": 2,
+      "result": "pass"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "questionId": "q5",
+      "expression": "18-14",
+      "exactNumerator": 4,
+      "exactDenominator": 1,
+      "answer": 4,
+      "result": "pass"
+    }
+  ]
+}

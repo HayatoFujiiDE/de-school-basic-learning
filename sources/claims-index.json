@@ -1,0 +1,1835 @@
+{
+  "purpose": "Each displayed assertion surface resolves to claims in js/units.js; wording is original and mathematical results are derived, not MEXT questions.",
+  "entries": [
+    {
+      "unitCode": "8250243110000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "game",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "buddy.0",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "workedExample",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "misconception",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243110000000",
+      "path": "visual",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.7",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "questions.8",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "game",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "buddy.0",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "workedExample",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "misconception",
+      "claimId": "c19"
+    },
+    {
+      "unitCode": "8250243120000000",
+      "path": "visual",
+      "claimId": "c20"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243131100000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243130000000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "game",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "buddy.0",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "workedExample",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "misconception",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243141200000",
+      "path": "visual",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "game",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "buddy.0",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "workedExample",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "misconception",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "visual",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243141400000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243150000000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243160000000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243170000000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.7",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.8",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "questions.9",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "game",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "buddy.0",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "workedExample",
+      "claimId": "c19"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "misconception",
+      "claimId": "c20"
+    },
+    {
+      "unitCode": "8250243180000000",
+      "path": "visual",
+      "claimId": "c21"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "questions.7",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "game",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "buddy.0",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "workedExample",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "misconception",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243210000000",
+      "path": "visual",
+      "claimId": "c19"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243220000000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "game",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "buddy.0",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "workedExample",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "misconception",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243230000000",
+      "path": "visual",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.7",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "questions.8",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "game",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "buddy.0",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "workedExample",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "misconception",
+      "claimId": "c19"
+    },
+    {
+      "unitCode": "8250243240000000",
+      "path": "visual",
+      "claimId": "c20"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "questions.7",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "game",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "buddy.0",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "workedExample",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "misconception",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243250000000",
+      "path": "visual",
+      "claimId": "c19"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "game",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "buddy.0",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "workedExample",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "misconception",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243310000000",
+      "path": "visual",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243320000000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "game",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "buddy.0",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "workedExample",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "misconception",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243411100000",
+      "path": "visual",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "explanations.es.short",
+      "claimId": "c1"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "explanations.es.detail",
+      "claimId": "c2"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "explanations.js.short",
+      "claimId": "c3"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "explanations.js.detail",
+      "claimId": "c4"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "entries.0.text",
+      "claimId": "c5"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "entries.1.text",
+      "claimId": "c6"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.0",
+      "claimId": "c7"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.1",
+      "claimId": "c8"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.2",
+      "claimId": "c9"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.3",
+      "claimId": "c10"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.4",
+      "claimId": "c11"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.5",
+      "claimId": "c12"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.6",
+      "claimId": "c13"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "questions.7",
+      "claimId": "c14"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "game",
+      "claimId": "c15"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "buddy.0",
+      "claimId": "c16"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "workedExample",
+      "claimId": "c17"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "misconception",
+      "claimId": "c18"
+    },
+    {
+      "unitCode": "8250243411200000",
+      "path": "visual",
+      "claimId": "c19"
+    },
+    {
+      "unitCode": "8250243141300000",
+      "path": "lessonScenes",
+      "claimId": "motion1"
+    }
+  ]
+}
