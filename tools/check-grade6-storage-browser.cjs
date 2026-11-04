@@ -2,11 +2,15 @@
 // Fresh isolated browser storage only; never reads a real child's profile.
 const fs=require('fs'),os=require('os'),path=require('path'),vm=require('vm'),assert=require('assert/strict');
 const {pathToFileURL}=require('url');const {chromium}=require('./dependencies.cjs')('playwright');
-const root=path.resolve(__dirname,'..');const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const root=path.resolve(__dirname,'..');
+// Keep the version-4 fixture independent of the current junior-high catalogue.
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace('data-catalogue-version="5"','data-catalogue-version="4"').replace(/^.*(?:jh1|units-jh1).*\n/gm,'');
 const w={};for(const f of ['units.js','units-grade5.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'js',f),'utf8'),{window:w});
 const records=Object.fromEntries(w.BL.data.units.map(u=>[u.code,{answers:Object.fromEntries(u.questions.map(q=>[q.id,{value:q.answer,correct:false}])),buddy:Object.fromEntries(u.buddy.map(b=>[b.id,true]))}]));
 const original=JSON.stringify({version:'3',grade:5,mode:'es',interest:'all',progress:records,resume:w.BL.data.units[20].code});
 const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'grade6-storage-browser-'));
+const registryPath=path.join(scratch,'catalogue-v4.js');
+fs.writeFileSync(registryPath,'window.BL=window.BL||{};BL.expectedCatalogue='+fs.readFileSync(path.join(root,'sources/catalogue-v4.json'),'utf8')+';');
 const chrome=process.env.BASIC_LEARNING_CHROME||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 async function run(){const browser=await chromium.launch({headless:true,executablePath:chrome});let cases=0;try{
  const fixtures=[
@@ -23,6 +27,7 @@ async function run(){const browser=await chromium.launch({headless:true,executab
  for(const f of fixtures){
   let source=html.replace('<head>','<head><base href="'+pathToFileURL(root+path.sep).href+'">');
   if(f.remove)source=source.replace('  <script src="js/'+f.remove+'" defer></script>','');
+  source=source.replace('src="js/catalogue.js"','src="'+pathToFileURL(registryPath).href+'"');
   if(f.inject){
    // Defer order is important: this local script runs after data, before core.
    fs.writeFileSync(path.join(scratch,f.name+'.js'),f.inject);

@@ -5,10 +5,10 @@ const review=JSON.parse(read('sources/grade6-visual-review.json')),expected=JSON
 assert.equal(review.evidence,'verified');
 assert.equal(review.visualsSha256,hash(read('js/visuals-grade6.js')),'reviewed visual source');
 assert.equal(review.scenesSha256,hash(read('js/lesson-scenes-grade6.js')),'reviewed scene source');
-const w={localStorage:{getItem:()=>null,setItem:()=>{}}};
-for(const f of ['units.js','units-grade5.js','units-grade6.js','catalogue.js','core.js','visuals.js','visuals-grade5.js','visuals-grade6.js','lesson-scenes.js','lesson-scenes-grade5.js','lesson-scenes-grade6.js','lesson-review.js','lesson-review-grade5.js','lesson-review-grade6.js'])vm.runInNewContext(read('js/'+f),{window:w});
+const w={BL:{expectedCatalogue:JSON.parse(read('sources/catalogue-v4.json'))},localStorage:{getItem:()=>null,setItem:()=>{}}};
+for(const f of ['units.js','units-grade5.js','units-grade6.js','core.js','visuals.js','visuals-grade5.js','visuals-grade6.js','lesson-scenes.js','lesson-scenes-grade5.js','lesson-scenes-grade6.js','lesson-review.js','lesson-review-grade5.js','lesson-review-grade6.js'])vm.runInNewContext(read('js/'+f),{window:w});
 const BL=w.BL;
-assert.equal(BL.core.rejectedCount,0);
+assert.equal(BL.core.ready,true);assert.equal(BL.core.readOnly,false);assert.equal(BL.core.rejectedCount,0);
 assert.deepEqual(Array.from(BL.core.units(6),u=>u.code).sort(),expected.slice().sort());
 for(const code of expected){const unit=BL.core.unit(code),def=BL.visuals.definitions[code];assert.ok(def);assert.ok(def.claimIds.every(id=>unit.claims.some(c=>c.id===id&&c.status==='verified')));assert.ok(BL.visuals.render(unit).includes('data-visual-code="'+code+'"'));}
 for(const code of lessons.codes){const scene=BL.lessonScenes.items[code],record=BL.lessonReview.items[code],unit=BL.core.unit(code);assert.equal(record.evidence,'verified');assert.equal(record.fingerprint,hash(JSON.stringify(scene)));assert.ok(scene.claimIds.concat(scene.challenge.claimIds).every(id=>unit.claims.some(c=>c.id===id&&c.status==='verified')));assert.equal(read(record.poster),BL.lessonScenes.render(code,0,1)+'\n','reviewed poster exact output');if(lessons.videos.includes(code))assert.equal(record.video,'assets/lessons/'+code+'.mp4');}
