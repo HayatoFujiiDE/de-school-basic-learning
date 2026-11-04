@@ -11,7 +11,7 @@ const url=pathToFileURL(path.join(root,'index.html')).href;
 const chrome=process.env.BASIC_LEARNING_CHROME || (process.platform==='darwin'?'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome':undefined);
 const banned='点数|ランキング|順位|評価|成績|レベル|集中力|得意|苦手|上手|成長|データがありません|学びのバディ';
 let visited=0,answered=0,dialogues=0,visuals=0;
-const gradeFor=code=>/^835021[0-9A-Z]{10}$/.test(code)?7:/^835022[0-9A-Z]{10}$/.test(code)?8:Number(code[5]);
+const gradeFor=code=>/^835021[0-9A-Z]{10}$/.test(code)?7:/^835022[0-9A-Z]{10}$/.test(code)?8:/^835023[0-9A-Z]{10}$/.test(code)?9:Number(code[5]);
 async function metrics(page){return page.evaluate(pattern=>{
   const bad=new RegExp(pattern,'g');
   const attrs=Array.from(document.querySelectorAll('[aria-label],[title],[placeholder]')).map(e=>[e.getAttribute('aria-label'),e.getAttribute('title'),e.getAttribute('placeholder')].join(' ')).join(' ');
@@ -19,7 +19,7 @@ async function metrics(page){return page.evaluate(pattern=>{
   return {length:document.body.innerText.length,forbidden:(copy.match(bad)||[]).length,overflow:document.documentElement.scrollWidth>innerWidth,heading:document.querySelectorAll('main h1').length};
 },banned);}
 async function audit(page,context){const m=await metrics(page);assert.ok(m.length>80,context+': nonempty visible UI');assert.equal(m.forbidden,0,context+': forbidden copy');assert.equal(m.overflow,false,context+': horizontal overflow');assert.equal(m.heading,1,context+': one visible main heading');visited++;}
-async function waitRoute(page,hash){if(hash==='#list')hash='#list/'+await page.evaluate(()=>BL.core.state.grade);const match=/^#(unit|practice|result|buddy)\/([0-9A-Z]{16})$/.exec(hash);const expectedPage=match?match[1]:/^#list\/[45678]$/.test(hash)?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';const expectedGrade=match?String(gradeFor(match[2])):/^#list\/[45678]$/.test(hash)?hash.slice(-1):null;await page.waitForFunction(({hash,expectedPage,expectedCode,expectedGrade})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode && (!expectedGrade || main.dataset.grade===expectedGrade);},{hash,expectedPage,expectedCode,expectedGrade});}
+async function waitRoute(page,hash){if(hash==='#list')hash='#list/'+await page.evaluate(()=>BL.core.state.grade);const match=/^#(unit|practice|result|buddy)\/([0-9A-Z]{16})$/.exec(hash);const expectedPage=match?match[1]:/^#list\/[456789]$/.test(hash)?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';const expectedGrade=match?String(gradeFor(match[2])):/^#list\/[456789]$/.test(hash)?hash.slice(-1):null;await page.waitForFunction(({hash,expectedPage,expectedCode,expectedGrade})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode && (!expectedGrade || main.dataset.grade===expectedGrade);},{hash,expectedPage,expectedCode,expectedGrade});}
 async function navigate(page,hash){await page.evaluate(h=>{location.hash=h;},hash);await waitRoute(page,hash);}
 async function moveRange(range){
   const start=Number(await range.inputValue()),min=Number(await range.getAttribute('min')),max=Number(await range.getAttribute('max'));
@@ -58,8 +58,9 @@ async function run(){
     const expected6=JSON.parse(fs.readFileSync(path.join(root,'sources/grade6-unit-manifest.json'),'utf8')).codes;
     const expected7=JSON.parse(fs.readFileSync(path.join(root,'sources/jh1-unit-manifest.json'),'utf8')).codes;
     const expected8=JSON.parse(fs.readFileSync(path.join(root,'sources/jh2-unit-manifest.json'),'utf8')).codes;
+    const expected9=JSON.parse(fs.readFileSync(path.join(root,'sources/jh3-unit-manifest.json'),'utf8')).codes;
     const expected4=Object.keys(JSON.parse(fs.readFileSync(path.join(root,'tools/math-review-expectations.json'),'utf8')).units);
-    assert.deepEqual(units.map(u=>u.code).sort(),expected4.concat(expected5,expected6,expected7,expected8).sort(),'exact material set loaded');
+    assert.deepEqual(units.map(u=>u.code).sort(),expected4.concat(expected5,expected6,expected7,expected8,expected9).sort(),'exact material set loaded');
     // A changed hash alone must not identify an old list as the new grade.
     await navigate(page,'#list/5');
     const readinessProbe=await page.evaluate(()=>{document.querySelector('[data-action=grade][data-grade="4"]').click();const m=document.querySelector('main');return {oldReady:location.hash==='#list/4'&&m.dataset.page==='list'&&m.dataset.unit==='',newReady:m.dataset.grade==='4',rendered:m.dataset.grade};});
@@ -82,9 +83,9 @@ async function run(){
       for(const mode of ['es','js']){
         await page.locator('[data-action=mode][data-mode='+mode+']').click();
         await navigate(page,'#list');await audit(page,'list '+width+' '+mode);
-        for(const grade of [4,5,6,7,8]) {
+        for(const grade of [4,5,6,7,8,9]) {
           await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);
-          assert.deepEqual((await page.locator('.unit-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.unit))).sort(),({4:expected4,5:expected5,6:expected6,7:expected7,8:expected8}[grade]).slice().sort(),'exact visible grade '+grade);
+          assert.deepEqual((await page.locator('.unit-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.unit))).sort(),({4:expected4,5:expected5,6:expected6,7:expected7,8:expected8,9:expected9}[grade]).slice().sort(),'exact visible grade '+grade);
           assert.equal(await page.locator('[data-action=grade][data-grade="'+grade+'"]').getAttribute('aria-pressed'),'true');
           await audit(page,'grade '+grade+' '+width+' '+mode);
         }
@@ -111,7 +112,7 @@ async function run(){
     await page.locator('[data-action=grade][data-grade="6"]').click();await waitRoute(page,'#list/6');
     await page.goBack();await waitRoute(page,'#list/5');assert.equal(await page.evaluate(()=>BL.core.state.grade),5);
     await page.goForward();await waitRoute(page,'#list/6');assert.equal(await page.evaluate(()=>BL.core.state.grade),6);
-    for (const grade of [7,8]) {
+    for (const grade of [7,8,9]) {
       await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);
       await page.goBack();await waitRoute(page,'#list/'+(grade-1));assert.equal(await page.evaluate(()=>BL.core.state.grade),grade-1);
       await page.goForward();await waitRoute(page,'#list/'+grade);assert.equal(await page.evaluate(()=>BL.core.state.grade),grade);

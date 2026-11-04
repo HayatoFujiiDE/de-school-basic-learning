@@ -64,9 +64,8 @@ function run() {
     equal(new Set(registry.codes).size, 143, 'registry143 unique');
     equal(registry.codes.slice().sort(), expected.codes.slice().sort(), 'independent complete registry');
   }
-  const registryScope = {window: {}};
-  vm.runInNewContext(read('js/catalogue.js'), registryScope, {timeout: 1000});
-  validateRegistry(copy(registryScope.window.BL.expectedCatalogue));
+  // Version6 is a frozen historical fixture; the current registry has its own gate.
+  validateRegistry(JSON.parse(read('sources/catalogue-v6.json')));
   equal(JSON.parse(read('sources/catalogue-v5.json')).codes.slice().sort(), catalogue('5').codes.slice().sort(), 'frozen old104 registry');
   equal(JSON.parse(read('sources/catalogue-v5.json')).version, '5', 'frozen registry version');
   const coreSource = read('js/core.js');

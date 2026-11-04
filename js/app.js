@@ -33,7 +33,7 @@
   function route() {
     var hash = window.location.hash || '#list';
     if (hash === '#list' || hash === '#main') return { page: 'list', unit: null, grade: core.state.grade };
-    var gradeRoute = /^#list\/(4|5|6|7|8)$/.exec(hash);
+    var gradeRoute = /^#list\/(4|5|6|7|8|9)$/.exec(hash);
     if (gradeRoute && core.grades().indexOf(Number(gradeRoute[1])) !== -1) return { page: 'list', unit: null, grade: Number(gradeRoute[1]) };
     if (hash === '#paused') return { page: 'paused', unit: null };
     var match = /^#(unit|practice|result|buddy)\/([0-9A-Z]{16})$/.exec(hash);

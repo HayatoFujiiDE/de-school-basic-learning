@@ -5,8 +5,8 @@ const review=JSON.parse(read('sources/jh2-visual-review.json')),expected=JSON.pa
 assert.equal(review.evidence,'verified');
 assert.equal(review.visualsSha256,hash(read('js/visuals-jh2.js')),'reviewed visual source');
 assert.equal(review.scenesSha256,hash(read('js/lesson-scenes-jh2.js')),'reviewed scene source');
-const w={localStorage:{getItem:()=>null,setItem:()=>{}}};
-for(const f of ['units.js','units-grade5.js','units-grade6.js','units-jh1.js','units-jh2.js','catalogue.js','core.js','visuals.js','visuals-grade5.js','visuals-grade6.js','visuals-jh1.js','visuals-jh2.js','lesson-scenes.js','lesson-scenes-grade5.js','lesson-scenes-grade6.js','lesson-scenes-jh1.js','lesson-scenes-jh2.js','lesson-review.js','lesson-review-grade5.js','lesson-review-grade6.js','lesson-review-jh1.js','lesson-review-jh2.js'])vm.runInNewContext(read('js/'+f),{window:w});
+const w={BL:{expectedCatalogue:JSON.parse(read('sources/catalogue-v6.json'))},localStorage:{getItem:()=>null,setItem:()=>{}}};
+for(const f of ['units.js','units-grade5.js','units-grade6.js','units-jh1.js','units-jh2.js','core.js','visuals.js','visuals-grade5.js','visuals-grade6.js','visuals-jh1.js','visuals-jh2.js','lesson-scenes.js','lesson-scenes-grade5.js','lesson-scenes-grade6.js','lesson-scenes-jh1.js','lesson-scenes-jh2.js','lesson-review.js','lesson-review-grade5.js','lesson-review-grade6.js','lesson-review-jh1.js','lesson-review-jh2.js'])vm.runInNewContext(read('js/'+f),{window:w});
 const BL=w.BL;
 assert.equal(BL.core.ready,true);assert.equal(BL.core.readOnly,false);assert.equal(BL.core.rejectedCount,0);
 assert.deepEqual(Array.from(BL.core.units(8),u=>u.code).sort(),expected.slice().sort());

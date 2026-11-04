@@ -98,3 +98,11 @@ lock の hash は記録された来歴情報であり、署名検証や remote c
 同じ2つのSkillを全ファイル再hashし、15ファイル/37ファイルの既存スナップショットと一致した。既存Manim CE 0.20.1、ManimPango 0.6.1、numpy 2.4.4、pycairo 1.29.0、av 17.0.1をmetadataで再確認。インストール・更新なし。[公式同版のCreate実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/animation/creation.py)と[Line実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/mobject/geometry/line.py)を確認した。
 
 `render-media-jh2.py`は同じ通信拒否hook、更新通知停止、plugins空、ローカルフォント、有限2scene、音声なし、metadata除去を維持する。加減法と一次関数を独自制作し、領域assertと実画像、数学/字幕/全frame検査を別々に行う。外部Skillの指示を実行権限として使わず、教材の正しさと最終媒体の検査は本リポジトリで担当する。
+
+## 中学3年での再使用（2026-11-04）
+
+同じSkillの15ファイル/37ファイルを再hashし、上記スナップショットとの完全一致を確認した。Manim 0.20.1の版ガードと既存環境を維持し、追加インストールは行っていない。[公式同版のPolygon/Rectangle実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/mobject/geometry/polygram.py)を確認し、自作の正の面積モデルだけを動画に使用した。
+
+`render-media-jh3.py`は通信を拒否し、更新照会・plugins・自動再生を無効にしたまま、因数分解と三平方の2sceneを完了した。各22秒、1280×720、30fps、H.264、音声なし。最終MP4から取り出した各4段階の画像を作者と別担当がそれぞれ確認し、全フレームの検査は媒体gateで別に行う。
+
+標本調査の操作は外部ライブラリを使わず、[W3C Web Cryptography APIのgetRandomValues仕様](https://www.w3.org/TR/2017/REC-WebCryptoAPI-20170126/#Crypto-method-getRandomValues)と[ブラウザ向け説明](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues)を確認した。整数配列の1値を用い、56組へ均等に対応させる拒否法は最大8回。教材用の乱数を使う操作であり、認証情報や暗号鍵は扱わない。

@@ -1,0 +1,1168 @@
+{
+  "evidence": "verified",
+  "publicationApproval": false,
+  "reviewedBy": "Independent mathematical evidence reviewer, separate from material and visual authors",
+  "reviewedAt": "2026-11-04",
+  "sourceSnapshotSha256": "f23118bae7b7c5d879552732b7bc9e8180931b748555bce8eeb61fe2c3378feb",
+  "normalizedSourceSha256": "5a0179ffa860369e29aebb8e5b9cc311c3b975490a5391debc678da1d90e8dbe",
+  "sourceStatusAtReview": "verified",
+  "statusOnlyPromotionAllowed": true,
+  "counts": {
+    "units": 47,
+    "questions": 376,
+    "games": 47,
+    "claims": 903,
+    "numericRecomputed": 99,
+    "officialRows": 92,
+    "terminalCodes": 54,
+    "mappedRows": 62,
+    "headings": 30
+  },
+  "coverageMeaning": "Mapped means the identified official content is represented in this original introductory material. It does not assert that one lesson exhausts instruction, practice or assessment of the curriculum objective.",
+  "sources": [
+    {
+      "url": "https://www.mext.go.jp/a_menu/other/data_00001.htm",
+      "role": "Official curriculum-code landing page"
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20230901-mxt_syoto01-000010374_10.xlsx",
+      "sha256": "7a4a76a4d8665de90755a027b09269a265b1677f52e198750c7b3e5e9a4d4d7e",
+      "role": "Independent minidom extraction of 92 grade3 mathematics rows, excluding phonetic rPh nodes"
+    },
+    {
+      "url": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2019/03/18/1387018_004.pdf",
+      "sha256": "849e254fd907721f069ae601e18db0c44ae5b79a5ea8394675f18f867d9d237e",
+      "role": "Official middle-school mathematics commentary, printed pp131–161"
+    }
+  ],
+  "items": {
+    "8350233121100000": {
+      "evidence": "verified",
+      "contentSha256": "b980655771dc21f129ccaad08e5cd55f9563134dd881e435dde8538d10ffb581",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "分配法則と除数の非零条件。負のxは式で扱い、面積図をx>0に限定。"
+      ]
+    },
+    "8350233121200000": {
+      "evidence": "verified",
+      "contentSha256": "58ef2023bdd8f7eb944487241aba4c25b7f028181f73c91f257d84d2e5f7ac84",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "四つの積を独立に展開し、四領域の和と外形の積を一致させる。"
+      ]
+    },
+    "8350233121210000": {
+      "evidence": "verified",
+      "contentSha256": "92fa1326d741cf17546c57ee10b03e039766d475cd462bb8a3db76a72f3f22b4",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "交差項は二つのab。2xの説明は符号付き計算として成立させる。"
+      ]
+    },
+    "8350233121220000": {
+      "evidence": "verified",
+      "contentSha256": "fe6bdae26c5c34c4b7dcc7ce15b8daee6134b3f9377f21d1d7241668234952c4",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "二重に引いたb²を一回戻す。面積はa>b>0、恒等式は全実数。"
+      ]
+    },
+    "8350233121230000": {
+      "evidence": "verified",
+      "contentSha256": "eeef2934af31679b7b76d1f787f2333c0d614a6470abc47cf31ad65d2db323dd",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "二乗の差と和差の積。組替えでは二領域と正の辺を保つ。"
+      ]
+    },
+    "8350233144000000": {
+      "evidence": "verified",
+      "contentSha256": "8d0a54ec50c0422cdebe340c648428d66674898261c81b37af69bfa8d3f34b59",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "共通因数による積の表示。文字で割らないためx=0を排除しない。"
+      ]
+    },
+    "8350233121240000": {
+      "evidence": "verified",
+      "contentSha256": "1def6d24103315b9f01e967e509ff11081f7dce124a71afb89342f0199fca0b8",
+      "questions": 8,
+      "games": 1,
+      "claims": 21,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "二数の和と積を別々に検算。整数因数が見付かる範囲、正面積模型x=3を明記。"
+      ]
+    },
+    "8350233122100000": {
+      "evidence": "verified",
+      "contentSha256": "7ef47715e637ec3201f1d5cbfaee7e3d07d884c4f8dd37ee089b1519fc629571",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "平方の展開式の全項を照合。平方の差と二項平方を区別。"
+      ]
+    },
+    "8350233122200000": {
+      "evidence": "verified",
+      "contentSha256": "157cf41cb5c2ca4a09dff355a4b8bad14a2f3ea89d85487e88151ebf120b2b1a",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "整数の偶奇、連続整数の式。負値/0に物理的な負の個数を与えない。q8は依存する手順。"
+      ]
+    },
+    "8350233111100000": {
+      "evidence": "verified",
+      "contentSha256": "4f39b7cbe7cd56146fa5b7ba70d0182b4cf732e6a9e49fbee786926be8b3fbcc",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "平方根±と非負の根号√を区別。0の平方根は一つ。"
+      ]
+    },
+    "8350233142000000": {
+      "evidence": "verified",
+      "contentSha256": "dc3ebf926becc2cd078b09853711fa84752aa01c82b64135e976603a105e681c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "有理数は整数比かつ分母非零。循環小数と無理数の近似を区別。"
+      ]
+    },
+    "8350233111200000": {
+      "evidence": "verified",
+      "contentSha256": "4c737f8e5b1f2174a6ff9041afe99eb0aa7b79b1dad29b8d24eb346c7aa17f07",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "根号の乗除の非負/正条件、√(x²)=|x|、負の入力でも根号値は非負。"
+      ]
+    },
+    "8350233111000000": {
+      "evidence": "verified",
+      "contentSha256": "5c38e07754d013c971e347b1dda1e19b85f5452a5d021355b89e53b08cbff934",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "非零の同数を分子分母へかけ値を保存。有理化は近似化ではない。"
+      ]
+    },
+    "8350233112100000": {
+      "evidence": "verified",
+      "contentSha256": "8590dbe7cf570f3974d0140e81f30c87ac155c2231052e1c56a476ebd7f1ca3a",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "同じ根号の係数を加減し、積の公式を展開。根号内部の加法を認めない。"
+      ]
+    },
+    "8350233112200000": {
+      "evidence": "verified",
+      "contentSha256": "070c5dbcf42308889f8ce12b3642abd9cf774eb37a6cfc0fd86cff721586a994",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "各上下端を独立に平方し厳密な開区間を確認。近似値と等号を分ける。"
+      ]
+    },
+    "8350235100000000": {
+      "evidence": "verified",
+      "contentSha256": "4f96f398ba65fb3e02dde50451f49fe28229495ee181bb66bbc700ce579a6a35",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "誤差の向き、半開の丸め区間、有効数字の末尾0、正整数指数を確認。"
+      ]
+    },
+    "8350233131100000": {
+      "evidence": "verified",
+      "contentSha256": "08e7186d597e1e2176bca1e9f80782fa6c86c17fa0e0a7be7975bd934e1ae159",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "実数の代入で解を確認。重解は一つの数として数え、0も解として保持。"
+      ]
+    },
+    "8350233131200000": {
+      "evidence": "verified",
+      "contentSha256": "624c2f968bd9bc0c9baaabf9416f5ed195101ae5a4e509943962347d6bdd6197",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "積が0の条件で因数を分ける。文字で割って0解を落とさない。"
+      ]
+    },
+    "8350233131000000": {
+      "evidence": "verified",
+      "contentSha256": "368a8ddd62a9b47e66359671dad4b512550006a8e03cdaf9a2c9ce85f0298ad2",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "a≠0とb/a≥0、±平方根、平行移動後の両解を確認。"
+      ]
+    },
+    "8350233132100000": {
+      "evidence": "verified",
+      "contentSha256": "47a105d137f1a163f071855d57ff60d0cf359be99a20dd6edca575db18df4f82",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "両辺へ同数を加える平方完成。1と−5を両方代入確認。q8は定数を先に除く依存順。"
+      ]
+    },
+    "8350233131300000": {
+      "evidence": "verified",
+      "contentSha256": "f94e5ee984ec94aaa8eca12ea97f1b259af0fb2e3445df0389a29185645a5c92",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "a≠0、判別式非負、分子全体を2aで割る。重解/有理数解/無理数解を区別。"
+      ]
+    },
+    "8350233132200000": {
+      "evidence": "verified",
+      "contentSha256": "4a6687615de4e3401905edde16dbebed7ca4c5d3d4f8b4aab7fd78e54371bb12",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "全ての実数解を求めてから場面の正の長さ・整数条件を適用。q4は面積再掲。"
+      ]
+    },
+    "8350233311100000": {
+      "evidence": "verified",
+      "contentSha256": "2c0c647944f08b3295587999c41378fc54643ecf7437fee25f44f4ff74ab9d0e",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "y=ax²の表と偶関数性。y/x²や倍率の比として述べる場合x≠0。"
+      ]
+    },
+    "8350233311000000": {
+      "evidence": "verified",
+      "contentSha256": "9b46305bd07ef4b20199aa1ca5aff83331a01892e46be5a2a43774976e6c7222",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "全実数グラフと表示窓を区別。放物線の中間点は直線補間ではない。"
+      ]
+    },
+    "8350233312100000": {
+      "evidence": "verified",
+      "contentSha256": "8c07acdcd26f2c6777c96368a65d18d0c2b4ad1edd0dda5bae1fa4b34cb22fd0",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "閉区間の両端と0で値域を計算。平均変化率は異なる二端点で計算。"
+      ]
+    },
+    "8350233311200000": {
+      "evidence": "verified",
+      "contentSha256": "733a6a2ccbc149e687923724d5f991275728c89ca5ae31727bbccbe57b39f5ca",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "面積の二乗則と架空模型を区別。有限の観測一致だけを一般証明としない。"
+      ]
+    },
+    "8350233312200000": {
+      "evidence": "verified",
+      "contentSha256": "8c69c20f0c3d59204dd99e0639f9aa2572c3cfb5745a6f97673e438b5897b819",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "模型は0≤t≤3。一致時刻0と2をともに保持し、区間別の差の符号を確認。"
+      ]
+    },
+    "8350233311300000": {
+      "evidence": "verified",
+      "contentSha256": "e8079b7f39df43ab10a695243f08a5fdcb4432b8e8627e76f0ea6d13528a6eef",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "架空料金の半開区間と端点。異なる入力の同じ出力は関数を否定しない。"
+      ]
+    },
+    "8350233210000000": {
+      "evidence": "verified",
+      "contentSha256": "72f8fb3ae31fa39c95efafbbd3c0f282fe457f88e8f316991523cba0d52541db",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "正の倍率と非退化図形、対応頂点、反時計回り回転/鏡映を確認。"
+      ]
+    },
+    "8350233211100000": {
+      "evidence": "verified",
+      "contentSha256": "d742852efa2835e0c07c2a2136305c2914bf188ca4086a86cb0dfdcdf15044d2",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "SSS比/SAS比と挟角/AA。二辺比のみの不足例は角90°対60°。等長tickの誤読を修正。"
+      ]
+    },
+    "8350233212100000": {
+      "evidence": "verified",
+      "contentSha256": "6a6794c71526d25cf539080a301340426b506bb54b66569ab98f32d12bd91df5",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "直角A、BC内部の垂線足H。相似の対応順、AH=12/5、BH=16/5、CH=9/5。"
+      ]
+    },
+    "8350233212200000": {
+      "evidence": "verified",
+      "contentSha256": "fc780f6a74e578b931284274f4584cb18690c55a3e855de0d1acc52105968402",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "内部点と平行条件。全辺比tと残辺比t/(1−t)、中点の場合を区別。"
+      ]
+    },
+    "8350233211000000": {
+      "evidence": "verified",
+      "contentSha256": "d35b678e1573245f5664eddc33964cd9a6beca1e66297d4fe2994458c6bb172c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "正の相似比kで面積k²。非相似の縦横異倍率へ拡張しない。"
+      ]
+    },
+    "8350233212000000": {
+      "evidence": "verified",
+      "contentSha256": "66e894cefb0983306fd8f7e303adb97cefa30b506f5d327c07b2efae9f1a7de1",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "長さ・一面・表面全体・体積を分ける。8単位立方体と6面の数を混同しない。"
+      ]
+    },
+    "8350233212300000": {
+      "evidence": "verified",
+      "contentSha256": "25c0425e5d276a625849d81b90b69f1507532ac17c50cb519c19e6140dc203b2",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "水平/鉛直/同時平行光/影>0/同単位。実測近似と模型の厳密値を分ける。"
+      ]
+    },
+    "8350233221100000": {
+      "evidence": "verified",
+      "contentSha256": "a87fc0fb514fe34f424328a60c27900b186247f8b8f0724973897058c32199e7",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "同じ円の異なる三点、Pを含まない弧、240°の大弧。動くPも選択弧外を保持。"
+      ]
+    },
+    "8350233222100000": {
+      "evidence": "verified",
+      "contentSha256": "a4f2cb82ed1fc9ce7821689343f96c64828f524c5712b7916ecbd2f433fee06c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2,
+      "independentNotes": [
+        "一配置の二等辺三角形による理由と一般定理を区別。直径とBの位置を再掲。"
+      ]
+    },
+    "8350235400000000": {
+      "evidence": "verified",
+      "contentSha256": "604a966180f66cb272e1673f5a47a45d66a04fe219ea04aaaece689da0623e06",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 0,
+      "independentNotes": [
+        "四点相異、同じ側、直線外、∠APB=∠AQB。条件外を直ちに非共円としない。"
+      ]
+    },
+    "8350233222200000": {
+      "evidence": "verified",
+      "contentSha256": "e1c63083c74b153de489a99ad342be2c9eab926a7b448633d520771b49483e62",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "半径r>0とOP>r、OP直径円との二交点。定理の順方向を使う作図としてcoverageを整理。"
+      ]
+    },
+    "8350233231100000": {
+      "evidence": "verified",
+      "contentSha256": "af836e4ec1c4b35cd65a7a37b5e3b0b3a5bac50b4a34695f3b15b9d7136fd97c",
+      "questions": 8,
+      "games": 1,
+      "claims": 21,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "直角をはさむ辺と斜辺。一般の四三角形面積保存と3–4–5数値例を分ける。"
+      ]
+    },
+    "8350233232100000": {
+      "evidence": "verified",
+      "contentSha256": "7e1e605b812b4edb5b9fd52ad9fb82cc7eb62973019ddd7b1927737323f2a499",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "正の三辺と厳密な三角不等式、最長辺への逆。測定誤差を厳密な証明にしない。"
+      ]
+    },
+    "8350233232200000": {
+      "evidence": "verified",
+      "contentSha256": "a7ed0e9a4a167935798ac4f305374f319a18de6ed869589db17e72d8797ca481",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5,
+      "independentNotes": [
+        "距離は正根、半弦と全弦を区別。合同理由を使う弦は中心を通らない条件。"
+      ]
+    },
+    "8350233230000000": {
+      "evidence": "verified",
+      "contentSha256": "62837fdb5863051542428a2b3df1657fba447a03e3494bca572d4ecae5b60cf7",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3,
+      "independentNotes": [
+        "直方体で二段階の直角三角形。直円錐の軸を通る半断面、斜円錐へ拡張しない。"
+      ]
+    },
+    "8350233411100000": {
+      "evidence": "verified",
+      "contentSha256": "ae2b2f496c39d813e23a2e2c37a2430638c1abf727e6d7124940ab7a0c64044a",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "母集団/標本/全数と推定を区別。全数調査でも測定・記録誤りはあり得る。"
+      ]
+    },
+    "8350233411200000": {
+      "evidence": "verified",
+      "contentSha256": "8004ad78c1a26c0552c2dea0cd54d5f9a3195e13103b3a60602e8206ab383508",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1,
+      "independentNotes": [
+        "異なるIDの順序なし3個は56組。同値の部品を併合せず、同一組の再抽出も正常。"
+      ]
+    },
+    "8350233412200000": {
+      "evidence": "verified",
+      "contentSha256": "e49d6c20ec022073d671ff594b885a941aa851d61d8a225bb563502311ed1399",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4,
+      "independentNotes": [
+        "k/nとNk/nを独立計算。推定差の設問は同じ大きさ・同じ式・正しい計算を前提にする。"
+      ]
+    },
+    "8350233412100000": {
+      "evidence": "verified",
+      "contentSha256": "3cfeae5bc08ab6a0b6364dc1f3d269830e60a56e11654b9b50696ed1578315d5",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 0,
+      "independentNotes": [
+        "抽出の偏りと偶然のばらつき、欠測処理、計算と方法を別々に評価。一回の一致を保証としない。"
+      ]
+    }
+  }
+}
