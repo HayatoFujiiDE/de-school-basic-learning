@@ -83,7 +83,7 @@
       ],
       "game": "0.3＋0.7",
       "basis": "(235+80)/100;(400-127)/100;(406+73)/1000;(302-85)/100; aligned units;(150+75)/100;(3+7)/10",
-      "contentSha256": "ba5667634219caa7379d9735843394201ed494a13bfd09d180eea8b8577bb68c"
+      "contentSha256": "2ed54119799959e73c1489fee43f77bb709df2675b7413dc9a8c591784e300e0"
     },
     "8250243141400000": {
       "questions": [
@@ -310,5 +310,5 @@
       "contentSha256": "efabd5a453be42dab15252c77570fc3d6ef13dde0725158483fbcfb5de49f39d"
     }
   },
-  "metadataSha256": "7b43f189ba32f14510f1fd1e5ab2fab5ab6ec4d05982e2c5eba066f4be6a21fd"
+  "metadataSha256": "be92fa547ffb555c4f678a5d2f90f49cdf5f25b2ad28b15e678ff87a3e30050c"
 }

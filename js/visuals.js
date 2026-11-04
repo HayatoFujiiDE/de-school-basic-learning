@@ -2,6 +2,8 @@
   'use strict';
   var BL = window.BL;
   var memories = Object.create(null);
+  var bindings = new WeakMap();
+  var own = function(object,key){return Object.prototype.hasOwnProperty.call(object,key);};
   var definitions = {
     '8250243110000000': {kind:'large',title:'まとまりを変えて見る',note:'同じ大きさを、万・億・兆のまとまりで見てみよう。',defaults:{n:3},controls:[['n','兆のまとまり',1,9,1]]},
     '8250243120000000': {kind:'round',title:'数直線で四捨五入',note:'千の位までの概数にする。1500を境に、近い千のまとまりを確かめよう。',defaults:{n:1420},controls:[['n','もとの数',1000,2000,10]]},
@@ -155,23 +157,71 @@
     if(!memories[unit.code])memories[unit.code]=Object.assign({},definitions[unit.code].defaults);
     return memories[unit.code];
   }
+  function definitionFor(unit) {
+    return unit && typeof unit.code==='string' && own(definitions,unit.code) && BL.core.unit(unit.code)===unit ? definitions[unit.code] : null;
+  }
+  function validState(unit,patch) {
+    var def=definitionFor(unit);
+    if(!def || !patch || typeof patch!=='object' || Array.isArray(patch))return false;
+    var prototype=Object.getPrototypeOf(patch);
+    if(prototype!==Object.prototype && prototype!==null)return false;
+    var keys=Object.keys(patch);
+    return keys.length>0 && keys.every(function(key){
+      if(!own(def.defaults,key))return false;
+      var value=patch[key],control=(def.controls||[]).filter(function(c){return c[0]===key;})[0];
+      if(control)return typeof value==='number' && Number.isFinite(value) && value>=control[2] && value<=control[3] && Number.isInteger((value-control[2])/control[4]);
+      var choices=(def.choices||[]).filter(function(c){return c[0]===key;});
+      if(choices.length)return typeof value==='string' && choices.some(function(c){return c[1]===value;});
+      return def.kind==='abacus' && ['h','t','o','d','c'].indexOf(key)!==-1 && typeof value==='number' && Number.isInteger(value) && value>=0 && value<=9;
+    });
+  }
+  function mounted(container,unit) {
+    var panel=container && container.querySelector('[data-visual-code]');
+    return Boolean(panel && panel.getAttribute('data-visual-code')===unit.code && container.querySelector('[data-visual-stage]'));
+  }
+  function update(container,unit) {
+    var def=definitionFor(unit);if(!def || !mounted(container,unit))return false;
+    var s=stateFor(unit);
+    container.querySelector('[data-visual-stage]').innerHTML=stage(def,s);
+    Array.prototype.forEach.call(container.querySelectorAll('[data-value]'),function(el){el.textContent=s[el.getAttribute('data-value')];});
+    Array.prototype.forEach.call(container.querySelectorAll('input[data-visual-field]'),function(input){input.value=s[input.getAttribute('data-visual-field')];});
+    Array.prototype.forEach.call(container.querySelectorAll('button[data-visual-field]'),function(el){el.setAttribute('aria-pressed',String(s[el.getAttribute('data-visual-field')]===el.getAttribute('data-visual-value')));});
+    return true;
+  }
+  function setState(container,unit,patch) {
+    if(!validState(unit,patch) || !mounted(container,unit))return false;
+    memories[unit.code]=Object.assign({},stateFor(unit),patch);
+    update(container,unit);
+    var keys=Object.keys(patch),controls=container.querySelectorAll('input[data-visual-field],button[data-visual-field],button[data-abacus]');
+    for(var i=0;i<controls.length;i++){
+      var field=controls[i].getAttribute('data-visual-field') || controls[i].getAttribute('data-abacus');
+      if(keys.indexOf(field)!==-1){controls[i].focus({preventScroll:true});break;}
+    }
+    container.scrollIntoView({block:'start',behavior:'auto'});
+    return true;
+  }
   function render(unit) {
-    var def=definitions[unit.code];if(!def)return '';
+    var def=definitionFor(unit);if(!def)return '';
     var s=stateFor(unit),controls='';
     (def.controls||[]).forEach(function(c){controls+='<label class="visual-control">'+esc(c[1])+' <output data-value="'+c[0]+'">'+s[c[0]]+'</output><input type="range" data-visual-field="'+c[0]+'" min="'+c[2]+'" max="'+c[3]+'" step="'+c[4]+'" value="'+s[c[0]]+'" aria-label="'+esc(c[1])+'"></label>';});
     if(def.choices)controls+='<div class="visual-choices">'+def.choices.map(function(c){return '<button type="button" data-visual-field="'+c[0]+'" data-visual-value="'+c[1]+'" aria-pressed="'+(s[c[0]]===c[1])+'">'+esc(c[2])+'</button>';}).join('')+'</div>';
     if(def.kind==='abacus')controls+='<div class="abacus-controls">'+['h','t','o','d','c'].map(function(key,index){return '<div><span>'+['100','10','1','0.1','0.01'][index]+'の位</span><button type="button" data-abacus="'+key+'" data-step="1" aria-label="'+['100','10','1','0.1','0.01'][index]+'の位の数を1増やす">＋</button><button type="button" data-abacus="'+key+'" data-step="-1" aria-label="'+['100','10','1','0.1','0.01'][index]+'の位の数を1減らす">−</button></div>';}).join('')+'</div>';
-    return '<div class="visual-panel panel"><p class="panel-kicker">'+(BL.core.state.mode==='es'?'さわって、たしかめる例':'動かせる例')+'</p><h2 class="panel-title">'+esc(def.title)+'</h2><p class="visual-note">'+esc(def.note)+'</p><div data-visual-stage>'+stage(def,s)+'</div><div class="visual-controls">'+controls+'</div><button type="button" class="quiet-button" data-visual-reset>図をもとに戻す</button><p class="subtle-note">下の説明や練習では、別の数も使います。</p></div>';
+    return '<div class="visual-panel panel" data-visual-code="'+esc(unit.code)+'"><p class="panel-kicker">'+(BL.core.state.mode==='es'?'さわって、たしかめる例':'動かせる例')+'</p><h2 class="panel-title">'+esc(def.title)+'</h2><p class="visual-note">'+esc(def.note)+'</p><div data-visual-stage>'+stage(def,s)+'</div><div class="visual-controls">'+controls+'</div><button type="button" class="quiet-button" data-visual-reset>図をもとに戻す</button><p class="subtle-note">下の説明や練習では、別の数も使います。</p></div>';
   }
   function bind(container,unit) {
-    var def=definitions[unit.code];if(!def || !container)return;
-    function update(){var s=stateFor(unit);container.querySelector('[data-visual-stage]').innerHTML=stage(def,s);Array.prototype.forEach.call(container.querySelectorAll('[data-value]'),function(el){el.textContent=s[el.getAttribute('data-value')];});Array.prototype.forEach.call(container.querySelectorAll('button[data-visual-field]'),function(el){el.setAttribute('aria-pressed',String(s[el.getAttribute('data-visual-field')]===el.getAttribute('data-visual-value')));});}
-    container.addEventListener('input',function(event){var field=event.target.getAttribute('data-visual-field');var control=(def.controls||[]).filter(function(c){return c[0]===field;})[0];if(!control)return;var value=Number(event.target.value);if(!Number.isFinite(value)||value<control[2]||value>control[3])return;stateFor(unit)[field]=value;update();});
-    container.addEventListener('click',function(event){var el=event.target.closest('button');if(!el || !container.contains(el))return;
-      if(el.hasAttribute('data-visual-reset')){memories[unit.code]=Object.assign({},def.defaults);Array.prototype.forEach.call(container.querySelectorAll('input[data-visual-field]'),function(input){input.value=stateFor(unit)[input.getAttribute('data-visual-field')];});update();return;}
-      if(el.hasAttribute('data-abacus')){var key=el.getAttribute('data-abacus'),step=Number(el.getAttribute('data-step'));if(['h','t','o','d','c'].indexOf(key)!==-1&&(step===1||step===-1)){stateFor(unit)[key]=Math.max(0,Math.min(9,stateFor(unit)[key]+step));update();}return;}
-      var field=el.getAttribute('data-visual-field'),value=el.getAttribute('data-visual-value');if((def.choices||[]).some(function(c){return c[0]===field&&c[1]===value;})){stateFor(unit)[field]=value;update();}
-    });
+    var def=definitionFor(unit);if(!def || !container || !mounted(container,unit))return;
+    var existing=bindings.get(container);
+    if(existing && existing.unit===unit)return;
+    if(existing){container.removeEventListener('input',existing.input);container.removeEventListener('click',existing.click);}
+    function onInput(event){var field=event.target.getAttribute('data-visual-field');var control=(def.controls||[]).filter(function(c){return c[0]===field;})[0];if(!control)return;var patch={};patch[field]=Number(event.target.value);if(!validState(unit,patch))return;memories[unit.code]=Object.assign({},stateFor(unit),patch);update(container,unit);}
+    function onClick(event){var el=event.target.closest('button');if(!el || !container.contains(el))return;
+      if(el.hasAttribute('data-visual-reset')){memories[unit.code]=Object.assign({},def.defaults);update(container,unit);return;}
+      if(el.hasAttribute('data-abacus')){var key=el.getAttribute('data-abacus'),step=Number(el.getAttribute('data-step'));if(['h','t','o','d','c'].indexOf(key)!==-1&&(step===1||step===-1)){stateFor(unit)[key]=Math.max(0,Math.min(9,stateFor(unit)[key]+step));update(container,unit);}return;}
+      var field=el.getAttribute('data-visual-field'),value=el.getAttribute('data-visual-value');if((def.choices||[]).some(function(c){return c[0]===field&&c[1]===value;})){stateFor(unit)[field]=value;update(container,unit);}
+    }
+    container.addEventListener('input',onInput);
+    container.addEventListener('click',onClick);
+    bindings.set(container,{unit:unit,input:onInput,click:onClick});
   }
-  BL.visuals={render:render,bind:bind,definitions:definitions};
+  BL.visuals={render:render,bind:bind,setState:setState,definitions:definitions};
 }());

@@ -1,0 +1,101 @@
+{
+  "version": "1",
+  "renderer": {
+    "name": "Manim Community",
+    "version": "0.20.1",
+    "source": "tools/media-scenes.py",
+    "sourceSha256": "883a8db391c4c5a63edbe13e6ed274a3a4377e60a6c80e1fa064a89b32ed6770",
+    "network": "blocked",
+    "plugins": []
+  },
+  "original": true,
+  "audio": false,
+  "videos": [
+    {
+      "code": "8250243150000000",
+      "scene": "FractionLesson",
+      "path": "assets/lessons/8250243150000000.mp4",
+      "sha256": "3caec480e3c8cc5fc1d6c49b1d4fbce8014aa768bb1f969527c88d87ab810127",
+      "seconds": 20.4,
+      "bytes": 183498,
+      "claimIds": [
+        "c16",
+        "c17"
+      ],
+      "transcript": [
+        "同じ大きさの1を、それぞれ5等分する。",
+        "1と1/5は、1/5が6こ。",
+        "6こから3こをひく。\n一つ分の大きさは1/5のまま。",
+        "残るのは3こ。答えは3/5。\n3/5 + 3/5 = 6/5で確かめる。"
+      ],
+      "evidence": "verified"
+    },
+    {
+      "code": "8250243240000000",
+      "scene": "AreaLesson",
+      "path": "assets/lessons/8250243240000000.mp4",
+      "sha256": "34f89b026e5565734f93143cc4d59b732de089f65d01eeff8d06f922303a47b2",
+      "seconds": 22.0,
+      "bytes": 241002,
+      "claimIds": [
+        "c18",
+        "c19",
+        "c20"
+      ],
+      "transcript": [
+        "一つのマスは1 cm²。\nたて6こ、横8こで48こ。",
+        "切り取る角は、たて2 cm、横3 cm。\n2 × 3 = 6 cm²。",
+        "全体の48 cm²から、6 cm²を1回ひく。",
+        "残った42このマスが42 cm²。\n長さのcmと、広さのcm²を分けよう。"
+      ],
+      "evidence": "verified"
+    },
+    {
+      "code": "8250243250000000",
+      "scene": "AngleLesson",
+      "path": "assets/lessons/8250243250000000.mp4",
+      "sha256": "f6677bef57d3556cf285bbdccdae18cf5e7f47fc0c9c2370193f42396f34f806",
+      "seconds": 22.0,
+      "bytes": 276782,
+      "claimIds": [
+        "c17",
+        "c18",
+        "c19"
+      ],
+      "transcript": [
+        "右向きの辺を0°に合わせる。\n反時計回りに、まず半回転。",
+        "残りは250 − 180 = 70°。\n同じ向きへ、さらに70°回す。",
+        "反対側の小さい角は110°。\n今測った回転の250°とは区別する。",
+        "一回転で360°。\n250°と110°を合わせると360°。"
+      ],
+      "evidence": "verified"
+    },
+    {
+      "code": "8250243310000000",
+      "scene": "ConnectedSquaresLesson",
+      "path": "assets/lessons/8250243310000000.mp4",
+      "sha256": "fba07c4ce93a909dc74c777fbe4e556d2971857cc33f99259c83bce438b914d8",
+      "seconds": 26.7,
+      "bytes": 299645,
+      "claimIds": [
+        "c15",
+        "c16",
+        "c17"
+      ],
+      "transcript": [
+        "最初の正方形には4本。",
+        "となりと1辺をいっしょに使う。\n次の正方形に足すのは3本。",
+        "もう1こ増えるたびに、3本ずつ足す。",
+        "5こなら、最初の4本と追加4回。\n共有する辺は1回だけ数える。",
+        "左端の1本と、3本ずつの5組でも同じ。"
+      ],
+      "evidence": "verified"
+    }
+  ],
+  "review": {
+    "type": "independent-agent-math-evidence",
+    "reviewedAt": "2026-11-04",
+    "humanPublicationApproval": false,
+    "scope": "All scene code and 17 caption strings, supporting claims, independent arithmetic/geometry models, actual MP4 hashes/stream metadata, sampled intermediate and final frames. Not a claim of watching every encoded frame."
+  }
+}

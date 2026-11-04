@@ -6,7 +6,7 @@ const assert = require('assert/strict');
 const crypto = require('crypto');
 const acorn = require('./dependencies.cjs')('acorn');
 const root = path.resolve(__dirname,'..');
-const files = ['units.js','core.js','visuals.js','app.js'];
+const files = fs.readdirSync(path.join(root,'js')).filter(file=>file.endsWith('.js'));
 files.forEach(file => {
   const source = fs.readFileSync(path.join(root,'js',file),'utf8');
   acorn.parse(source,{ecmaVersion:2017,sourceType:'script'});

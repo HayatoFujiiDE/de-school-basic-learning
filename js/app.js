@@ -130,6 +130,7 @@
   }
 
   function unitPage(unit) {
+    var lessonHTML = window.BL.lessons ? window.BL.lessons.render(unit) : '';
     var gameState = memory.games[unit.code];
     var length = memory.lengths[unit.code] || 'short';
     var selected = unit.entries.filter(function (entry) { return entry.category === core.state.interest; })[0];
@@ -140,10 +141,11 @@
       body += interestPanel(true);
       if (entry) body += '<section class="panel" aria-labelledby="example-title"><p class="panel-kicker">' + e(categoryLabel(entry.category)) + 'から考える</p><h2 class="example-title" id="example-title">' + e(entry.title) + '</h2><p class="body-copy">' + e(entry.text) + '</p>' + (core.state.interest !== 'all' && !selected ? '<p class="subtle-note">「' + e(categoryLabel(core.state.interest)) + '」の例は準備中です。今は「' + e(categoryLabel(entry.category)) + '」の例を見られます。</p>' : '') + '</section>';
       body += '<section class="panel" aria-labelledby="explanation-title"><div class="section-line with-tabs"><div><p class="panel-kicker">考え方を確かめる</p><h2 id="explanation-title" class="panel-title">' + t('どう考える？', '考え方') + '</h2></div><div class="length-tabs" role="group" aria-label="説明の長さ"><button class="length-tab" type="button" data-action="length" data-length="short" aria-pressed="' + (length === 'short') + '">短く</button><button class="length-tab" type="button" data-action="length" data-length="detail" aria-pressed="' + (length === 'detail') + '">くわしく</button></div></div><p class="body-copy" id="explanation-copy">' + e(core.text(unit, length)) + '</p><div class="button-row"><a class="button" href="#practice/' + e(unit.code) + '">' + t('練習してみる', '練習へ進む') + '<span aria-hidden="true">→</span></a></div><p class="subtle-note">' + unit.questions.length + 'つの問い。途中で休んでも、続きから。</p></section>';
+      body += '<div id="unit-lesson">' + lessonHTML + '</div>';
       if (unit.workedExample) body += workedExample(unit);
       if (unit.misconception) body += '<details class="panel misconception"><summary>ここを確かめる</summary><p class="misconception-trap">' + e(unit.misconception.trap) + '</p><p class="body-copy">' + e(unit.misconception.correction) + '</p></details>';
     }
-    return breadcrumb(unit) + unitHeading(unit) + '<div class="unit-layout"><div class="learning-column">' + body + '</div><aside class="lesson-aside"><h2>この単元の進め方</h2><ul class="flow-list"><li><span class="flow-dot"></span>クイズでためす</li><li><span class="flow-dot"></span>例と説明を見る</li><li><span class="flow-dot"></span>練習で確かめる</li><li><span class="flow-dot"></span>自分の言葉で話す</li></ul><div class="aside-separator"></div><p>短い説明と、くわしい説明。<br>そのときに合わせて選べます。</p><a class="text-link" href="#result/' + e(unit.code) + '">今の達成率を見る</a></aside></div>' + footer();
+    return breadcrumb(unit) + unitHeading(unit) + (lessonHTML ? '<div class="lesson-jump"><button type="button" class="quiet-button" data-action="lesson-jump">動く解説へ <span aria-hidden="true">↓</span></button></div>' : '') + '<div class="unit-layout"><div class="learning-column">' + body + '</div><aside class="lesson-aside"><h2>この単元の進め方</h2><ul class="flow-list"><li><span class="flow-dot"></span>クイズでためす</li><li><span class="flow-dot"></span>例と説明を見る</li><li><span class="flow-dot"></span>練習で確かめる</li><li><span class="flow-dot"></span>自分の言葉で話す</li></ul><div class="aside-separator"></div><p>短い説明と、くわしい説明。<br>そのときに合わせて選べます。</p><a class="text-link" href="#result/' + e(unit.code) + '">今の達成率を見る</a></aside></div>' + footer();
   }
 
   function workedExample(unit) {
@@ -227,6 +229,7 @@
   }
 
   function render(focusMain) {
+    if (window.BL.lessons) window.BL.lessons.destroy();
     var current = route();
     document.documentElement.setAttribute('data-mode', core.state.mode);
     if (current.unit) {
@@ -238,6 +241,10 @@
     if (current.page === 'unit' && window.BL.visuals) {
       var visual = document.getElementById('unit-visual');
       if (visual) { visual.innerHTML = window.BL.visuals.render(current.unit); window.BL.visuals.bind(visual, current.unit); }
+    }
+    if (current.page === 'unit' && window.BL.lessons) {
+      var lesson = document.getElementById('unit-lesson');
+      if (lesson) window.BL.lessons.bind(lesson, current.unit);
     }
     document.title = (current.unit ? current.unit.title + ' — ' : '') + '基礎学習';
     if (focusMain) {
@@ -366,6 +373,9 @@
         var heading = document.getElementById('heading-' + domain);
         if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus(); heading.scrollIntoView({ block: 'start' }); }
       }
+    } else if (current.unit && action === 'lesson-jump') {
+      var lessonHeading = document.getElementById('lesson-heading');
+      if (lessonHeading) { focusSelector('#lesson-heading'); document.getElementById('unit-lesson').scrollIntoView({ block: 'start', behavior: 'auto' }); }
     } else if (current.unit && (action === 'worked-next' || action === 'worked-reset')) {
       if (!current.unit.workedExample) return;
       memory.steps[current.unit.code] = action === 'worked-reset' ? 1 : Math.min(current.unit.workedExample.steps.length, (memory.steps[current.unit.code] || 1) + 1);

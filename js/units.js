@@ -1,7 +1,7 @@
 /* Original grade-4 mathematics preview. Source and verification ledger: sources/README.md. */
 window.BL = window.BL || {};
 window.BL.data = {
-  "version": "1",
+  "version": "2",
   "grade": 4,
   "sources": [
     {
@@ -2317,6 +2317,15 @@ window.BL.data = {
         {
           "id": "c17",
           "text": "整数nが0〜99なら、1.25±n/100は0.01を単位とした125±nこの計算。同じ位をそろえ、結果を100で割って表す。",
+          "status": "verified",
+          "sourceIds": [
+            "mext-codes",
+            "mext-commentary"
+          ]
+        },
+        {
+          "id": "motion1",
+          "text": "5.00は、1が4こ、0.1が9こ、0.01が10こに分け直せる。1が2こ、0.1が4こ、0.01が6こを取り分けると、1が2こ、0.1が5こ、0.01が4こ残り、2.54となる。0.01のマス500こは、取り分ける246こと残る254こに分かれる。",
           "status": "verified",
           "sourceIds": [
             "mext-codes",

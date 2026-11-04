@@ -2,7 +2,11 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert'),crypto=require('crypto');
 const path=process.argv[2]||require('path').join(process.env.BASIC_LEARNING_ROOT||require('path').resolve(__dirname,'..'),'js/visuals.js');
 const source=fs.readFileSync(path,'utf8');
-const ctx={BL:{core:{state:{mode:'es'},escape:s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}}};ctx.window=ctx;
+// Use the actual validated unit identity; only DOM sinks are stubbed for arithmetic enumeration.
+const projectRoot=process.env.BASIC_LEARNING_ROOT||require('path').resolve(__dirname,'..');
+const ctx={localStorage:{getItem:()=>null,setItem:()=>{},removeItem:()=>{}}};ctx.window=ctx;
+for(const file of ['units.js','core.js'])vm.runInNewContext(fs.readFileSync(require('path').join(projectRoot,'js',file),'utf8'),ctx,{timeout:1000});
+ctx.BL.core.state.mode='es';
 vm.runInNewContext(source,ctx,{timeout:1000});
 let checks=0,sliderStates=0;
 function result(html){let m=html.match(/<p class="visual-result"[^>]*>(.*?)<\/p>/);return m?m[1]:null;}
@@ -33,8 +37,8 @@ function mathematicalCheck(kind,s,html){
  checks++;
 }
 for(const [code,def] of Object.entries(ctx.BL.visuals.definitions)){
- const unit={code};let html=ctx.BL.visuals.render(unit),stage={innerHTML:''},events={};
- const panel={querySelector:()=>stage,querySelectorAll:()=>[],addEventListener:(k,v)=>events[k]=v,contains:()=>true};ctx.BL.visuals.bind(panel,unit);
+ const unit=ctx.BL.core.unit(code);assert(unit);assert.strictEqual(ctx.BL.visuals.render({code}),'','unvalidated unit identity is rejected');let html=ctx.BL.visuals.render(unit),stage={innerHTML:''},events={};
+ const panel={querySelector:selector=>selector==='[data-visual-code]'?{getAttribute:key=>key==='data-visual-code'?code:null}:selector==='[data-visual-stage]'?stage:null,querySelectorAll:()=>[],addEventListener:(k,v)=>events[k]=v,removeEventListener:k=>delete events[k],contains:()=>true};ctx.BL.visuals.bind(panel,unit);
  const values={...def.defaults};mathematicalCheck(def.kind,values,html);
  const input=(field,value)=>{values[field]=value;events.input({target:{value:String(value),getAttribute:k=>k==='data-visual-field'?field:null}});};
  const click=attrs=>events.click({target:{closest:()=>({hasAttribute:k=>k in attrs,getAttribute:k=>attrs[k]??null})}});
