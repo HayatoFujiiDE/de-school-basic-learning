@@ -1,0 +1,178 @@
+{
+  "reviewedAt": "2026-11-04",
+  "reviewerRole": "independent-evidence-agent",
+  "sourceSha256": "b0161929710d687833bf3fef187e2637aa690fb62dcfe3110863fe1fb3038e29",
+  "statusFieldOnlyChangeAllowed": true,
+  "publicationApproval": false,
+  "scope": "All 24 units, all displayed prose, 192 questions, 24 games, 462 claims, curriculum mapping; UI/browser review recorded separately.",
+  "items": {
+    "8250253120000000": {
+      "evidence": "verified",
+      "contentSha256": "c6db2542006c40db39d62bf24b29d751d9bfb4ab55966b0650bc718aef20066a",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253111100000": {
+      "evidence": "verified",
+      "contentSha256": "fb2ac44353ce50c6a925316f8b15e2a2d6c8ca98365cc548f1b34adcee5e2f86",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253111200000": {
+      "evidence": "verified",
+      "contentSha256": "9e796ae0735a8ed4e2d7e6a92960f82e8ef2f1e08c6463cc3feefb65999dbdea",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253131100000": {
+      "evidence": "verified",
+      "contentSha256": "55b9eb873be8a3b7e37e0e652436cf910b8da60afaf92c26cc9f3be42edea5ae",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 20
+    },
+    "8250253131200000": {
+      "evidence": "verified",
+      "contentSha256": "71c15d9a623089952d1b29d9fc81c272e09c0ea3677db45703d35f92d55d1917",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 20
+    },
+    "8250253141200000": {
+      "evidence": "verified",
+      "contentSha256": "ef5c4efa35250f5a7b84150e0a08d12f7eb63a7b0d513a496b1cb3b7b00da51d",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253140000000": {
+      "evidence": "verified",
+      "contentSha256": "488a2575d657cd109352809b9128fbca5dd2fbeeb933ef3745e7f6b27026bec1",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253150000000": {
+      "evidence": "verified",
+      "contentSha256": "e774c014a882c4c742008b7bff2f529495d82a7ae1e43f8883c71554abaab4e8",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 20
+    },
+    "8250253160000000": {
+      "evidence": "verified",
+      "contentSha256": "f3d5d178974ac9742d142418c7dbb467992f80161992389e74459e137762385a",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253211100000": {
+      "evidence": "verified",
+      "contentSha256": "35381ab25e33c808afecfee0ea19e71e008f3af595a28c1951a4319a4a1223d4",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253211200000": {
+      "evidence": "verified",
+      "contentSha256": "a9c5662a4a5626515cf813a8ec93b08bc4d4b11fdf04acc0c72f9418ee656e9a",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253211300000": {
+      "evidence": "verified",
+      "contentSha256": "b5ab74321d35fb628468e17e410c1031e1bc632adf67d936418f762080a085cb",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253211400000": {
+      "evidence": "verified",
+      "contentSha256": "b59c76bd742e5bfb6ef959a47f440d8a5b05bf220f1f1b006e2b0d1139243086",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253231100000": {
+      "evidence": "verified",
+      "contentSha256": "6764bf217c47d143009cb3fbf98aa130cea34f8ac2ca988d75f6f798917e504b",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 20
+    },
+    "8250253232100000": {
+      "evidence": "verified",
+      "contentSha256": "a257f53abe7dd2065e7552f5e420c96c54c41512370062ab8b5cb874fc4d8c76",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253220000000": {
+      "evidence": "verified",
+      "contentSha256": "3242b32807a9d4c8cb367559ca99d3ef986c72319c4456ce770c75a47373a70d",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253240000000": {
+      "evidence": "verified",
+      "contentSha256": "99e444941d5425c3dc9b04e6175ff17a22a4dc04399b21b5ab64b6c2b794ca66",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253310000000": {
+      "evidence": "verified",
+      "contentSha256": "06f295b3b0f697a34484c09b7e507be77fc3cef1564200e934932abb62f30c85",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253321100000": {
+      "evidence": "verified",
+      "contentSha256": "b2ae169730ecbbfe0ac46f54ba2d46fb8807746299058ecb50fd19c2ef46f767",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253320000000": {
+      "evidence": "verified",
+      "contentSha256": "549d83b168c7bde8c02a5dc178ba7d8b48fc975a17f7217f9b6dd293186208ba",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253331100000": {
+      "evidence": "verified",
+      "contentSha256": "6528cea2a49e6bec4eb64546a7ecc8c1d304c580e665aff93247a9ac5035107b",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 20
+    },
+    "8250253331200000": {
+      "evidence": "verified",
+      "contentSha256": "c40fa06e9d78946f7adef2b3ce7219527d08ed21054d07857419d21da6a88a33",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    },
+    "8250253420000000": {
+      "evidence": "verified",
+      "contentSha256": "9f93649c5bace8bc9a2a2aecf266237e1ff742b8bc1a6dbf1389ed0a2fa86f77",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 20
+    },
+    "8250253410000000": {
+      "evidence": "verified",
+      "contentSha256": "b413ba9fa7846f55164992624ba361880fca5c45dfb70185852ea1a94feebf60",
+      "questionCount": 8,
+      "gameCount": 1,
+      "claimCount": 19
+    }
+  }
+}
