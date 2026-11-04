@@ -1,0 +1,1330 @@
+{
+  "grade": 7,
+  "curriculumGrade": 1,
+  "sourceRows": 107,
+  "unitCount": 38,
+  "note": "The mapping does not certify mastery. Raw row662 preserves the official Excel missing character; authored lessons use 錐体 as in the official commentary p78.",
+  "rows": [
+    {
+      "curriculumCode": "8350210000000000",
+      "row": 610,
+      "text": "〔第１学年〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350212000000000",
+      "row": 611,
+      "text": "１　目標",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350212100000000",
+      "row": 612,
+      "text": "(1) 正の数と負の数，文字を用いた式と一元一次方程式，平面図形と空間図形，比例と反比例，データの分布と確率などについての基礎的な概念や原理・法則などを理解するとともに，事象を数理的に捉えたり，数学的に解釈したり，数学的に表現・処理したりする技能を身に付けるようにする。",
+      "unitCodes": [
+        "8350213111100000",
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215100000000",
+        "8350215200000000",
+        "8350213121200000",
+        "8350213121100000",
+        "8350213121300000",
+        "8350213121400000",
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000",
+        "8350213311100000",
+        "8350213311300000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213312200000",
+        "8350213211200000",
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350215500000000",
+        "8350213221100000",
+        "8350213222100000",
+        "8350215600000000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000",
+        "8350213411200000",
+        "8350213411100000",
+        "8350213412100000",
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350212200000000",
+      "row": 613,
+      "text": "(2) 数の範囲を拡張し，数の性質や計算について考察したり，文字を用いて数量の関係や法則などを考察したりする力，図形の構成要素や構成の仕方に着目し，図形の性質や関係を直観的に捉え論理的に考察する力，数量の変化や対応に着目して関数関係を見いだし，その特徴を表，式，グラフなどで考察する力，データの分布に着目し，その傾向を読み取り批判的に考察して判断したり，不確定な事象の起こりやすさについて考察したりする力を養う。",
+      "unitCodes": [
+        "8350213111100000",
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215100000000",
+        "8350215200000000",
+        "8350213121200000",
+        "8350213121100000",
+        "8350213121300000",
+        "8350213121400000",
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000",
+        "8350213311100000",
+        "8350213311300000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213312200000",
+        "8350213211200000",
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350215500000000",
+        "8350213221100000",
+        "8350213222100000",
+        "8350215600000000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000",
+        "8350213411200000",
+        "8350213411100000",
+        "8350213412100000",
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350212300000000",
+      "row": 614,
+      "text": "(3) 数学的活動の楽しさや数学のよさに気付いて粘り強く考え，数学を生活や学習に生かそうとする態度，問題解決の過程を振り返って検討しようとする態度，多面的に捉え考えようとする態度を養う。",
+      "unitCodes": [
+        "8350213111100000",
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215100000000",
+        "8350215200000000",
+        "8350213121200000",
+        "8350213121100000",
+        "8350213121300000",
+        "8350213121400000",
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000",
+        "8350213311100000",
+        "8350213311300000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213312200000",
+        "8350213211200000",
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350215500000000",
+        "8350213221100000",
+        "8350213222100000",
+        "8350215600000000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000",
+        "8350213411200000",
+        "8350213411100000",
+        "8350213412100000",
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213000000000",
+      "row": 615,
+      "text": "２　内容",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213100000000",
+      "row": 616,
+      "text": "Ａ　数と式",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213110000000",
+      "row": 617,
+      "text": "(1) 正の数と負の数について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213111100000",
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213111000000",
+      "row": 618,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213111100000",
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213111100000",
+      "row": 619,
+      "text": "(ｱ) 正の数と負の数の必要性と意味を理解すること。",
+      "unitCodes": [
+        "8350213111100000",
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213111200000",
+      "row": 620,
+      "text": "(ｲ) 正の数と負の数の四則計算をすること。",
+      "unitCodes": [
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213111300000",
+      "row": 621,
+      "text": "(ｳ) 具体的な場面で正の数と負の数を用いて表したり処理したりすること。",
+      "unitCodes": [
+        "8350213111300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213112000000",
+      "row": 622,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213112100000",
+      "row": 623,
+      "text": "(ｱ) 算数で学習した数の四則計算と関連付けて，正の数と負の数の四則計算の方法を考察し表現すること。",
+      "unitCodes": [
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213112200000",
+      "row": 624,
+      "text": "(ｲ) 正の数と負の数を具体的な場面で活用すること。",
+      "unitCodes": [
+        "8350213111300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213120000000",
+      "row": 625,
+      "text": "(2) 文字を用いた式について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213121200000",
+        "8350213121100000",
+        "8350213121300000",
+        "8350213121400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213121000000",
+      "row": 626,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213121200000",
+        "8350213121100000",
+        "8350213121300000",
+        "8350213121400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213121100000",
+      "row": 627,
+      "text": "(ｱ) 文字を用いることの必要性と意味を理解すること。",
+      "unitCodes": [
+        "8350213121100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213121200000",
+      "row": 628,
+      "text": "(ｲ) 文字を用いた式における乗法と除法の表し方を知ること。",
+      "unitCodes": [
+        "8350213121200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213121300000",
+      "row": 629,
+      "text": "(ｳ) 簡単な一次式の加法と減法の計算をすること。",
+      "unitCodes": [
+        "8350213121300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213121400000",
+      "row": 630,
+      "text": "(ｴ) 数量の関係や法則などを文字を用いた式に表すことができることを理解し，式を用いて表したり読み取ったりすること。",
+      "unitCodes": [
+        "8350213121100000",
+        "8350213121400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213122000000",
+      "row": 631,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213121300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213122100000",
+      "row": 632,
+      "text": "(ｱ) 具体的な場面と関連付けて，一次式の加法と減法の計算の方法を考察し表現すること。",
+      "unitCodes": [
+        "8350213121300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213130000000",
+      "row": 633,
+      "text": "(3) 一元一次方程式について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213131000000",
+      "row": 634,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213131100000",
+      "row": 635,
+      "text": "(ｱ) 方程式の必要性と意味及び方程式の中の文字や解の意味を理解すること。",
+      "unitCodes": [
+        "8350213131100000",
+        "8350213132200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213131200000",
+      "row": 636,
+      "text": "(ｲ) 簡単な一元一次方程式を解くこと。",
+      "unitCodes": [
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213132000000",
+      "row": 637,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213132100000",
+      "row": 638,
+      "text": "(ｱ) 等式の性質を基にして，一元一次方程式を解く方法を考察し表現すること。",
+      "unitCodes": [
+        "8350213131200000",
+        "8350213132100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213132200000",
+      "row": 639,
+      "text": "(ｲ) 一元一次方程式を具体的な場面で活用すること。",
+      "unitCodes": [
+        "8350215400000000",
+        "8350213132200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213140000000",
+      "row": 640,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213141000000",
+      "row": 641,
+      "text": "自然数",
+      "unitCodes": [
+        "8350215100000000",
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213142000000",
+      "row": 642,
+      "text": "素数",
+      "unitCodes": [
+        "8350215100000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213143000000",
+      "row": 643,
+      "text": "符号",
+      "unitCodes": [
+        "8350213111100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213144000000",
+      "row": 644,
+      "text": "絶対値",
+      "unitCodes": [
+        "8350213111100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213145000000",
+      "row": 645,
+      "text": "項",
+      "unitCodes": [
+        "8350213121300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213146000000",
+      "row": 646,
+      "text": "係数",
+      "unitCodes": [
+        "8350213121200000",
+        "8350213121300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213147000000",
+      "row": 647,
+      "text": "移項",
+      "unitCodes": [
+        "8350213131200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213148000000",
+      "row": 648,
+      "text": "≦",
+      "unitCodes": [
+        "8350213121400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213149000000",
+      "row": 649,
+      "text": "≧",
+      "unitCodes": [
+        "8350213121400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213200000000",
+      "row": 650,
+      "text": "Ｂ　図形",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213210000000",
+      "row": 651,
+      "text": "(1) 平面図形について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213211200000",
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350215500000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213211000000",
+      "row": 652,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213211200000",
+        "8350213211100000",
+        "8350213212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213211100000",
+      "row": 653,
+      "text": "(ｱ) 角の二等分線，線分の垂直二等分線，垂線などの基本的な作図の方法を理解すること。",
+      "unitCodes": [
+        "8350213211100000",
+        "8350213212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213211200000",
+      "row": 654,
+      "text": "(ｲ) 平行移動，対称移動及び回転移動について理解すること。",
+      "unitCodes": [
+        "8350213211200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213212000000",
+      "row": 655,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350215500000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213212100000",
+      "row": 656,
+      "text": "(ｱ) 図形の性質に着目し，基本的な作図の方法を考察し表現すること。",
+      "unitCodes": [
+        "8350213211100000",
+        "8350213212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213212200000",
+      "row": 657,
+      "text": "(ｲ) 図形の移動に着目し，二つの図形の関係について考察し表現すること。",
+      "unitCodes": [
+        "8350213212200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213212300000",
+      "row": 658,
+      "text": "(ｳ) 基本的な作図や図形の移動を具体的な場面で活用すること。",
+      "unitCodes": [
+        "8350213212200000",
+        "8350213212100000",
+        "8350215500000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213220000000",
+      "row": 659,
+      "text": "(2) 空間図形について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213221100000",
+        "8350213222100000",
+        "8350215600000000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213221000000",
+      "row": 660,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213221100000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213221100000",
+      "row": 661,
+      "text": "(ｱ) 空間における直線や平面の位置関係を知ること。",
+      "unitCodes": [
+        "8350213221100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213221200000",
+      "row": 662,
+      "text": "(ｲ) 扇形の弧の長さと面積，基本的な柱体や体，球の表面積と体積を求めること。",
+      "unitCodes": [
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213222000000",
+      "row": 663,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213222100000",
+        "8350215600000000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213222100000",
+      "row": 664,
+      "text": "(ｱ) 空間図形を直線や平面図形の運動によって構成されるものと捉えたり，空間図形を平面上に表現して平面上の表現から空間図形の性質を見いだしたりすること。",
+      "unitCodes": [
+        "8350213222100000",
+        "8350215600000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213222200000",
+      "row": 665,
+      "text": "(ｲ) 立体図形の表面積や体積の求め方を考察し表現すること。",
+      "unitCodes": [
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213230000000",
+      "row": 666,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213231000000",
+      "row": 667,
+      "text": "弧",
+      "unitCodes": [
+        "8350213221200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213232000000",
+      "row": 668,
+      "text": "弦",
+      "unitCodes": [
+        "8350213221200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213233000000",
+      "row": 669,
+      "text": "回転体",
+      "unitCodes": [
+        "8350213222100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213234000000",
+      "row": 670,
+      "text": "ねじれの位置",
+      "unitCodes": [
+        "8350213221100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213235000000",
+      "row": 671,
+      "text": "π",
+      "unitCodes": [
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213236000000",
+      "row": 672,
+      "text": "//",
+      "unitCodes": [
+        "8350213221100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213237000000",
+      "row": 673,
+      "text": "⊥",
+      "unitCodes": [
+        "8350213211100000",
+        "8350215500000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213238000000",
+      "row": 674,
+      "text": "∠",
+      "unitCodes": [
+        "8350213212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213239000000",
+      "row": 675,
+      "text": "△",
+      "unitCodes": [
+        "8350213212100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213300000000",
+      "row": 676,
+      "text": "Ｃ　関数",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213310000000",
+      "row": 677,
+      "text": "(1) 比例，反比例について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213311100000",
+        "8350213311300000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213312200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213311000000",
+      "row": 678,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213311100000",
+        "8350213311300000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213311100000",
+      "row": 679,
+      "text": "(ｱ) 関数関係の意味を理解すること。",
+      "unitCodes": [
+        "8350213311100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213311200000",
+      "row": 680,
+      "text": "(ｲ) 比例，反比例について理解すること。",
+      "unitCodes": [
+        "8350213311200000",
+        "8350213310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213311300000",
+      "row": 681,
+      "text": "(ｳ) 座標の意味を理解すること。",
+      "unitCodes": [
+        "8350213311300000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213311400000",
+      "row": 682,
+      "text": "(ｴ) 比例，反比例を表，式，グラフなどに表すこと。",
+      "unitCodes": [
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213312000000",
+      "row": 683,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213312200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213312100000",
+      "row": 684,
+      "text": "(ｱ) 比例，反比例として捉えられる二つの数量について，表，式，グラフなどを用いて調べ，それらの変化や対応の特徴を見いだすこと。",
+      "unitCodes": [
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213312200000",
+      "row": 685,
+      "text": "(ｲ) 比例，反比例を用いて具体的な事象を捉え考察し表現すること。",
+      "unitCodes": [
+        "8350213312200000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213320000000",
+      "row": 686,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213321000000",
+      "row": 687,
+      "text": "関数",
+      "unitCodes": [
+        "8350213311100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213322000000",
+      "row": 688,
+      "text": "変数",
+      "unitCodes": [
+        "8350213311100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213323000000",
+      "row": 689,
+      "text": "変域",
+      "unitCodes": [
+        "8350213311100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213400000000",
+      "row": 690,
+      "text": "Ｄ　データの活用",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213410000000",
+      "row": 691,
+      "text": "(1) データの分布について，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213411200000",
+        "8350213411100000",
+        "8350213412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213411000000",
+      "row": 692,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213411200000",
+        "8350213411100000",
+        "8350213412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213411100000",
+      "row": 693,
+      "text": "(ｱ) ヒストグラムや相対度数などの必要性と意味を理解すること。",
+      "unitCodes": [
+        "8350213411200000",
+        "8350213411100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213411200000",
+      "row": 694,
+      "text": "(ｲ) コンピュータなどの情報手段を用いるなどしてデータを表やグラフに整理すること。",
+      "unitCodes": [
+        "8350213411200000",
+        "8350213412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213412000000",
+      "row": 695,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213412100000",
+      "row": 696,
+      "text": "(ｱ) 目的に応じてデータを収集して分析し，そのデータの分布の傾向を読み取り，批判的に考察し判断すること。",
+      "unitCodes": [
+        "8350213412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213420000000",
+      "row": 697,
+      "text": "(2) 不確定な事象の起こりやすさについて，数学的活動を通して，次の事項を身に付けることができるよう指導する。",
+      "unitCodes": [
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213421000000",
+      "row": 698,
+      "text": "ア　次のような知識及び技能を身に付けること。",
+      "unitCodes": [
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213421100000",
+      "row": 699,
+      "text": "(ｱ) 多数の観察や多数回の試行によって得られる確率の必要性と意味を理解すること。",
+      "unitCodes": [
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213422000000",
+      "row": 700,
+      "text": "イ　次のような思考力，判断力，表現力等を身に付けること。",
+      "unitCodes": [
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213422100000",
+      "row": 701,
+      "text": "(ｱ) 多数の観察や多数回の試行の結果を基にして，不確定な事象の起こりやすさの傾向を読み取り表現すること。",
+      "unitCodes": [
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213430000000",
+      "row": 702,
+      "text": "〔用語・記号〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213431000000",
+      "row": 703,
+      "text": "範囲",
+      "unitCodes": [
+        "8350213412100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213432000000",
+      "row": 704,
+      "text": "累積度数",
+      "unitCodes": [
+        "8350213411100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213500000000",
+      "row": 705,
+      "text": "〔数学的活動〕",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213510000000",
+      "row": 706,
+      "text": "(1) 「Ａ数と式」，「Ｂ図形」，「Ｃ関数」及び「Ｄデータの活用」の学習やそれらを相互に関連付けた学習において，次のような数学的活動に取り組むものとする。",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350213511000000",
+      "row": 707,
+      "text": "ア　日常の事象を数理的に捉え，数学的に表現・処理し，問題を解決したり，解決の過程や結果を振り返って考察したりする活動",
+      "unitCodes": [
+        "8350213111300000",
+        "8350213121400000",
+        "8350215400000000",
+        "8350213132200000",
+        "8350213312200000",
+        "8350215500000000",
+        "8350213412100000",
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213512000000",
+      "row": 708,
+      "text": "イ　数学の事象から問題を見いだし解決したり，解決の過程や結果を振り返って統合的・発展的に考察したりする活動",
+      "unitCodes": [
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350215100000000",
+        "8350215200000000",
+        "8350213121300000",
+        "8350213132100000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350213222100000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000",
+        "8350213411100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350213513000000",
+      "row": 709,
+      "text": "ウ　数学的な表現を用いて筋道立てて説明し伝え合う活動",
+      "unitCodes": [
+        "8350213111100000",
+        "8350213111200000",
+        "8350213112100000",
+        "8350213111000000",
+        "8350213111300000",
+        "8350215100000000",
+        "8350215200000000",
+        "8350213121200000",
+        "8350213121100000",
+        "8350213121300000",
+        "8350213121400000",
+        "8350213131100000",
+        "8350213131200000",
+        "8350213132100000",
+        "8350215400000000",
+        "8350213132200000",
+        "8350213311100000",
+        "8350213311300000",
+        "8350213311200000",
+        "8350213311400000",
+        "8350213310000000",
+        "8350213312200000",
+        "8350213211200000",
+        "8350213212200000",
+        "8350213211100000",
+        "8350213212100000",
+        "8350215500000000",
+        "8350213221100000",
+        "8350213222100000",
+        "8350215600000000",
+        "8350213221200000",
+        "8350213222200000",
+        "8350213221000000",
+        "8350213220000000",
+        "8350213411200000",
+        "8350213411100000",
+        "8350213412100000",
+        "8350213421100000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350215000000000",
+      "row": 710,
+      "text": "３　内容の取扱い",
+      "unitCodes": [],
+      "classification": "heading",
+      "evidence": "Structural heading"
+    },
+    {
+      "curriculumCode": "8350215100000000",
+      "row": 711,
+      "text": "(1) 内容の「Ａ数と式」の(1)に関連して，自然数を素数の積として表すことを取り扱うものとする。",
+      "unitCodes": [
+        "8350215100000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350215200000000",
+      "row": 712,
+      "text": "(2) 内容の「Ａ数と式」の(1)のアとイの(ｱ)に関連して，数の集合と四則計算の可能性を取り扱うものとする。",
+      "unitCodes": [
+        "8350215200000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350215300000000",
+      "row": 713,
+      "text": "(3) 内容の「Ａ数と式」の(2)のアの(ｴ)に関連して，大小関係を不等式を用いて表すことを取り扱うものとする。",
+      "unitCodes": [
+        "8350213121400000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350215400000000",
+      "row": 714,
+      "text": "(4) 内容の「Ａ数と式」の(3)のアの(ｲ)とイの(ｲ)に関連して，簡単な比例式を解くことを取り扱うものとする。",
+      "unitCodes": [
+        "8350215400000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350215500000000",
+      "row": 715,
+      "text": "(5) 内容の「Ｂ図形」の(1)のイの(ｳ)に関連して，円の接線はその接点を通る半径に垂直であることを取り扱うものとする。",
+      "unitCodes": [
+        "8350215500000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    },
+    {
+      "curriculumCode": "8350215600000000",
+      "row": 716,
+      "text": "(6) 内容の「Ｂ図形」の(2)のイの(ｱ)については，見取図や展開図，投影図を取り扱うものとする。",
+      "unitCodes": [
+        "8350215600000000"
+      ],
+      "classification": "mapped",
+      "evidence": "Related official items are collectively addressed by authored explanations, problems, reasoning, examples and visual claims."
+    }
+  ]
+}

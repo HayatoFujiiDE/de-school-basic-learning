@@ -1,0 +1,46 @@
+{
+  "renderer": {
+    "version": "0.20.1",
+    "sourceSha256": "e0b1ebd9ba98769caed708ca7794131e0a0e9e672fc0b74750e0d029f511cc14"
+  },
+  "reviewedAt": "2026-11-04",
+  "reviewScope": "Independent source, captions, mathematical transformations, contact sheets and all 1290 decoded frame measurements. Not operator publication approval.",
+  "videos": [
+    {
+      "code": "8350213111200000",
+      "path": "assets/lessons/8350213111200000.mp4",
+      "sha256": "752d7f4c94c0db9a787f0eef729f9177b023a42f1e0956c818f6287d456c8aaf",
+      "evidence": "verified",
+      "reviewedBy": "independent-evidence-agent",
+      "publicationApproval": false,
+      "claimIds": [
+        "video"
+      ],
+      "claimTextSha256": "724b9f8f9b4da5162439486ace5b538e07b44d4101dd6a6ad390b1a4c0270d96",
+      "transcript": [
+        "ひき算は、ひく数の符号を変えて足す。",
+        "原点は動かさず、-2から右へ3目盛進む。",
+        "着いたところは1。(-2)＋3は1になる。",
+        "負の数をひくことを、正の数を足すことに直した。"
+      ]
+    },
+    {
+      "code": "8350213131200000",
+      "path": "assets/lessons/8350213131200000.mp4",
+      "sha256": "2cc56f53a8de837312f0656fe8562b79d4d1b965caaf774542361ee1043eece5",
+      "evidence": "verified",
+      "reviewedBy": "independent-evidence-agent",
+      "publicationApproval": false,
+      "claimIds": [
+        "video"
+      ],
+      "claimTextSha256": "08a77bca1df77886cf6ef6d67bfa9db3285d092f8a478dfadf519fae3d3819a0",
+      "transcript": [
+        "2x＋3＝7。左右が等しくなるxを求める。",
+        "両辺から3をひくと、2x＝4になる。",
+        "両辺を0でない2でわると、x＝2。",
+        "代入すると2×2＋3＝7。もとの式でも確かめる。"
+      ]
+    }
+  ]
+}

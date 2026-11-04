@@ -86,3 +86,9 @@ lock の hash は記録された来歴情報であり、署名検証や remote c
 ## 第6学年での再使用（2026-11-04）
 
 導入済みの同じManim Community 0.20.1とローカルSkillを再使用した。新しいSkill・パッケージ・音声APIは導入していない。stable docsの版は手元と異なるため、[公式v0.20.1の実装](https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/animation/transform.py)と実レンダーでAPIを照合した。ネットワーク拒否hook、更新照会停止、plugins空、ローカル日本語フォント、領域assert、音声なし・metadata除去を維持する。2本の動画は分数の乗法と比の分け方で、独立した内容・実フレーム確認を別に行う。
+
+## 中学1年での再使用（2026-11-04）
+
+同じ2つのSkill全ファイルを再hashし、上記15ファイル／37ファイルのスナップショットと完全一致した。実行環境のmetadataでもManim 0.20.1を再確認した。新規導入はない。[同版のLine/Arrow実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/mobject/geometry/line.py)と[Transform実装](https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/animation/transform.py)を一次資料として確認し、自作の数直線と記号札の動画だけを制作する。
+
+`render-media-jh1.py`も通信拒否、更新照会停止、plugins空、固定版チェック、ローカルフォント、metadata削除を維持。20秒／23秒の2本が正常終了した。人気の指標で内容の正しさを代替せず、教材の数学・字幕・全フレームの検証を独立担当へ渡す。

@@ -1,0 +1,848 @@
+{
+  "evidence": "verified",
+  "publicationApproval": false,
+  "reviewedBy": "independent-evidence-agent",
+  "reviewedAt": "2026-11-04",
+  "sourceSnapshotSha256": "d2893eea2e2741776e3db58691f5767d6eeaaaef749cff04eca35910f7a02c1b",
+  "normalizedSourceSha256": "6204dc0c46212ebee66632b586642519870da070819f6b78efc5f2f75e6deac4",
+  "sourceStatusAtReview": "pending",
+  "statusOnlyPromotionAllowed": true,
+  "counts": {
+    "units": 38,
+    "questions": 304,
+    "games": 38,
+    "claims": 732,
+    "numericRecomputed": 155,
+    "officialRows": 107,
+    "terminalCodes": 69,
+    "mappedRows": 93,
+    "headings": 14
+  },
+  "coverageMeaning": "Mapped codes identify reviewed lesson examples and explanation surfaces; they do not certify completion of a school year, student mastery, or every possible teaching activity.",
+  "sources": [
+    {
+      "id": "mext-jh1-codes",
+      "url": "https://www.mext.go.jp/content/20230901-mxt_syoto01-000010374_10.xlsx",
+      "sha256": "7a4a76a4d8665de90755a027b09269a265b1677f52e198750c7b3e5e9a4d4d7e",
+      "method": "Independent ZIP/XML visible-text extraction excluding phonetic runs, 107 rows exactly matched."
+    },
+    {
+      "id": "mext-jh1-commentary",
+      "url": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2019/03/18/1387018_004.pdf",
+      "sha256": "849e254fd907721f069ae601e18db0c44ae5b79a5ea8394675f18f867d9d237e",
+      "scope": "Printed pages 62–99; numerical/algebra, geometry, functions, data/probability and mathematical activities. Page 78 image checked for the Excel source anomaly."
+    }
+  ],
+  "items": {
+    "8350213111100000": {
+      "evidence": "verified",
+      "contentSha256": "2e091cb09f85e806126ca0757c80d1f5d6865c438d09d04058e77a921456de37",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4
+    },
+    "8350213111200000": {
+      "evidence": "verified",
+      "contentSha256": "a7b50d43c2130bd9ecd8f27dd9cc95e4cdbf75ca45fd0a0ce258e9c7759a571d",
+      "questions": 8,
+      "games": 1,
+      "claims": 21,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350213112100000": {
+      "evidence": "verified",
+      "contentSha256": "3e037545b9f52d99c8ae80a8d653dab2b9add7757c6c754b6bba27daad666e32",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350213111000000": {
+      "evidence": "verified",
+      "contentSha256": "e760b5099b5152882d25677e142ab53229a2bf02ef66a0d81ccb99c8ced7808e",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 8
+    },
+    "8350213111300000": {
+      "evidence": "verified",
+      "contentSha256": "f1760d35569d95f572fc0729b19bd54f7102d809565fe0a90f7fbb671f11387e",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350215100000000": {
+      "evidence": "verified",
+      "contentSha256": "0c34909fd91e6004b0c0436617cf0ab731021d677f6f09fa6ca09a7e98143e12",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3
+    },
+    "8350215200000000": {
+      "evidence": "verified",
+      "contentSha256": "90c152c5eeb8728ea990b88caa642c686240d528232ecc5527b1d3cffde6b996",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213121200000": {
+      "evidence": "verified",
+      "contentSha256": "d81fdda7cf4794e2fd2fc9f056242799feb30417f901a470740deb8ae80cdcce",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213121100000": {
+      "evidence": "verified",
+      "contentSha256": "8e8f3de9a75619fd88251e441096965d5ad3237760c8149769753963b7d4ea96",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350213121300000": {
+      "evidence": "verified",
+      "contentSha256": "9fd1cf385d0767de2be13ed5aeac438f659e25a3eed379ccbb74da73342ae8d1",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213121400000": {
+      "evidence": "verified",
+      "contentSha256": "dc794b8af3fc8d87d2a4c403bfba568d19d602cb8d7dd04c4271964843659d48",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213131100000": {
+      "evidence": "verified",
+      "contentSha256": "b76a8cec149e5aae8b1d2ebb6d37a3625e4a3b6924ee65a144ff0cb6972e365d",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213131200000": {
+      "evidence": "verified",
+      "contentSha256": "3e8d2a2d06716679eaf9114e85d64cb1447b135f1638751ab3e7b9e86896cec2",
+      "questions": 8,
+      "games": 1,
+      "claims": 21,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213132100000": {
+      "evidence": "verified",
+      "contentSha256": "cdf452dd1f0c18d6cee887783e454e974296e707e825a4c5fad0d1421c22cbec",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 6
+    },
+    "8350215400000000": {
+      "evidence": "verified",
+      "contentSha256": "5d17801700104f08cd23074ced4b77e6103f2e5b9baf88050b118522b5142188",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213132200000": {
+      "evidence": "verified",
+      "contentSha256": "9b6d8f0db308f19c238d458a16608273c26cf06191563c2ec7c5dd7224d89cb8",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213311100000": {
+      "evidence": "verified",
+      "contentSha256": "27d5ac0be4a759d81365aba1cf9ace3204fb64ff9150d30a5d10e1eb576d3b72",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 4
+    },
+    "8350213311300000": {
+      "evidence": "verified",
+      "contentSha256": "b29c25758b955ac55abbcad1a58c9fe2997de908728c1d4150c1be96cdb4cfdf",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2
+    },
+    "8350213311200000": {
+      "evidence": "verified",
+      "contentSha256": "faf111c6b10d44fc49cd2ad290abf349a0a03f208c198a772616a19400fb3ebb",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213311400000": {
+      "evidence": "verified",
+      "contentSha256": "315180853d9738d3c3f7b727f4be5ccb8568740faa04ecf14c4b2a7da00942f7",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3
+    },
+    "8350213310000000": {
+      "evidence": "verified",
+      "contentSha256": "617bf108bf86712e46fca77e9f5f1ac1ae716b4ac5d6304bd0f256a3093afea0",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 6
+    },
+    "8350213312200000": {
+      "evidence": "verified",
+      "contentSha256": "e672fa06d6afaa249f98aa5823e38b459d6cc4510930e68fb55cbcd53abe3562",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213211200000": {
+      "evidence": "verified",
+      "contentSha256": "f9b6a5e83b70412dc11eac36af8d58ccb0df318c5132c01c3d8f056f854ad259",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213212200000": {
+      "evidence": "verified",
+      "contentSha256": "5375da4412da4de9116922572974bf688342b2ce16aab16e52edd7430777cb70",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213211100000": {
+      "evidence": "verified",
+      "contentSha256": "7a3426d268a12aa19ab5ce075370d5ab96b723e7833bdcdd237c7d7794cafa25",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213212100000": {
+      "evidence": "verified",
+      "contentSha256": "7758bdc9c90f877cb95a860d661ff235801aa43422cc7ba5ee0dea8b0a21ad4d",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3
+    },
+    "8350215500000000": {
+      "evidence": "verified",
+      "contentSha256": "1aa8293d4e75581b75e538d1f9e6ade9194c00150cb765d17f6d94febfdb9498",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 2
+    },
+    "8350213221100000": {
+      "evidence": "verified",
+      "contentSha256": "0e40226678793f40f1f28633d1650a4983aad980e88daf4c1f64999e2cb7faf7",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 1
+    },
+    "8350213222100000": {
+      "evidence": "verified",
+      "contentSha256": "0ea0385e08e85196e84ec701fcbb7456b36ca6b9372a512ea8b3891a6ff0ea90",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3
+    },
+    "8350215600000000": {
+      "evidence": "verified",
+      "contentSha256": "7492bee9bba5aa5a33b9cc7e7dd268d4c5e7168b52038ff434ca355cd1f7eb09",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 3
+    },
+    "8350213221200000": {
+      "evidence": "verified",
+      "contentSha256": "9ba131824f8806ba5c045eff4f649dfbd22f928db9237fd4d78e6baf5795a817",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213222200000": {
+      "evidence": "verified",
+      "contentSha256": "f3b0518636c3d261c89bd0f585406dea66f3042408aa60de54027c1b992f897c",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350213221000000": {
+      "evidence": "verified",
+      "contentSha256": "cfa124b3cb7bfe0852bf8c0fedb3a94baf39e5af932804122c937115ffc2a1ce",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350213220000000": {
+      "evidence": "verified",
+      "contentSha256": "0608fb7d85e1ce2dc3dbc4256c46c471031af3d74aeebf667ea0379f99e86a0a",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 7
+    },
+    "8350213411200000": {
+      "evidence": "verified",
+      "contentSha256": "55a761bd3796aa175c2cce8f3a9d7afc5d3dc020dd497de70eff2bfc9ba54608",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213411100000": {
+      "evidence": "verified",
+      "contentSha256": "e646e6702eb88e125d237639b7ff89f7c97abdb544f11051f282e7ff59bdbbe9",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213412100000": {
+      "evidence": "verified",
+      "contentSha256": "35ff3f33acbb435600f32b9b9d5dc17e06764e891d946847fa9148334e35cac1",
+      "questions": 8,
+      "games": 1,
+      "claims": 19,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    },
+    "8350213421100000": {
+      "evidence": "verified",
+      "contentSha256": "0b77eba5377d6ca1093ad075747ed0be8be77026f7519a19b92f414c18e2a387",
+      "questions": 8,
+      "games": 1,
+      "claims": 20,
+      "reviewedSurfaces": [
+        "explanations.es.short",
+        "explanations.es.detail",
+        "explanations.js.short",
+        "explanations.js.detail",
+        "entries",
+        "questions",
+        "game",
+        "workedExample",
+        "misconception",
+        "buddy",
+        "claims"
+      ],
+      "numericRecomputed": 5
+    }
+  },
+  "limitations": [
+    "This approves reviewed mathematics and text only; operator publication approval is not granted.",
+    "The 38 interactive visual contracts and 8 motion claims were checked mathematically; complete rendered/browser verification is reported separately by the integration reviewer.",
+    "Two MP4 clips have separate independent all-frame, media, caption and claim review in media-jh1-manifest.json.",
+    "Author numeric audit is checked for consistency only and was not used to generate independent expected answers.",
+    "Only review.evidence pending/verified promotion is normalized; changed lesson prose, answers, metadata, coverage or source wrapper requires renewed review."
+  ],
+  "sourceAnomaly": {
+    "code": "8350213221200000",
+    "excelRow": 662,
+    "finding": "The official Excel visible text omits 錐 in 柱体や体. Its single text node confirms this is not a rich-run/phonetic extraction error. The official commentary printed page 78 renders 錐体. Raw Excel text is retained, and the lesson uses the correct 錐体 wording."
+  }
+}

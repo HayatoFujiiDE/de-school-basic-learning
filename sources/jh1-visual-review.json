@@ -1,0 +1,25 @@
+{
+  "evidence": "verified",
+  "reviewer": "independent-primary-agent",
+  "scope": "Mathematical invariants, authored text, independent claims review and real Chrome SVG typography. Human publication approval remains unset.",
+  "visualsSha256": "b3712f83c1209badbcb5d08cf6b18fa0cd2bff17f70c5bf99eb718b0a619b7c5",
+  "scenesSha256": "73c2216ae9ac92fefca96445aa74485d27a7ebc725e9968490ca2f475cf4b2d8",
+  "units": 38,
+  "interactiveStates": 795,
+  "scenes": 8,
+  "steps": 32,
+  "sampledFrames": 3232,
+  "legacyDiagramsCompared": 66,
+  "legacyFramesCompared": 243,
+  "positiveProbes": 10,
+  "methods": [
+    "Independent coordinate, rational arithmetic, compass, sector, solid geometry and count expectations",
+    "Every inverse-curve vertex preserves xy=a without crossing x=0",
+    "Every continuous sampled phase preserves fixed origin, equal operations, radius and counted observations",
+    "Existing 66 manipulatives and 243 sampled legacy frames unchanged",
+    "Independent content reviewer verifies 38 visual, 8 motion and 2 video claim scopes",
+    "Real Chrome 390px checks all 795 states and 3232 frames: no text intersections, clipping or page overflow",
+    "Primary reviewer inspects 15 rendered galleries covering 38 diagrams and all 32 scene stages",
+    "Default cone scale 3 verified at 390px: approximately 78 by 54 pixels, unchanged mathematical state space"
+  ]
+}
