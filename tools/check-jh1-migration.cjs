@@ -216,7 +216,7 @@ function run() {
   equal(all.core.gradeOf(all.core.unit(seventh.code)), 7, '835021 maps to runtime7');
   equal(all.core.gradeLabel(7), '中学1年生', 'course label');
   equal(all.core.subject(7), '数学', 'course subject');
-  equal(all.core.domains(7), [{id:'A',title:'数と式'},{id:'B',title:'図形'},{id:'C',title:'関数'},{id:'D',title:'データの活用'}], 'course domain names');
+  equal(all.core.domains(7), [{id:'A',title:'数と式'},{id:'C',title:'関数'},{id:'B',title:'図形'},{id:'D',title:'データの活用'}], 'course domains follow the agreed lesson order');
   for (const grade of [4, 5, 6]) {
     equal(all.core.gradeLabel(grade), '小学' + grade + '年生', 'old course label');
     equal(all.core.subject(grade), '算数', 'old course subject');
