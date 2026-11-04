@@ -3,7 +3,7 @@
 
   var app = document.getElementById('app');
   var core = window.BL && window.BL.core;
-  if (!core) {
+  if (!core || core.ready === false) {
     app.innerHTML = '<main class="no-script"><h1>教材を開けませんでした</h1><p>ファイルをひとつのフォルダにそろえて、もう一度開いてください。</p></main>';
     return;
   }
@@ -31,10 +31,10 @@
   function route() {
     var hash = window.location.hash || '#list';
     if (hash === '#list' || hash === '#main') return { page: 'list', unit: null, grade: core.state.grade };
-    var gradeRoute = /^#list\/(4|5)$/.exec(hash);
+    var gradeRoute = /^#list\/(4|5|6)$/.exec(hash);
     if (gradeRoute && core.grades().indexOf(Number(gradeRoute[1])) !== -1) return { page: 'list', unit: null, grade: Number(gradeRoute[1]) };
     if (hash === '#paused') return { page: 'paused', unit: null };
-    var match = /^#(unit|practice|result|buddy)\/(82502[45][0-9A-Z]{10})$/.exec(hash);
+    var match = /^#(unit|practice|result|buddy)\/(82502[456][0-9A-Z]{10})$/.exec(hash);
     if (!match) return { page: 'missing', unit: null };
     var unit = core.unit(match[2]);
     return unit ? { page: match[1], unit: unit } : { page: 'missing', unit: null };
@@ -64,7 +64,7 @@
   }
 
   function footer() {
-    return '<footer class="page-footer"><span>小学' + core.state.grade + '年生の算数 · 学習指導要領につながる教材</span><span>回答はこのブラウザに保存</span></footer>';
+    return '<footer class="page-footer"><span>小学' + core.state.grade + '年生の算数 · 学習指導要領につながる教材</span><span>' + (core.storageOK ? '回答はこのブラウザに保存' : '今回の回答は保存していません') + '</span></footer>';
   }
 
   function progressBar(p, label) {
@@ -231,7 +231,7 @@
 
   function pausedPage() {
     var unit = core.state.resume ? core.unit(core.state.resume) : null;
-    return '<section class="paused-screen"><div class="paused-art" aria-hidden="true"><span class="pause-icon"></span></div><p class="eyebrow">ひと休み</p><h1 class="page-title">' + t('きょうは、ここまで。', '今日は、ここまで。') + '</h1><p class="page-lead">' + (core.storageOK ? '取り組んだところは、このブラウザに残っています。' : 'このページを開いている間は、続きから始められます。') + '<br>またやってみたくなったら、いつでも。</p>' + (unit ? '<div class="resume-card"><p>続きからできる単元</p><h2>' + e(unit.title) + '</h2><a class="button" href="' + e(/^#(unit|practice|result|buddy)\/82502[45][0-9A-Z]{10}$/.test(lastRoute) && lastRoute.slice(lastRoute.lastIndexOf('/') + 1) === unit.code ? lastRoute : '#unit/' + unit.code) + '">' + t('つづきをする', '続きをする') + ' →</a></div>' : '') + '<div class="button-row"><a class="text-link" href="#list/' + core.state.grade + '">単元一覧を見る</a></div></section>';
+    return '<section class="paused-screen"><div class="paused-art" aria-hidden="true"><span class="pause-icon"></span></div><p class="eyebrow">ひと休み</p><h1 class="page-title">' + t('きょうは、ここまで。', '今日は、ここまで。') + '</h1><p class="page-lead">' + (core.storageOK ? '取り組んだところは、このブラウザに残っています。' : 'このページを開いている間は、続きから始められます。') + '<br>またやってみたくなったら、いつでも。</p>' + (unit ? '<div class="resume-card"><p>続きからできる単元</p><h2>' + e(unit.title) + '</h2><a class="button" href="' + e(/^#(unit|practice|result|buddy)\/82502[456][0-9A-Z]{10}$/.test(lastRoute) && lastRoute.slice(lastRoute.lastIndexOf('/') + 1) === unit.code ? lastRoute : '#unit/' + unit.code) + '">' + t('つづきをする', '続きをする') + ' →</a></div>' : '') + '<div class="button-row"><a class="text-link" href="#list/' + core.state.grade + '">単元一覧を見る</a></div></section>';
   }
 
   function render(focusMain) {
@@ -250,7 +250,7 @@
       core.save();
     }
     var content = current.page === 'list' ? listPage() : current.page === 'unit' ? unitPage(current.unit) : current.page === 'practice' ? practicePage(current.unit) : current.page === 'result' ? resultPage(current.unit) : current.page === 'buddy' ? buddyPage(current.unit) : current.page === 'paused' ? pausedPage() : '<section class="route-error"><h1>この単元を開けませんでした</h1><p>単元一覧から、もう一度選んでみてください。</p><a class="button" href="#list/' + core.state.grade + '">単元一覧へ</a></section>';
-    app.innerHTML = '<div class="app-shell">' + sidebar(current.page) + '<div class="workspace">' + topbar(current.page) + gradeTabs() + (!core.storageOK ? '<div class="storage-warning" role="status">このブラウザでは保存できません。今は取り組めますが、ページを閉じると回答が消えます。</div>' : '') + '<main id="main" class="main" tabindex="-1" data-page="' + e(current.page) + '" data-grade="' + core.state.grade + '" data-unit="' + e(current.unit ? current.unit.code : '') + '">' + content + '</main></div></div>';
+    app.innerHTML = '<div class="app-shell">' + sidebar(current.page) + '<div class="workspace">' + topbar(current.page) + gradeTabs() + (!core.storageOK ? '<div class="storage-warning" role="status">記録を守るため、今は保存していません。このページを閉じると、今回の回答は残りません。</div>' : '') + '<main id="main" class="main" tabindex="-1" data-page="' + e(current.page) + '" data-grade="' + core.state.grade + '" data-unit="' + e(current.unit ? current.unit.code : '') + '">' + content + '</main></div></div>';
     if (current.page === 'unit' && window.BL.visuals) {
       var visual = document.getElementById('unit-visual');
       if (visual) { visual.innerHTML = window.BL.visuals.render(current.unit); window.BL.visuals.bind(visual, current.unit); }

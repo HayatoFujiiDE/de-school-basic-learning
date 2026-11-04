@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "grade": 6,
+  "reviewer": "independent-evidence-agent",
+  "reviewedAt": "2026-11-04",
+  "evidence": "verified",
+  "publicationApproval": false,
+  "reviewedSourceSha256": "5a26adb033fe19b247aa245a7af98c01dfd1f113328be24be0ae32c73f81d10e",
+  "snapshotState": "author review.evidence pending; unit review status changes alone do not change reviewed content hashes",
+  "officialExcelSha256": "f32ba37970cac91a26656a4f317ca755e2536aa525fc439d214391904e24c8e3",
+  "officialCommentarySha256": "5eebb7f4ddc516aa47451999659596523a888eb68d49ed7dadeb489c2cd27129",
+  "counts": {
+    "units": 22,
+    "questions": 176,
+    "games": 22,
+    "claims": 424,
+    "numericRecomputed": 97,
+    "officialRows": 88,
+    "terminalCodes": 47,
+    "mappedRows": 77,
+    "headings": 11
+  },
+  "scope": [
+    "all 88 explanations (two modes, two lengths)",
+    "44 original interest entries",
+    "176 question answers, explanations, hints and options",
+    "22 games",
+    "22 worked examples with four steps",
+    "22 misconception/correction pairs",
+    "22 buddy prompts, follow-ups, samples and checkpoints",
+    "22 visual mathematical claims and six motion mathematical claims",
+    "official code alignment and existing 44-unit byte/runtime preservation"
+  ],
+  "limitations": [
+    "Not operator publication approval or a claim of full annual classroom instruction",
+    "Manipulative and SVG implementation/rendering are checked separately by their independent geometry/browser gates",
+    "A code mapping does not prove a learner has mastered a competency",
+    "Official PDF fresh retrieval timed out; reviewed a previously downloaded copy bound by the stated hash"
+  ],
+  "items": {
+    "8250263111100000": {
+      "evidence": "verified",
+      "contentSha256": "3313c7ba8f2d039a0d1857cfb9ebefff8ecb3c26f7578716e789ff3ff88869a9",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263111200000": {
+      "evidence": "verified",
+      "contentSha256": "ca54e24dcba13ce90a7f4b48e5f0c79ab763a8b8470be14ba8fb9b42604c9e85",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263112100000": {
+      "evidence": "verified",
+      "contentSha256": "138be2440a09037fe4ebe08392a2e3a409099e3929f6b40871c10816890a38be",
+      "claims": 20,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263110000000": {
+      "evidence": "verified",
+      "contentSha256": "71d75db6171f130db1f79ad63a45bb06aa377f5144a26ad474abf9ea971e1487",
+      "claims": 20,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263111300000": {
+      "evidence": "verified",
+      "contentSha256": "9bda45c20b4ba390076ae6a2c932c1f0b5c358632255a4697b9eb5ea133b5cab",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263120000000": {
+      "evidence": "verified",
+      "contentSha256": "c8451cb229b9b8683b79da630ac7a267a8b2cf8fa928d39484bc007b02e3fbca",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263211200000": {
+      "evidence": "verified",
+      "contentSha256": "64f81c4f80ab5421d9e3fb96c24e5176e4d59b20fc9f478ff1b885005a43e5d5",
+      "claims": 20,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263210000000": {
+      "evidence": "verified",
+      "contentSha256": "b5ae9780548a18b64ba17a1f3250d99a18d6e9ed3fbcf7f74ea13c4f0621c335",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263321100000": {
+      "evidence": "verified",
+      "contentSha256": "c55f58e8f4b2dd13f6c73e20af07857ed26b5081ecc7eaa71c623db1d6cca532",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263320000000": {
+      "evidence": "verified",
+      "contentSha256": "04bec9c2ee639da9f40d60a95da9653cc77c4f71bc3c29856273b21b4c465874",
+      "claims": 20,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263211100000": {
+      "evidence": "verified",
+      "contentSha256": "b2cb4a37819b108368bf4dff1178927828213a3c4f69823b8e51fcd473c398cf",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263230000000": {
+      "evidence": "verified",
+      "contentSha256": "c1dff44cd6f5a76a9eeca4c874b53ed15df8ffbb837be4a3929e9634a551b849",
+      "claims": 20,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263220000000": {
+      "evidence": "verified",
+      "contentSha256": "beaa075335e8f21fe39ae4dc3e03336f34a45cef3647cf32e21a57655b21f15e",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263240000000": {
+      "evidence": "verified",
+      "contentSha256": "605bf3f7742f10aa88c5cb203c4e89b345bc2c160519b38c2446dc3a054c9249",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263311100000": {
+      "evidence": "verified",
+      "contentSha256": "665fe9bfd2a9ce073721feefbca7e1b7c70643b4ac8d17807bcf509db147eb97",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263311200000": {
+      "evidence": "verified",
+      "contentSha256": "b1fea4ac4c89edc72a950053728030610a9dbfd18b032b1c0b2593a2bea146ec",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263311300000": {
+      "evidence": "verified",
+      "contentSha256": "7bd688c5c926770ac48e97bed93893c5ddc2eaff154cbbe4831a3a92f0a6d08d",
+      "claims": 20,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263411100000": {
+      "evidence": "verified",
+      "contentSha256": "dba6dd05d1d718f38c1c0d0ede1cdee542d082d1b9cd8bb2ecef1e597a5b574a",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263411200000": {
+      "evidence": "verified",
+      "contentSha256": "be285fcabcb94b64ae28c72d80cad17dbf1f343f6401241c3878fecb64fbc78c",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263411300000": {
+      "evidence": "verified",
+      "contentSha256": "f56528ed731094a265f4b98e670b0a0b7a76c54c1be8591c16e0618777182b49",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263421100000": {
+      "evidence": "verified",
+      "contentSha256": "5104c55bc2cd7b1004ec91fa2d911008ae5af6ce4ee96b33c926ac2a44dcb53d",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    },
+    "8250263420000000": {
+      "evidence": "verified",
+      "contentSha256": "569c78861d41b1409c901fd10bf17eccd74762173c694be39fa41e9e1fc91963",
+      "claims": 19,
+      "questionCount": 8,
+      "gameCount": 1
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "evidence": "verified",
+  "reviewer": "independent-primary-agent",
+  "scope": "Mathematical invariants, authored text, independent claims review, visible partitions and browser geometry; human publication approval remains unset",
+  "visualsSha256": "50557795285c627961d275d32d36b7d9226b08c50393418a3e88bfe4cb63e3d9",
+  "scenesSha256": "e5761294271b10acaf60ab5af297760cff6895b32d1000f7588487e6da80cb99",
+  "units": 22,
+  "interactiveStates": 322,
+  "scenes": 6,
+  "steps": 24,
+  "sampledFrames": 2424,
+  "legacyFramesCompared": 171,
+  "positiveProbes": 8,
+  "methods": [
+    "Independent arithmetic, counts, partitions, coordinates and area",
+    "Continuous inverse area at every sampled animation phase",
+    "Circle sector preservation and non-overlap",
+    "Visible counted-cell contrast and square-grid geometry",
+    "Unchanged old 44 manipulatives and old 14 scenes",
+    "Independent content reviewer verifies all visual and motion claims",
+    "Real Chrome text bounds and rendered frame inspection"
+  ]
+}

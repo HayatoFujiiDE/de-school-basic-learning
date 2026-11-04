@@ -26,8 +26,8 @@ stars / forks は調査時点の表示値であり、固定値ではない。
 
 読み取った入口:
 
-- `/Users/hayatofujii/.agents/skills/manim/SKILL.md`（local version 1.5.0）
-- `/Users/hayatofujii/.agents/skills/manimce-best-practices/SKILL.md`
+- `~/.agents/skills/manim/SKILL.md`（local version 1.5.0）
+- `~/.agents/skills/manimce-best-practices/SKILL.md`
 
 `.agents/.skill-lock.json` から対象 2 件だけの公開 metadata を投影した。各 Skill ディレクトリに Git 管理はなく、`git rev-parse` は rc 128。
 
@@ -54,7 +54,7 @@ lock の hash は記録された来歴情報であり、署名検証や remote c
 
 ## 既存実行環境
 
-`/Users/hayatofujii/.local/bin/manim` は `/Users/hayatofujii/.local/share/uv/tools/manim/bin/manim` への symlink。337-byte の通常の Python entry wrapper で `manim.__main__.main` を呼ぶ。
+`~/.local/bin/manim` は `~/.local/share/uv/tools/manim/bin/manim` への symlink。337-byte の通常の Python entry wrapper で `manim.__main__.main` を呼ぶ。
 
 - wrapper SHA-256: `b9e87d9acf242a0f5cf1bac23379df86fa0f0b48399e4b0c2ad7f65496e43b8f`
 - installed distribution: Manim 0.20.1 / INSTALLER uv / Requires-Python >=3.11。
@@ -82,3 +82,7 @@ lock の hash は記録された来歴情報であり、署名検証や remote c
 - https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/mobject/geometry/polygram.py
 - https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/animation/transform.py
 人気や採用数を教材の正確さの証明とせず、新しい原稿・図・動画を別担当が検証する。
+
+## 第6学年での再使用（2026-11-04）
+
+導入済みの同じManim Community 0.20.1とローカルSkillを再使用した。新しいSkill・パッケージ・音声APIは導入していない。stable docsの版は手元と異なるため、[公式v0.20.1の実装](https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/animation/transform.py)と実レンダーでAPIを照合した。ネットワーク拒否hook、更新照会停止、plugins空、ローカル日本語フォント、領域assert、音声なし・metadata除去を維持する。2本の動画は分数の乗法と比の分け方で、独立した内容・実フレーム確認を別に行う。

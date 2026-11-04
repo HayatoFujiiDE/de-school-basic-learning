@@ -18,8 +18,14 @@ async function metrics(page){return page.evaluate(pattern=>{
   return {length:document.body.innerText.length,forbidden:(copy.match(bad)||[]).length,overflow:document.documentElement.scrollWidth>innerWidth,heading:document.querySelectorAll('main h1').length};
 },banned);}
 async function audit(page,context){const m=await metrics(page);assert.ok(m.length>80,context+': nonempty visible UI');assert.equal(m.forbidden,0,context+': forbidden copy');assert.equal(m.overflow,false,context+': horizontal overflow');assert.equal(m.heading,1,context+': one visible main heading');visited++;}
-async function waitRoute(page,hash){if(hash==='#list')hash='#list/'+await page.evaluate(()=>BL.core.state.grade);const match=/^#(unit|practice|result|buddy)\/(82502[45][0-9A-Z]{10})$/.exec(hash);const expectedPage=match?match[1]:/^#list\/[45]$/.test(hash)?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';const expectedGrade=match?match[2][5]:/^#list\/[45]$/.test(hash)?hash.slice(-1):null;await page.waitForFunction(({hash,expectedPage,expectedCode,expectedGrade})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode && (!expectedGrade || main.dataset.grade===expectedGrade);},{hash,expectedPage,expectedCode,expectedGrade});}
+async function waitRoute(page,hash){if(hash==='#list')hash='#list/'+await page.evaluate(()=>BL.core.state.grade);const match=/^#(unit|practice|result|buddy)\/(82502[456][0-9A-Z]{10})$/.exec(hash);const expectedPage=match?match[1]:/^#list\/[456]$/.test(hash)?'list':hash==='#paused'?'paused':'missing';const expectedCode=match?match[2]:'';const expectedGrade=match?match[2][5]:/^#list\/[456]$/.test(hash)?hash.slice(-1):null;await page.waitForFunction(({hash,expectedPage,expectedCode,expectedGrade})=>{const main=document.querySelector('main');return location.hash===hash && main && main.dataset.page===expectedPage && main.dataset.unit===expectedCode && (!expectedGrade || main.dataset.grade===expectedGrade);},{hash,expectedPage,expectedCode,expectedGrade});}
 async function navigate(page,hash){await page.evaluate(h=>{location.hash=h;},hash);await waitRoute(page,hash);}
+async function moveRange(range){
+  const start=Number(await range.inputValue()),min=Number(await range.getAttribute('min')),max=Number(await range.getAttribute('max'));
+  assert.ok(min<max&&start>=min&&start<=max,'valid range bounds before input');
+  await range.focus();await range.press(start<max?'ArrowRight':'ArrowLeft');
+  const after=Number(await range.inputValue());assert.ok(after!==start&&after>=min&&after<=max,'keyboard changes a valid value');
+}
 async function submit(page,q,kind,wrong){
   const form=page.locator('form[data-kind="'+kind+'"]');
   if(q.type==='number')await form.locator('input[name=answer]').fill(String(wrong?q.answer+1:q.answer));
@@ -48,8 +54,9 @@ async function run(){
     await page.goto(url+'#list');
     const units=await page.evaluate(()=>BL.core.units().map(u=>({code:u.code,questions:u.questions,game:u.game,buddy:u.buddy,entries:u.entries,workedExample:u.workedExample})));
     const expected5=JSON.parse(fs.readFileSync(path.join(root,'sources/grade5-unit-manifest.json'),'utf8')).codes;
+    const expected6=JSON.parse(fs.readFileSync(path.join(root,'sources/grade6-unit-manifest.json'),'utf8')).codes;
     const expected4=Object.keys(JSON.parse(fs.readFileSync(path.join(root,'tools/math-review-expectations.json'),'utf8')).units);
-    assert.deepEqual(units.map(u=>u.code).sort(),expected4.concat(expected5).sort(),'exact material set loaded');
+    assert.deepEqual(units.map(u=>u.code).sort(),expected4.concat(expected5,expected6).sort(),'exact material set loaded');
     // A changed hash alone must not identify an old list as the new grade.
     await navigate(page,'#list/5');
     const readinessProbe=await page.evaluate(()=>{document.querySelector('[data-action=grade][data-grade="4"]').click();const m=document.querySelector('main');return {oldReady:location.hash==='#list/4'&&m.dataset.page==='list'&&m.dataset.unit==='',newReady:m.dataset.grade==='4',rendered:m.dataset.grade};});
@@ -60,14 +67,21 @@ async function run(){
     const positive=await metrics(page);assert.ok(positive.forbidden>0&&positive.overflow,'forbidden/overflow positive probes');
     await page.locator('#positive-probe').evaluate(e=>e.remove());
     const errorProbe=page.waitForEvent('pageerror');await page.evaluate(()=>{setTimeout(()=>{throw Error('checker positive probe');},0);});await errorProbe;assert.equal(errors.length,1);errors.length=0;
+    await navigate(page,'#unit/8250263111200000');
+    const upperRange=page.locator('input[data-visual-field]').first(),upperStage=page.locator('[data-visual-stage]');
+    assert.equal(await upperRange.inputValue(),await upperRange.getAttribute('max'));
+    const upperBefore=await upperStage.innerHTML();await upperRange.focus();await upperRange.press('ArrowRight');
+    assert.equal(await upperStage.innerHTML(),upperBefore,'old unconditional Right cannot change an upper-bound value');
+    await moveRange(upperRange);assert.notEqual(await upperStage.innerHTML(),upperBefore,'boundary-aware input changes real diagram');
+    await page.locator('[data-visual-reset]').click();
     for(const width of [1440,1024,390]){
       await page.setViewportSize({width,height:1000});
       for(const mode of ['es','js']){
         await page.locator('[data-action=mode][data-mode='+mode+']').click();
         await navigate(page,'#list');await audit(page,'list '+width+' '+mode);
-        for(const grade of [4,5]) {
+        for(const grade of [4,5,6]) {
           await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);
-          assert.deepEqual((await page.locator('.unit-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.unit))).sort(),(grade===4?expected4:expected5).slice().sort(),'exact visible grade '+grade);
+          assert.deepEqual((await page.locator('.unit-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.unit))).sort(),({4:expected4,5:expected5,6:expected6}[grade]).slice().sort(),'exact visible grade '+grade);
           assert.equal(await page.locator('[data-action=grade][data-grade="'+grade+'"]').getAttribute('aria-pressed'),'true');
           await audit(page,'grade '+grade+' '+width+' '+mode);
         }
@@ -75,7 +89,7 @@ async function run(){
           for(const route of ['unit','practice','result','buddy']){
             await navigate(page,'#'+route+'/'+unit.code);await audit(page,route+' '+unit.code+' '+width+' '+mode);
             assert.equal(await page.locator('[data-action=grade][data-grade="'+unit.code[5]+'"]').getAttribute('aria-pressed'),'true','deep link synchronizes grade');
-            if(route==='unit'&&unit.code[5]==='5'&&width===390&&mode==='es'){await page.locator('#unit-visual').scrollIntoViewIfNeeded();await page.locator('#unit-visual').screenshot({path:path.join(output,unit.code+'-visual.png')});}
+            if(route==='unit'&&(unit.code[5]==='5'||unit.code[5]==='6')&&width===390&&mode==='es'){await page.locator('#unit-visual').scrollIntoViewIfNeeded();await page.locator('#unit-visual').screenshot({path:path.join(output,unit.code+'-visual.png')});}
           }
         }
         await page.locator('[data-action=pause]').click();await waitRoute(page,'#paused');await audit(page,'paused '+width+' '+mode);
@@ -91,7 +105,10 @@ async function run(){
     await page.locator('[data-action=grade][data-grade="5"]').click();await waitRoute(page,'#list/5');
     await page.goBack();await waitRoute(page,'#list/4');assert.equal(await page.evaluate(()=>BL.core.state.grade),4);
     await page.goForward();await waitRoute(page,'#list/5');assert.equal(await page.evaluate(()=>BL.core.state.grade),5);
-    await navigate(page,'#unit/'+expected5[0]);const skipHash=await page.evaluate(()=>location.hash);
+    await page.locator('[data-action=grade][data-grade="6"]').click();await waitRoute(page,'#list/6');
+    await page.goBack();await waitRoute(page,'#list/5');assert.equal(await page.evaluate(()=>BL.core.state.grade),5);
+    await page.goForward();await waitRoute(page,'#list/6');assert.equal(await page.evaluate(()=>BL.core.state.grade),6);
+    await navigate(page,'#unit/'+expected6[0]);const skipHash=await page.evaluate(()=>location.hash);
     await page.locator('.skip-link').focus();await page.locator('.skip-link').press('Enter');
     assert.equal(await page.evaluate(()=>location.hash),skipHash,'keyboard skip preserves unit');
     assert.equal(await page.evaluate(()=>document.activeElement.id),'main','skip focuses main content');
@@ -112,7 +129,7 @@ await page.setViewportSize({width:1024,height:1000});
       // Every manipulative must visibly react through a real control, then restore.
       const stage=page.locator('[data-visual-stage]');const initial=await stage.innerHTML();
       const range=page.locator('input[data-visual-field]').first();
-      if(await range.count()){await range.focus();await range.press('ArrowRight');}
+      if(await range.count())await moveRange(range);
       else if(await page.locator('[data-abacus]').count())await page.locator('[data-abacus]').first().click();
       else {
         const selected=page.locator('button[data-visual-field][aria-pressed="true"]').first();
@@ -144,7 +161,7 @@ await page.setViewportSize({width:1024,height:1000});
       await page.locator('[data-action=buddy-confirm]').click();
       await audit(page,'completed buddy '+unit.code);
     }
-    for(const grade of [4,5,4,5]){await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);await page.reload();assert.equal(await page.evaluate(()=>BL.core.state.grade),grade);assert.equal(await page.evaluate(()=>BL.core.units().every(u=>BL.core.progress(u.code).percent===100)),true,'grade switch preserves all progress');}
+    for(const grade of [4,5,6,4,6,5]){await page.locator('[data-action=grade][data-grade="'+grade+'"]').click();await waitRoute(page,'#list/'+grade);await page.reload();assert.equal(await page.evaluate(()=>BL.core.state.grade),grade);assert.equal(await page.evaluate(()=>BL.core.units().every(u=>BL.core.progress(u.code).percent===100)),true,'grade switch preserves all progress');}
     await navigate(page,'#buddy/'+units[units.length-1].code);
     await page.reload();assert.equal(await page.evaluate(()=>BL.core.units().every(u=>BL.core.progress(u.code).percent===100)),true,'reload all progress');
     assert.equal(await page.locator('#buddy-answer').inputValue(),'','conversation text not reloaded');

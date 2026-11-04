@@ -1,0 +1,40 @@
+{
+  "renderer": {
+    "version": "0.20.1",
+    "sourceSha256": "79b6941b61b4f9fe410b009deee4b1f76db3e07ae8f99471f79cccaf8d983038"
+  },
+  "videos": [
+    {
+      "code": "8250263112100000",
+      "path": "assets/lessons/8250263112100000.mp4",
+      "sha256": "ac03511050237b48e1e4baa8d7be4e62242c8cd97688eec2089173be1781166c",
+      "evidence": "verified",
+      "transcript": [
+        "図全体を1とする。3列のうち2列が2/3。",
+        "たてを4等分すると、全体は12こに分かれる。",
+        "色のついた部分の、4段のうち3段を選ぶ。",
+        "12このうち6こ。全体の1/2になる。"
+      ],
+      "claimIds": ["c17", "visual", "motion"],
+      "reviewedBy": "independent-evidence-agent",
+      "reviewedFrameSeconds": [1, 4.5, 6, 9, 12, 17],
+      "publicationApproval": false
+    },
+    {
+      "code": "8250263320000000",
+      "path": "assets/lessons/8250263320000000.mp4",
+      "sha256": "b0d759a55ff37acc0f6140092e9ee1410210d84ae15fd04a5fa68a475678c19d",
+      "evidence": "verified",
+      "transcript": [
+        "全部で20こ。2：3の、同じ大きさの5つ分にする。",
+        "1つ分は、20 ÷ 5 ＝ 4こ。",
+        "2つ分は8こ。3つ分は12こ。",
+        "8：12 ＝ 2：3。合わせると20こ。"
+      ],
+      "claimIds": ["c17", "visual", "motion"],
+      "reviewedBy": "independent-evidence-agent",
+      "reviewedFrameSeconds": [1, 6, 10.2, 16],
+      "publicationApproval": false
+    }
+  ]
+}
