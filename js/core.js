@@ -24,10 +24,10 @@
   }
 
   function validUnit(unit) {
-    if (!isObject(unit) || !/^82502[45][0-9A-Z]{10}$/.test(unit.code) || !text(unit.title) || !text(unit.goal) || ['A', 'B', 'C', 'D'].indexOf(unit.domain) === -1 || !Number.isFinite(unit.order)) return false;
+    if (!isObject(unit) || !/^82502[456][0-9A-Z]{10}$/.test(unit.code) || !text(unit.title) || !text(unit.goal) || ['A', 'B', 'C', 'D'].indexOf(unit.domain) === -1 || !Number.isFinite(unit.order)) return false;
     if ((unit.grade === undefined && unit.code.charAt(5) !== '4') || (unit.grade !== undefined && unit.grade !== Number(unit.code.charAt(5)))) return false;
     if (!unit.review || unit.review.evidence !== 'verified' || unit.review.publication !== 'preview') return false;
-    if (!Array.isArray(unit.coverageCodes) || !unit.coverageCodes.length || !unit.coverageCodes.every(function (code) { return /^82502[45][0-9A-Z]{10}$/.test(code) && code.charAt(5) === unit.code.charAt(5); })) return false;
+    if (!Array.isArray(unit.coverageCodes) || !unit.coverageCodes.length || !unit.coverageCodes.every(function (code) { return /^82502[456][0-9A-Z]{10}$/.test(code) && code.charAt(5) === unit.code.charAt(5); })) return false;
     if (!unit.explanations || !['es', 'js'].every(function (mode) { return unit.explanations[mode] && text(unit.explanations[mode].short) && text(unit.explanations[mode].detail); })) return false;
     if (!Array.isArray(unit.claims) || !unit.claims.length) return false;
     var claims = dictionary();
@@ -60,7 +60,7 @@
   });
   accepted.sort(function (a, b) { return Number(a.code.charAt(5)) - Number(b.code.charAt(5)) || a.order - b.order; });
   core.gradeOf = function (unit) { return unit && own(unitMap, unit.code) && unitMap[unit.code] === unit ? Number(unit.code.charAt(5)) : null; };
-  core.grades = function () { return [4, 5].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
+  core.grades = function () { return [4, 5, 6].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
   core.units = function (grade) { return grade === undefined ? accepted.slice() : accepted.filter(function (unit) { return core.gradeOf(unit) === grade; }); };
   core.unit = function (code) { return typeof code === 'string' && own(unitMap, code) ? unitMap[code] : null; };
   core.escape = function (value) {
@@ -68,6 +68,23 @@
       return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[character];
     });
   };
+
+  // The independent catalogue declaration detects missing scripts, duplicate or
+  // substituted codes before saving can project away any existing record.
+  var expectedCatalogue = BL.expectedCatalogue;
+  var requiredVersion = typeof document !== 'undefined' && document.documentElement ? document.documentElement.getAttribute('data-catalogue-version') : null;
+  var requireCatalogue = Boolean(expectedCatalogue) || requiredVersion === '4' || data.version === '4';
+  core.ready = true;
+  if (requireCatalogue) {
+    var expectedCodes = expectedCatalogue && expectedCatalogue.codes;
+    var actualCodes = data.units.map(function (unit) { return unit && unit.code; });
+    core.ready = Boolean(expectedCatalogue && expectedCatalogue.version === '4' && data.version === '4' && (!requiredVersion || requiredVersion === '4') && Array.isArray(expectedCodes) && expectedCodes.length === 66 && unique(expectedCodes) && expectedCodes.every(function (code) { return typeof code === 'string' && /^82502[456][0-9A-Z]{10}$/.test(code); }) && actualCodes.length === expectedCodes.length && unique(actualCodes) && actualCodes.every(function (code) { return expectedCodes.indexOf(code) !== -1; }) && data.units.every(function (unit) { return unit && ((unit.grade === undefined && unit.code.charAt(5) === '4') || unit.grade === Number(unit.code.charAt(5))); }));
+  }
+  var catalogueReadOnly = !core.ready || core.rejectedCount > 0;
+  core.readOnly = catalogueReadOnly;
+  function supportedVersion(version) {
+    return version === data.version || (version === '2' && (data.version === '3' || data.version === '4')) || (version === '3' && data.version === '4');
+  }
 
   function numeric(value) {
     if (typeof value !== 'string' && typeof value !== 'number') return null;
@@ -101,15 +118,21 @@
     if (raw.interest === 'all' || data.categories.some(function (category) { return category.id === raw.interest; })) state.interest = raw.interest;
     if (core.unit(raw.resume)) state.resume = raw.resume;
     // Version 2 contained only the byte-identical grade-4 material. Migrate that
-    // one reviewed version; never carry new grade-5 or other-version records.
-    var legacyGrade4 = data.version === '3' && raw.version === '2';
+    // reviewed grade only. Version 3 may similarly carry grades 4 and 5 into 4.
+    var legacyGrade4 = (data.version === '3' || data.version === '4') && raw.version === '2';
+    var legacyGrade45 = data.version === '4' && raw.version === '3';
     if (legacyGrade4) {
       state.grade = 4;
       if (state.resume && core.gradeOf(core.unit(state.resume)) !== 4) state.resume = null;
     }
-    if ((raw.version !== data.version && !legacyGrade4) || !isObject(raw.progress)) return state;
+    if (legacyGrade45) {
+      if (state.grade === 6) state.grade = 4;
+      if (state.resume && core.gradeOf(core.unit(state.resume)) === 6) state.resume = null;
+    }
+    if (!supportedVersion(raw.version) || !isObject(raw.progress)) return state;
     accepted.forEach(function (unit) {
       if (legacyGrade4 && core.gradeOf(unit) !== 4) return;
+      if (legacyGrade45 && core.gradeOf(unit) === 6) return;
       if (!own(raw.progress, unit.code) || !isObject(raw.progress[unit.code])) return;
       var stored = raw.progress[unit.code];
       var record = {answers: dictionary(), buddy: dictionary()};
@@ -126,14 +149,23 @@
     return state;
   }
   core.load = function () {
-    var stored = null;
-    try { stored = window.localStorage.getItem(KEY); core.storageOK = true; }
-    catch (error) { core.storageOK = false; }
-    try { core.state = sanitize(stored && stored.length <= 1000000 ? JSON.parse(stored) : null); }
-    catch (error) { core.state = defaults(); }
+    var stored = null, parsed = null;
+    core.readOnly = catalogueReadOnly;
+    core.storageOK = !core.readOnly;
+    try { stored = window.localStorage.getItem(KEY); }
+    catch (error) { core.readOnly = true; core.storageOK = false; }
+    if (stored !== null) {
+      try {
+        if (typeof stored !== 'string' || stored.length > 1000000) throw new Error('Unreadable saved work');
+        parsed = JSON.parse(stored);
+        if (!isObject(parsed) || !isObject(parsed.progress) || !supportedVersion(parsed.version)) { core.readOnly = true; core.storageOK = false; }
+      } catch (error) { core.readOnly = true; core.storageOK = false; }
+    }
+    core.state = sanitize(parsed);
     return core.state;
   };
   core.save = function () {
+    if (core.readOnly) { core.storageOK = false; return false; }
     // Re-project only recognized fields; conversation text can never enter this record.
     core.state = sanitize(core.state);
     try { window.localStorage.setItem(KEY, JSON.stringify(core.state)); core.storageOK = true; }
@@ -176,6 +208,7 @@
   };
   core.text = function (unit, length) { return unit.explanations[core.state.mode][length === 'detail' ? 'detail' : 'short']; };
   core.reset = function () {
+    if (core.readOnly) { core.storageOK = false; return false; }
     core.state = defaults();
     try { window.localStorage.removeItem(KEY); core.storageOK = true; }
     catch (error) { core.storageOK = false; }

@@ -21,7 +21,7 @@ function fixture() {
   }]};
 }
 function boot(data, raw, blocked) {
-  let saved = raw;
+  let saved = raw === undefined ? null : raw;
   const storage = {getItem: () => { if(blocked) throw Error('blocked'); return saved; },setItem: (key,value) => { if(blocked) throw Error('blocked'); saved = value; },removeItem: () => { if(blocked) throw Error('blocked'); saved = null; }};
   const window = {BL:{data},localStorage:storage};
   vm.runInNewContext(script, {window});
