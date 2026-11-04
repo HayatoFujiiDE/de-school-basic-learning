@@ -85,7 +85,7 @@ rollbackは新入口を非表示にし、v6対応coreと保存対象を保持。
 - visuals-jh2.js: `09c953f9851b0db5380f78dd206f16b3d738a06c2a1edde3993e04239c93e688`
 - lesson-scenes-jh2.js: `b11cd5e1d4d166670f1294fc19084c6dea12b7765af2fe6e5e2a0a6c8d98956e`
 
-全原稿・独立review・poster/videoを含む統合後の実教材での全39単元、両mode、control/tryIt/keyboard/focus/動画の検証は、着地担当の統合後に実施する。ここでの単独描画検査を統合アプリ完了とは扱わない。
+全原稿・独立review・poster/videoを含む統合後の実教材でも、下記の全39単元・両modeの実操作検査を完了した。単独描画検査と統合アプリ検査の実出力は分けて記録する。
 
 仕上げの相互目視で、合同sceneの根拠に無関係な右側の装飾線を削除。辺の印と対応角の4段階は維持し、ES2017・全3,232frame・独立数学189,284検査・旧339frame一致を再確認した。
 
@@ -103,6 +103,19 @@ rollbackは新入口を非表示にし、v6対応coreと保存対象を保持。
 この段階の13単元JSON投影SHA-256は `cbc34093b54b211464d10f693eafcd695e611c57da07380161f82d29879f7913`。31q2の問いの目的再掲、32の「四つの角」への表記整理は作者へ依頼済みで数値・正答変更はない。全39単元生成後のmotion claims21/27同期確認と、統合アプリの実操作は引き続き必要。
 
 
-最終表記を本文・公式コードの合同記号「≡」へ統一した。数値・幾何は不変。全460状態＋3,232frameのES2017/数学/実Chrome文字bbox検査は再PASS。B31の問いの目的再掲、B32の「四つの角」も作者原稿の修正を再読した。全39原稿に追加されたB21/27 motion claimsはsceneの角位置とSSSの根拠に一致し、B13の117答案も再PASS。最後に残るのは、独立承認と素材を統合したアプリの実操作である。
+最終表記を本文・公式コードの合同記号「≡」へ統一した。数値・幾何は不変。全460状態＋3,232frameのES2017/数学/実Chrome文字bbox検査は再PASS。B31の問いの目的再掲、B32の「四つの角」も作者原稿の修正を再読した。全39原稿に追加されたB21/27 motion claimsはsceneの角位置とSSSの根拠に一致し、B13の117答案も再PASS。独立承認と素材を統合したアプリの実操作結果は以下のとおり。
 
 独立検査器の追加レビューでは、同数の選択値変更、既定値型違い、零長グラフ、抽選盤円弧flag変更を旧検査が見逃すことを隔離改変で確認した。親の許可で `tools/check-jh2-visuals.cjs` に独立した39状態契約のexact検査、線の長さと描画境界、扇形の全flagと閉路を追加。正規図は8,408検査でPASSし、4改変はそれぞれ意図したassertで拒否される。これは検査器の境界補強で、制作済み図の数値変更ではない。
+
+
+## 統合アプリの実操作（2026-11-04）
+
+対象 `/private/tmp/basic-learning-jh2/index.html` をfile://で開き、実Google Chromeの隔離contextと合成記録だけを使用。Google Fonts以外への通信要求は0、検査中のHTTP通信は全て遮断した。
+
+実出力：`JH2_INTEGRATED_UI=PASS modes=es,js width=390 units=39 views=78 keyboard_and_choice_controls=292 lesson_steps=64 try_transfers=16 video_plays=4 id_checks=435 duplicate_ids=0 duplicate_positive=1 reset_state_positive=1 errors=0 external_requests=0`。
+
+全39図を両modeで操作し、rangeのキーボード入力、choice、既定状態へのreset、SVG文字包含、全DOM ID一意を確認。8解説の全段、16回のtryIt状態引継ぎとfocus・学習記録不変、2動画を両modeで実再生・閉じると停止を確認した。負号U+2212の数値入力は受理し、自由な分数式入力は無効とする境界も通過。
+
+初回検査では、前modeのtryItが残した錯角状態を「既定状態」とみなす検査側の期待値誤りで停止した。実Chromeのcold、modeのみ、tryItのみ、tryIt＋modeの4対照は、すべてreset後にcoldの同位角へ戻った。検査器だけを前reset＋全field型/値の照合へ直し、探索後のexact HTML比較は維持。非default tryIt→mode保持→reset既定の対照も恒久検査に追加し、上記全件PASSを取得。製品の状態保持・reset実装は変更していない。
+
+目視は加減法・一次グラフ・合同証明・箱ひげ図の既定画面4枚と、合同証明第3段の両mode通常viewport画面2枚。`JH2_PROOF_ACTUAL_VIEW=PASS modes=2 congruence_symbol=≡ viewport390 normal_screenshots=2`、両modeとも横はみ出しなし・skip linkの画面侵入なし。画像は統合worktreeの `output/jh2-browser/*-actual-mobile.png` と `proof-congruence-{es,js}-viewport.png` に保存した。
