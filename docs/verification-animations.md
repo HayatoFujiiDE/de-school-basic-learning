@@ -4,6 +4,10 @@
 
 ## 実行
 
+最終納品場所 `/Users/hayatofujii/Coding/DESystem/Basic-Learning` でも `sh tools/check.sh` を実行し、exit code 0 / `CHECK_RESULT=PASS` を確認した。以下の統合検査と同じ733画面、145回答、20対話、図解33段階、8予想、動画4本の実再生が通過。追加の画像完全一致8件も通過した。
+
+撮影方法の変更後は `node tools/check-lessons.cjs` を再実行し、198画面・8予想・動画4本・errors0・unexpectedRequests0を確認した。教材のコードや素材は撮影方法の確認によって変更していない。
+
 統合用worktree `/private/tmp/basic-learning-motion` で以下を実行した。検証用Acornは既存インストールを明示。教材の実行には不要。
 
 ```sh
@@ -45,3 +49,5 @@ SVG解説は、再生による図形変化、停止した図の静止、末尾�
 最初の統合検査はworktreeにAcorn参照がないため停止し、既存検証環境を明示した。通常sandboxでのChrome起動はOSに拒否され、隔離した新規Chromeプロファイルの起動を許可された環境で再実行した。失敗をPASSへ読み替えていない。
 
 数学的内容と根拠の別担当確認は [lesson-evidence-review.md](lesson-evidence-review.md)。第三者Skillと公式ライブラリの確認範囲は [skill-safety-review.md](skill-safety-review.md)。全MP4フレームは機械decodeし、代表的な途中・末尾フレームを目視した。全フレームを人が目視したという意味ではない。今回の実ブラウザ検査はこのMacのChromeで行い、実iPhone/Safariは未検証。運営による公開承認・外部公開は行っていない。
+
+長い要素の切り出し画像で、画面外の「本文へ」が写り込むことも弁別した。通常390px viewportではy=-100、bottom=-50.8125、表示域との交差0、focusなし。focusした正例はy=12で意図どおり表示する。製品CSSは変更せず、撮影前に実際の「動く解説へ」で見出しを画面内へ出し、切り出し開始点が画面内であることを検査する。通常viewport画像も目視済み。

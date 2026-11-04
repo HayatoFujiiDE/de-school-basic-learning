@@ -38,6 +38,9 @@ async function audit(page,code){
     await page.locator(action('previous')).click();assert.ok((await page.locator('[data-lesson-step-count]').textContent()).startsWith(String(items[code].steps.length-1)));
     await page.locator(action('reset')).click();assert.equal(await page.locator(action('previous')).isDisabled(),true);
     if(width===390&&mode==='es'){
+      // Put the tall card inside the viewport before clipping: offscreen fixed skip links must not enter captures.
+      await page.locator('[data-action=lesson-jump]').click();
+      assert.ok((await page.locator('[data-lesson-code]').boundingBox()).y>=0,'capture starts inside the viewport');
       await page.locator('[data-lesson-code]').screenshot({path:path.join(out,code+'-mobile.png')});
     }
    }
