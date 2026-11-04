@@ -24,9 +24,10 @@
   }
 
   function validUnit(unit) {
-    if (!isObject(unit) || !/^825024[0-9A-Z]{10}$/.test(unit.code) || !text(unit.title) || !text(unit.goal) || ['A', 'B', 'C', 'D'].indexOf(unit.domain) === -1 || !Number.isFinite(unit.order)) return false;
+    if (!isObject(unit) || !/^82502[45][0-9A-Z]{10}$/.test(unit.code) || !text(unit.title) || !text(unit.goal) || ['A', 'B', 'C', 'D'].indexOf(unit.domain) === -1 || !Number.isFinite(unit.order)) return false;
+    if ((unit.grade === undefined && unit.code.charAt(5) !== '4') || (unit.grade !== undefined && unit.grade !== Number(unit.code.charAt(5)))) return false;
     if (!unit.review || unit.review.evidence !== 'verified' || unit.review.publication !== 'preview') return false;
-    if (!Array.isArray(unit.coverageCodes) || !unit.coverageCodes.length || !unit.coverageCodes.every(function (code) { return /^825024[0-9A-Z]{10}$/.test(code); })) return false;
+    if (!Array.isArray(unit.coverageCodes) || !unit.coverageCodes.length || !unit.coverageCodes.every(function (code) { return /^82502[45][0-9A-Z]{10}$/.test(code) && code.charAt(5) === unit.code.charAt(5); })) return false;
     if (!unit.explanations || !['es', 'js'].every(function (mode) { return unit.explanations[mode] && text(unit.explanations[mode].short) && text(unit.explanations[mode].detail); })) return false;
     if (!Array.isArray(unit.claims) || !unit.claims.length) return false;
     var claims = dictionary();
@@ -57,8 +58,10 @@
     accepted.push(unit);
     unitMap[unit.code] = unit;
   });
-  accepted.sort(function (a, b) { return a.order - b.order; });
-  core.units = function () { return accepted.slice(); };
+  accepted.sort(function (a, b) { return Number(a.code.charAt(5)) - Number(b.code.charAt(5)) || a.order - b.order; });
+  core.gradeOf = function (unit) { return unit && own(unitMap, unit.code) && unitMap[unit.code] === unit ? Number(unit.code.charAt(5)) : null; };
+  core.grades = function () { return [4, 5].filter(function (grade) { return accepted.some(function (unit) { return core.gradeOf(unit) === grade; }); }); };
+  core.units = function (grade) { return grade === undefined ? accepted.slice() : accepted.filter(function (unit) { return core.gradeOf(unit) === grade; }); };
   core.unit = function (code) { return typeof code === 'string' && own(unitMap, code) ? unitMap[code] : null; };
   core.escape = function (value) {
     return String(value === null || value === undefined ? '' : value).replace(/[&<>"']/g, function (character) {
@@ -89,15 +92,24 @@
     return null;
   }
   core.validAnswer = function (question, value) { return Boolean(question) && cleanValue(question, value) !== null; };
-  function defaults() { return {version: data.version, mode: 'es', interest: 'all', progress: dictionary(), resume: null}; }
+  function defaults() { return {version: data.version, grade: 4, mode: 'es', interest: 'all', progress: dictionary(), resume: null}; }
   function sanitize(raw) {
     var state = defaults();
     if (!isObject(raw)) return state;
+    if (core.grades().indexOf(raw.grade) !== -1) state.grade = raw.grade;
     if (raw.mode === 'js' || raw.mode === 'es') state.mode = raw.mode;
     if (raw.interest === 'all' || data.categories.some(function (category) { return category.id === raw.interest; })) state.interest = raw.interest;
     if (core.unit(raw.resume)) state.resume = raw.resume;
-    if (raw.version !== data.version || !isObject(raw.progress)) return state;
+    // Version 2 contained only the byte-identical grade-4 material. Migrate that
+    // one reviewed version; never carry new grade-5 or other-version records.
+    var legacyGrade4 = data.version === '3' && raw.version === '2';
+    if (legacyGrade4) {
+      state.grade = 4;
+      if (state.resume && core.gradeOf(core.unit(state.resume)) !== 4) state.resume = null;
+    }
+    if ((raw.version !== data.version && !legacyGrade4) || !isObject(raw.progress)) return state;
     accepted.forEach(function (unit) {
+      if (legacyGrade4 && core.gradeOf(unit) !== 4) return;
       if (!own(raw.progress, unit.code) || !isObject(raw.progress[unit.code])) return;
       var stored = raw.progress[unit.code];
       var record = {answers: dictionary(), buddy: dictionary()};
