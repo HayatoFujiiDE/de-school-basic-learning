@@ -1,0 +1,43 @@
+{
+  "renderer": {
+    "version": "0.20.1",
+    "sourceSha256": "8a798fefa9476548429b2e090dc2e7ec52e5a6590906f650b8c6c369d053176a"
+  },
+  "publicationApproval": false,
+  "reviewedAt": "2026-11-04",
+  "method": "Both clips: independent source mathematics, exact captions, sampled static/active-frame visual review, full decoding and 1320-frame fixed-area/boundary-motion measurements. No claim of exhaustive frame-by-frame text recognition.",
+  "videos": [
+    {
+      "code": "8350233121240000",
+      "path": "assets/lessons/8350233121240000.mp4",
+      "sha256": "34da525fb9acf470b4683aec8ceb22e54b6223a2843c2b2f082b3a789598812c",
+      "evidence": "verified",
+      "transcript": [
+        "辺の長さが正のとき、面積は縦と横の積で表せる。",
+        "同じ文字の項をまとめる。面積の合計は変わらない。",
+        "同じ長方形の面積を、二つの辺の積で表し直す。",
+        "因数分解した式を展開すると、元の式に戻る。"
+      ],
+      "claimIds": [
+        "video"
+      ],
+      "claimTextSha256": "0ee2ea2f15503bf142202f5b4e9d28b67796bf842cddd2e94c5398100d748720"
+    },
+    {
+      "code": "8350233231100000",
+      "path": "assets/lessons/8350233231100000.mp4",
+      "sha256": "ef3aa97754c46967beb6d02caa6c72683e8edc4d4fdb9571d7da6fa0a39afb18",
+      "evidence": "verified",
+      "transcript": [
+        "3、4、5の直角三角形。三辺の外側に正方形を作る。",
+        "直角をはさむ二辺の正方形は、面積9と16。",
+        "斜辺の正方形の面積25は、9と16の和に等しい。",
+        "これは数値の例。成り立つ理由は、上の段階解説で。"
+      ],
+      "claimIds": [
+        "video"
+      ],
+      "claimTextSha256": "8ba849afa5a12c63de46655f3e4fd8bf840a5cd3b525fad53e36a9b62908ca2f"
+    }
+  ]
+}
