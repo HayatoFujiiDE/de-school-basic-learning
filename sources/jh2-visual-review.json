@@ -1,0 +1,23 @@
+{
+  "evidence": "verified",
+  "reviewer": "independent-primary-agent",
+  "scope": "Independent mathematics, authored diagrams/scenes, and the exact referenced visual/motion/video claims reviewed. Human publication approval remains unset.",
+  "visualsSha256": "09c953f9851b0db5380f78dd206f16b3d738a06c2a1edde3993e04239c93e688",
+  "scenesSha256": "b11cd5e1d4d166670f1294fc19084c6dea12b7765af2fe6e5e2a0a6c8d98956e",
+  "units": 39,
+  "interactiveStates": 460,
+  "scenes": 8,
+  "steps": 32,
+  "sampledFrames": 3232,
+  "legacyDiagramsCompared": 104,
+  "legacyFramesCompared": 339,
+  "positiveProbes": 12,
+  "methods": [
+    "Independent equations, rational arithmetic, congruence, angles, quartiles and equiprobable outcome counts",
+    "All 460 finite states and 3232 continuous phase samples checked",
+    "Old 104 diagrams and 339 sampled old scene frames unchanged",
+    "Real Chrome 390px text bounds and collisions, dedicated positive and negative fixtures",
+    "Primary reviewer inspected 15 galleries covering all 39 diagrams and 32 scene stages",
+    "Independent exact finite-state domains, line endpoints and arc flags with four mutation controls"
+  ]
+}

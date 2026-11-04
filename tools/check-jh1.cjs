@@ -75,7 +75,7 @@ for(const row of coverage.rows){
  assert.deepEqual(row.unitCodes,actual,'coverage projection disagrees '+row.curriculumCode);
  assert.equal(row.classification,actual.length?'mapped':'heading','incomplete coverage classification');
 }
-const registryContext={window:{BL:{}}};vm.runInNewContext(read('js/catalogue.js'),registryContext,{timeout:1000});
+const registryContext={window:{BL:{}}};vm.runInNewContext('window.BL.expectedCatalogue='+read('sources/catalogue-v5.json')+';',registryContext,{timeout:1000});
 const registry=clone(registryContext.window.BL.expectedCatalogue);assert.equal(registry.version,'5');
 assert.equal(new Set(registry.codes).size,104,'registry unique');
 assert.deepEqual(registry.codes.slice().sort(),base.units.map(u=>u.code).concat(expectedCodes).sort(),'complete independent registry set');

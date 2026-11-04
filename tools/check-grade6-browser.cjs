@@ -72,6 +72,19 @@ async function run() {
         views++;
 
         {
+          // A previous mode's try-it may preserve a non-default exploration.
+          // Reset means the definition's defaults, not the state at re-entry.
+          const defaults = await page.evaluate(value => BL.visuals.definitions[value].defaults, code);
+          async function visibleState() {
+            return visual.evaluate(element => {
+              const state = {};
+              for (const input of element.querySelectorAll('input[data-visual-field]')) state[input.dataset.visualField] = Number(input.value);
+              for (const button of element.querySelectorAll('button[data-visual-field][aria-pressed="true"]')) state[button.dataset.visualField] = button.dataset.visualValue;
+              return state;
+            });
+          }
+          await visual.locator('[data-visual-reset]').click();
+          assert.deepEqual(await visibleState(), defaults, 'begin from exact default control values');
           const originalStage = await stage.innerHTML();
           const ranges = visual.locator('input[type="range"]');
           for (let index = 0; index < await ranges.count(); index++) {
@@ -97,6 +110,7 @@ async function run() {
           }
           await visual.locator('[data-visual-reset]').click();
           assert.equal(await stage.innerHTML(), originalStage, 'reset restores exact diagram');
+          assert.deepEqual(await visibleState(), defaults, 'reset restores all default control values');
           if (mode === 'es') {
             await visual.evaluate(element => element.scrollIntoView({block: 'start'}));
             await visual.screenshot({path: path.join(output, code + '-actual-mobile.png')});

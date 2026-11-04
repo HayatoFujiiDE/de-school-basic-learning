@@ -4,7 +4,7 @@ const fs=require('fs'),os=require('os'),path=require('path'),vm=require('vm'),as
 const {pathToFileURL}=require('url');const {chromium}=require('./dependencies.cjs')('playwright');
 const root=path.resolve(__dirname,'..');
 // Keep the version-4 fixture independent of the current junior-high catalogue.
-const html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace('data-catalogue-version="5"','data-catalogue-version="4"').replace(/^.*(?:jh1|units-jh1).*\n/gm,'');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/data-catalogue-version="[0-9]+"/,'data-catalogue-version="4"').replace(/^.*jh[12].*\n/gm,'');
 const w={};for(const f of ['units.js','units-grade5.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'js',f),'utf8'),{window:w});
 const records=Object.fromEntries(w.BL.data.units.map(u=>[u.code,{answers:Object.fromEntries(u.questions.map(q=>[q.id,{value:q.answer,correct:false}])),buddy:Object.fromEntries(u.buddy.map(b=>[b.id,true]))}]));
 const original=JSON.stringify({version:'3',grade:5,mode:'es',interest:'all',progress:records,resume:w.BL.data.units[20].code});

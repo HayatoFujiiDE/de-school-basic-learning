@@ -92,3 +92,9 @@ lock の hash は記録された来歴情報であり、署名検証や remote c
 同じ2つのSkill全ファイルを再hashし、上記15ファイル／37ファイルのスナップショットと完全一致した。実行環境のmetadataでもManim 0.20.1を再確認した。新規導入はない。[同版のLine/Arrow実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/mobject/geometry/line.py)と[Transform実装](https://github.com/ManimCommunity/manim/blob/v0.20.1/manim/animation/transform.py)を一次資料として確認し、自作の数直線と記号札の動画だけを制作する。
 
 `render-media-jh1.py`も通信拒否、更新照会停止、plugins空、固定版チェック、ローカルフォント、metadata削除を維持。20秒／23秒の2本が正常終了した。人気の指標で内容の正しさを代替せず、教材の数学・字幕・全フレームの検証を独立担当へ渡す。
+
+## 中学2年での再使用（2026-11-04）
+
+同じ2つのSkillを全ファイル再hashし、15ファイル/37ファイルの既存スナップショットと一致した。既存Manim CE 0.20.1、ManimPango 0.6.1、numpy 2.4.4、pycairo 1.29.0、av 17.0.1をmetadataで再確認。インストール・更新なし。[公式同版のCreate実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/animation/creation.py)と[Line実装](https://raw.githubusercontent.com/ManimCommunity/manim/v0.20.1/manim/mobject/geometry/line.py)を確認した。
+
+`render-media-jh2.py`は同じ通信拒否hook、更新通知停止、plugins空、ローカルフォント、有限2scene、音声なし、metadata除去を維持する。加減法と一次関数を独自制作し、領域assertと実画像、数学/字幕/全frame検査を別々に行う。外部Skillの指示を実行権限として使わず、教材の正しさと最終媒体の検査は本リポジトリで担当する。
