@@ -9,7 +9,7 @@
   function rect(x,y,w,h,fill,stroke,opacity) { return '<rect x="'+num(x)+'" y="'+num(y)+'" width="'+num(w)+'" height="'+num(h)+'" rx="2" fill="'+(fill||'none')+'" stroke="'+(stroke||'none')+'" opacity="'+(opacity===undefined?1:num(opacity))+'"/>'; }
   function line(x1,y1,x2,y2,color,width,dash) { return '<line x1="'+num(x1)+'" y1="'+num(y1)+'" x2="'+num(x2)+'" y2="'+num(y2)+'" stroke="'+(color||ink)+'" stroke-width="'+(width||3)+'" stroke-linecap="round"'+(dash?' stroke-dasharray="'+dash+'"':'')+'/>'; }
   function circle(x,y,r,fill) { return '<circle cx="'+num(x)+'" cy="'+num(y)+'" r="'+r+'" fill="'+fill+'"/>'; }
-  function footer(value) { return text(300,365,value,32,green); }
+  function footer(value) { return text(300,380,value,32,green); }
   function moving(a,b,p,w,h,fill,stroke) { return rect(mix(a[0],b[0],p),mix(a[1],b[1],p),w,h,fill,stroke); }
   function definition(title,prompt,claim,steps,challenge,tryIt) {
     return {title:title,prompt:prompt,claimIds:[claim],steps:steps.map(function(s){return {label:s[0],text:s[1],alt:s[2]};}),challenge:{prompt:challenge[0],options:challenge[1],answer:challenge[2],explanation:challenge[3],claimIds:[claim]},tryIt:tryIt};
@@ -100,7 +100,7 @@
       j=k-490;return [435+(j%5)*19,(s===3&&!removed(k)?140:105+Math.floor(j/5)*25)+(s>=2&&removed(k)?154:0)];
     }
     if(step>0)body+=text(110,65,'1',31,green)+text(310,65,'0.1',31,green)+text(480,65,'0.01',31,green);
-    if(step>=2)body+=rect(25,250,540,80,sand,'#d9cfad')+text(555,345,'取り分けた 2.46',24,olive,'end');
+    if(step>=2)body+=rect(25,250,540,80,sand,'#d9cfad')+text(555,330,'取り分けた 2.46',24,olive,'end');
     for(i=0;i<500;i++){
       var a=pos(i,old),b=pos(i,step),color=step>=2&&removed(i)?olive:green;
       body+=moving(a,b,p,6,6,color,paper);
@@ -226,6 +226,9 @@
     body+=footer(['同じ時刻の2点を見る','10時：18 − 14 = 4℃','11時：20 − 17 = 3℃','差は 4℃ → 3℃'][step]);
     return body;
   }
+  // The explicit regrouping claim is added by the independent evidence owner.
+  items['8250243141300000'].claimIds = ['c15','motion1'];
+  items['8250243141300000'].challenge.claimIds = ['c15','motion1'];
   var drawers = {'8250243131100000':division,'8250243141300000':decimal,'8250243150000000':fraction,'8250243240000000':area,'8250243250000000':angle,'8250243310000000':change,'8250243320000000':ratio,'8250243411200000':graph};
   function render(code,step,phase) {
     if(typeof code!=='string'||!Object.prototype.hasOwnProperty.call(items,code))return '';
