@@ -19,7 +19,7 @@
     4: {label: '小学4年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
     5: {label: '小学5年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
     6: {label: '小学6年生', subject: '算数', domains: ['数と計算', '図形', '変化と関係', 'データの活用']},
-    7: {label: '中学1年生', subject: '数学', domains: ['数と式', '図形', '関数', 'データの活用']}
+    7: {label: '中学1年生', subject: '数学', domainOrder: 'ACBD', domains: ['数と式', '図形', '関数', 'データの活用']}
   };
   function codeGrade(code) {
     if (typeof code !== 'string') return null;
@@ -28,7 +28,11 @@
   }
   core.gradeLabel = function (grade) { return own(courses, grade) ? courses[grade].label : ''; };
   core.subject = function (grade) { return own(courses, grade) ? courses[grade].subject : ''; };
-  core.domains = function (grade) { return own(courses, grade) ? courses[grade].domains.map(function (title, i) { return {id: 'ABCD'.charAt(i), title: title}; }) : []; };
+  core.domains = function (grade) {
+    if (!own(courses, grade)) return [];
+    var course = courses[grade];
+    return (course.domainOrder || 'ABCD').split('').map(function (id) { return {id: id, title: course.domains['ABCD'.indexOf(id)]}; });
+  };
 
   function validQuestion(question, claims) {
     if (!isObject(question) || !text(question.id) || !text(question.prompt) || !text(question.explanation)) return false;

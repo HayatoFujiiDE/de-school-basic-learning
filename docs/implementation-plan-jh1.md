@@ -18,6 +18,8 @@ core（code、course、受理、sort、保存）、app（routeと学年/教科/�
 ## 6. 採用案
 固定course metadataをcoreの一箇所へ置く。codeGradeは825024/5/6→4/5/6、835021→内部7を完全prefixで判定。core.gradeLabel、core.subject、core.domainsで表示を統一する。内部7は中学1年であり公式学年1と区別する。38の公式primary codeを用い、広い公式項目はcoverageで共同対応。原稿はunits-jh1.js、操作図とsceneは独立fileへ追加。表現式・π・分数は選択か並べ替えで採点し、数値入力は有限小数だけを完全一致で読む。数学用負号−の正規化のみ追加する。
 
+表示順は原稿のorderと[eboard中学一覧](https://www.eboard.jp/list/1/)に合わせ、数と式→関数→図形→データの活用。領域の公式IDはA/C/B/Dのまま変えず、course metadataに表示順を持つ。
+
 ## 7. 比較した案
 A:各画面にgrade===7の分岐を加える最小差分。学年/教科/領域/保存判定が散り、検査の抜けを招くため不採用。B:固定course metadataと独立教材fileを採用。C:式パーサと外部数学rendererを導入する案は、オフライン契約と採点範囲を不必要に広げるため不採用。
 
